@@ -14,26 +14,20 @@ body {
 
 /* Главный баннер */
 .hero {
+    background-image: url('banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #f5e6d3;
     text-align: center;
     padding: 100px 20px;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('banner.jpg') center/cover;
-    opacity: 0.3;
+    min-height: 500px;
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
+}
 }
 
 .hero h1 {
