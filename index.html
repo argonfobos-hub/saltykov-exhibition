@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Салтыков-Щедрин: Сатира на века</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Georgia&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Главный баннер -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Салтыков-Щедрин: Сатира на века</h1>
+            <p class="subtitle">Виртуальная выставка к юбилею великого сатирика</p>
+            <button class="cta-button" onclick="scrollToSection('biography')">Начать экскурсию</button>
+        </div>
+    </header>
+
+    <!-- Навигация -->
+    <nav class="navigation">
+        <a href="#biography">Биография</a>
+        <a href="#works">Произведения</a>
+        <a href="#quotes">Цитаты</a>
+        <a href="#quiz">Тест</a>
+        <a href="#gallery">Галерея</a>
+    </nav>
+
+    <!-- Биография / Таймлайн -->
+    <section id="biography" class="section">
+        <h2>Временная линия жизни</h2>
+        <div class="timeline">
+            <div class="timeline-item" data-year="1826">
+                <div class="timeline-marker">1826</div>
+                <div class="timeline-content">
+                    <h3>Рождение</h3>
+                    <p>Михаил Евграфович Салтыков родился в селе Спас-Угол Тверской губернии в дворянской семье.</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-year="1848">
+                <div class="timeline-marker">1848</div>
+                <div class="timeline-content">
+                    <h3>Арест и ссылка</h3>
+                    <p>За публикацию повести «Запутанное дело» арестован и отправлен в ссылку в Вятку.</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-year="1868">
+                <div class="timeline-marker">1868</div>
+                <div class="timeline-content">
+                    <h3>«Отечественные записки»</h3>
+                    <p>Возглавил журнал «Отечественные записки», где публиковал свои главные сатирические произведения.</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-year="1889">
+                <div class="timeline-marker">1889</div>
+                <div class="timeline-content">
+                    <h3>Смерть</h3>
+                    <p>Скончался в Петербурге. Похоронен на Волковом кладбище рядом с Тургеневым.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Произведения -->
+    <section id="works" class="section">
+        <h2>Главные произведения</h2>
+        <div class="books-grid">
+            <div class="book-card" onclick="showBookModal('history')">
+                <div class="book-cover">
+                    <span class="book-title">История одного города</span>
+                </div>
+                <p class="book-year">1869–1870</p>
+            </div>
+            <div class="book-card" onclick="showBookModal('gospoda')">
+                <div class="book-cover">
+                    <span class="book-title">Господа Головлёвы</span>
+                </div>
+                <p class="book-year">1875–1880</p>
+            </div>
+            <div class="book-card" onclick="showBookModal('tales')">
+                <div class="book-cover">
+                    <span class="book-title">Сказки для детей</span>
+                </div>
+                <p class="book-year">1882–1886</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Цитаты -->
+    <section id="quotes" class="section">
+        <h2>Генератор цитат</h2>
+        <div class="quote-container">
+            <blockquote id="quote-display">
+                «Премудрый пискарь» — о страхе жить
+            </blockquote>
+            <button class="quote-button" onclick="generateQuote()">Следующая цитата</button>
+        </div>
+    </section>
+
+    <!-- Тест -->
+    <section id="quiz" class="section">
+        <h2>Какой вы герой Щедрина?</h2>
+        <div class="quiz-container">
+            <div id="quiz-question"></div>
+            <div id="quiz-options"></div>
+            <div id="quiz-result" class="hidden"></div>
+            <button id="quiz-next" class="quiz-button" onclick="nextQuestion()">Далее</button>
+            <button id="quiz-restart" class="quiz-button hidden" onclick="restartQuiz()">Пройти заново</button>
+        </div>
+    </section>
+
+    <!-- Галерея -->
+    <section id="gallery" class="section">
+        <h2>Галерея иллюстраций</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <div class="gallery-placeholder">Портрет писателя</div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-placeholder">Иллюстрации к сказкам</div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-placeholder">Карикатуры эпохи</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <p>Виртуальная выставка «Салтыков-Щедрин: Сатира на века»</p>
+        <p>Создано для GitHub Pages • 2026</p>
+    </footer>
+
+    <!-- Модальное окно для книг -->
+    <div id="book-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeBookModal()">&times;</span>
+            <h3 id="modal-title"></h3>
+            <p id="modal-description"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
