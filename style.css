@@ -15,14 +15,17 @@ body {
 /* Главный баннер */
 /* Главный баннер - ТОЛЬКО КАРТИНКА */
 .hero {
-    background-image: url('banner.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: #f5e6d3;
-    height: 500px;
-    min-height: 500px;
-    width: 600px;
+    height: 600px;
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+.banner-image {
+    height: 100%;
+    width: auto;
+    display: block;
     margin: 0 auto;
 }
 
@@ -88,6 +91,22 @@ body {
 
 .navigation a:hover {
     color: #d4af37;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    .hero {
+        height: 300px;
+    }
+    
+    .intro-text {
+        font-size: 2rem;
+    }
+    
+    .cta-button {
+        font-size: 1.5rem;
+        padding: 15px 40px;
+    }
 }
 /* Секции */
 .section {
