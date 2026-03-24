@@ -4,146 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Салтыков-Щедрин: Сатира на века</title>
-   <link rel="stylesheet" href="style.css?v=2">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Georgia&display=swap" rel="stylesheet">
+    <style>
+        /* Сброс отступов */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: Georgia, serif;
+            background: #f5e6d3;
+            color: #3d2817;
+            text-align: center;
+        }
+        
+        /* Баннер — высота 600, ширина авто */
+        .hero {
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f5e6d3;
+            overflow: hidden;
+        }
+        
+        .hero img {
+            height: 100%;
+            width: auto;
+            display: block;
+        }
+        
+        /* Текст и кнопка */
+        .intro-section {
+            background: #f5e6d3;
+            padding: 50px 20px;
+            border-bottom: 3px solid #8b4513;
+        }
+        
+        .intro-text {
+            font-size: 3rem;
+            font-style: italic;
+            color: #5d2e0c;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+        
+        .cta-button {
+            background: #8b4513;
+            color: #f5e6d3;
+            border: none;
+            padding: 20px 60px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        
+        .cta-button:hover {
+            background: #d4af37;
+            color: #3d2817;
+        }
+        
+        /* Навигация */
+        .navigation {
+            background: #3d2817;
+            padding: 15px;
+        }
+        
+        .navigation a {
+            color: #f5e6d3;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1rem;
+        }
+    </style>
 </head>
 <body>
-    <!-- Главный баннер -->
-  <!-- Главный баннер - только картинка -->
-<header class="hero">
-    <img src="banner.jpg" alt="Салтыков-Щедрин" class="banner-image">
-</header>
 
-<!-- Описание и кнопка -->
-<!-- Вводный блок -->
-<!-- Вводный блок -->
-<div class="intro-section">
-    <p class="intro-text">Виртуальная выставка к юбилею великого сатирика</p>
-    <button class="cta-button" onclick="scrollToSection('biography')">Начать экскурсию</button>
-</div>
+    <!-- Баннер -->
+    <header class="hero">
+        <img src="banner.jpg" alt="Баннер" onerror="this.style.display='none'; document.querySelector('.hero').innerHTML='<p style=\'color:red; font-size:1.5rem\'>❌ Картинка не загрузилась. Проверьте имя файла!</p>'">
+    </header>
+
+    <!-- Текст -->
+    <div class="intro-section">
+        <p class="intro-text">Виртуальная выставка к юбилею великого сатирика</p>
+        <button class="cta-button" onclick="document.querySelector('#biography').scrollIntoView({behavior:'smooth'})">Начать экскурсию</button>
+    </div>
+
     <!-- Навигация -->
     <nav class="navigation">
         <a href="#biography">Биография</a>
         <a href="#works">Произведения</a>
         <a href="#quotes">Цитаты</a>
         <a href="#quiz">Тест</a>
-        <a href="#gallery">Галерея</a>
     </nav>
 
-    <!-- Биография / Таймлайн -->
-    <section id="biography" class="section">
-        <h2>Временная линия жизни</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-marker">1826</div>
-                <div class="timeline-content">
-                    <h3>Рождение</h3>
-                    <p>Михаил Евграфович Салтыков родился в селе Спас-Угол Тверской губернии в дворянской семье.</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-marker">1848</div>
-                <div class="timeline-content">
-                    <h3>Арест и ссылка</h3>
-                    <p>За публикацию повести «Запутанное дело» арестован и отправлен в ссылку в Вятку.</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-marker">1868</div>
-                <div class="timeline-content">
-                    <h3>«Отечественные записки»</h3>
-                    <p>Возглавил журнал «Отечественные записки», где публиковал свои главные сатирические произведения.</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-marker">1889</div>
-                <div class="timeline-content">
-                    <h3>Смерть</h3>
-                    <p>Скончался в Петербурге. Похоронен на Волковом кладбище рядом с Тургеневым.</p>
-                </div>
-            </div>
-        </div>
+    <!-- Остальной контент (заглушка) -->
+    <section id="biography" style="padding:50px 20px;">
+        <h2>Биография</h2>
+        <p>Здесь будет контент...</p>
     </section>
 
-    <!-- Произведения -->
-    <section id="works" class="section">
-        <h2>Главные произведения</h2>
-        <div class="books-grid">
-            <div class="book-card">
-                <div class="book-cover">
-                    <span class="book-title">История одного города</span>
-                </div>
-                <p class="book-year">1869–1870</p>
-                <div class="book-description">
-                    <p>Сатирический роман о вымышленном городе Глупове и его правителях. Через гротеск и абсурд Щедрин показывает пороки российской государственности и общества.</p>
-                </div>
-            </div>
-            <div class="book-card">
-                <div class="book-cover">
-                    <span class="book-title">Господа Головлёвы</span>
-                </div>
-                <p class="book-year">1875–1880</p>
-                <div class="book-description">
-                    <p>Семейная хроника о вырождении дворянского рода. Центральная фигура — Иудушка Головлёв, ставший символом лицемерия и нравственной пустоты.</p>
-                </div>
-            </div>
-            <div class="book-card">
-                <div class="book-cover">
-                    <span class="book-title">Сказки для детей</span>
-                </div>
-                <p class="book-year">1882–1886</p>
-                <div class="book-description">
-                    <p>Цикл сатирических сказок, где под видом детских историй Щедрин критикует социальные пороки: страх жизни, бюрократию, лицемерие.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Цитаты -->
-    <section id="quotes" class="section">
-        <h2>Генератор цитат</h2>
-        <div class="quote-container">
-            <blockquote id="quote-display">
-                «Премудрый пискарь» — о страхе жить
-            </blockquote>
-            <button class="quote-button" onclick="generateQuote()">Следующая цитата</button>
-        </div>
-    </section>
-
-    <!-- Тест -->
-    <section id="quiz" class="section">
-        <h2>Какой вы герой Щедрина?</h2>
-        <div class="quiz-container">
-            <div id="quiz-question"></div>
-            <div id="quiz-options"></div>
-            <div id="quiz-result" class="hidden"></div>
-            <button id="quiz-next" class="quiz-button" onclick="nextQuestion()">Далее</button>
-            <button id="quiz-restart" class="quiz-button hidden" onclick="restartQuiz()">Пройти заново</button>
-        </div>
-    </section>
-
-    <!-- Галерея -->
-    <section id="gallery" class="section">
-        <h2>Галерея иллюстраций</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="banner.jpg" alt="Портрет писателя" class="gallery-image">
-            </div>
-            <div class="gallery-item">
-                <img src="books.jpg" alt="Иллюстрации к сказкам" class="gallery-image">
-            </div>
-            <div class="gallery-item">
-                <img src="timeline.jpg" alt="Карикатуры эпохи" class="gallery-image">
-            </div>
-        </div>
-    </section>
-
-    <!-- Футер -->
-    <footer class="footer">
-        <p>Виртуальная выставка «Салтыков-Щедрин: Сатира на века»</p>
-        <p>Создано для GitHub Pages • 2026</p>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
