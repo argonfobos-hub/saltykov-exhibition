@@ -15,41 +15,6 @@ function generateQuote() {
     document.getElementById('quote-display').textContent = `"${quotes[randomIndex]}"`;
 }
 
-// Модальное окно для книг
-const bookData = {
-    history: {
-        title: "История одного города",
-        description: "Сатирический роман о вымышленном городе Глупове и его правителях. Через гротеск и абсурд Щедрин показывает пороки российской государственности и общества."
-    },
-    gospoda: {
-        title: "Господа Головлёвы",
-        description: "Семейная хроника о вырождении дворянского рода. Центральная фигура — Иудушка Головлёв, ставший символом лицемерия и нравственной пустоты."
-    },
-    tales: {
-        title: "Сказки для детей изрядного возраста",
-        description: "Цикл сатирических сказок, где под видом детских историй Щедрин критикует социальные пороки: страх жизни, бюрократию, лицемерие."
-    }
-};
-
-function showBookModal(bookId) {
-    const modal = document.getElementById('book-modal');
-    document.getElementById('modal-title').textContent = bookData[bookId].title;
-    document.getElementById('modal-description').textContent = bookData[bookId].description;
-    modal.classList.remove('hidden');
-}
-
-function closeBookModal() {
-    document.getElementById('book-modal').classList.add('hidden');
-}
-
-// Закрытие модального окна по клику вне его
-window.onclick = function(event) {
-    const modal = document.getElementById('book-modal');
-    if (event.target === modal) {
-        closeBookModal();
-    }
-}
-
 // Тест: Какой вы герой Щедрина?
 const quizQuestions = [
     {
