@@ -99,9 +99,174 @@
 
     <!-- Остальной контент (заглушка) -->
     <section id="biography" style="padding:50px 20px;">
-        <h2>Биография</h2>
-        <p>Здесь будет контент...</p>
-    </section>
+        <!-- Биография -->
+<section id="biography" class="section">
+    <h2 class="section-title">Временная линия жизни</h2>
+    <p class="timeline-instruction">📌 Нажмите на год, чтобы увидеть подробности</p>
+    
+    <div class="timeline-horizontal">
+        <div class="timeline-line"></div>
+        
+        <div class="timeline-point" data-year="1826" onclick="openModal('modal-1826')">
+            <div class="point-marker">1826</div>
+        </div>
+        
+        <div class="timeline-point" data-year="1836" onclick="openModal('modal-1836')">
+            <div class="point-marker">1836</div>
+        </div>
+        
+        <div class="timeline-point" data-year="1841" onclick="openModal('modal-1841')">
+            <div class="point-marker">1841</div>
+        </div>
+        
+        <div class="timeline-point" data-year="1847" onclick="openModal('modal-1847')">
+            <div class="point-marker">1847</div>
+        </div>
+        
+        <div class="timeline-point" data-year="1848" onclick="openModal('modal-1848')">
+            <div class="point-marker">1848</div>
+        </div>
+        
+        <div class="timeline-point" data-year="1856" onclick="openModal('modal-1856')">
+            <div class="point-marker">1856</div>
+        </div>
+        
+        <div class="timeline-point" data-year="1863" onclick="openModal('modal-1863')">
+            <div class="point-marker">1863</div>
+        </div>
+        
+        <div class="timeline-point" data-year="1868" onclick="openModal('modal-1868')">
+            <div class="point-marker">1868</div>
+        </div>
+        
+        <div class="timeline-point" data-year="1869" onclick="openModal('modal-1869')">
+            <div class="point-marker">1869</div>
+        </div>
+        
+        <div class="timeline-point" data-year="1875" onclick="openModal('modal-1875')">
+            <div class="point-marker">1875</div>
+        </div>
+        
+        <div class="timeline-point" data-year="1884" onclick="openModal('modal-1884')">
+            <div class="point-marker">1884</div>
+        </div>
+        
+        <div class="timeline-point" data-year="1889" onclick="openModal('modal-1889')">
+            <div class="point-marker">1889</div>
+        </div>
+    </div>
+</section>
+
+<!-- Модальные окна (всплывающие) -->
+<div id="modal-1826" class="modal" onclick="closeModal(event, this)">
+    <div class="modal-content">
+        <span class="modal-close" onclick="closeModalBtn('modal-1826')">&times;</span>
+        <h3>1826 год</h3>
+        <p>15 (27) января – Родился в селе Спас-Угол в Тверской губернии в семье помещика.</p>
+    </div>
+</div>
+
+<div id="modal-1836" class="modal" onclick="closeModal(event, this)">
+    <div class="modal-content">
+        <span class="modal-close" onclick="closeModalBtn('modal-1836')">&times;</span>
+        <h3>1836–1844</h3>
+        <p>Учёба в Московском Дворянском институте, а затем с 1838 г. в Царскосельском (Александровском) лицее.</p>
+    </div>
+</div>
+
+<div id="modal-1841" class="modal" onclick="closeModal(event, this)">
+    <div class="modal-content">
+        <span class="modal-close" onclick="closeModalBtn('modal-1841')">&times;</span>
+        <h3>1841–1845</h3>
+        <p>Начало литературной деятельности, публикация первых стихотворений в журнале «Библиотека для чтения» и «Современник».</p>
+        <p><strong>Конец 1840-х:</strong> Участник кружка М.В. Петрашевского.</p>
+    </div>
+</div>
+
+<div id="modal-1847" class="modal" onclick="closeModal(event, this)">
+    <div class="modal-content">
+        <span class="modal-close" onclick="closeModalBtn('modal-1847')">&times;</span>
+        <h3>1847–1848</h3>
+        <p>Первые прозаические произведения: повести «Противоречия», «Запутанное дело» в журнале «Отечественные записки».</p>
+        <p><strong>Апрель 1848:</strong> Арест и ссылка в Вятку за «вредный образ мыслей».</p>
+    </div>
+</div>
+
+<div id="modal-1848" class="modal" onclick="closeModal(event, this)">
+    <div class="modal-content">
+        <span class="modal-close" onclick="closeModalBtn('modal-1848')">&times;</span>
+        <h3>1848–1855</h3>
+        <p>Годы ссылки, служба в Вятке старшим чиновником, советником губернского правления.</p>
+    </div>
+</div>
+
+<div id="modal-1856" class="modal" onclick="closeModal(event, this)">
+    <div class="modal-content">
+        <span class="modal-close" onclick="closeModalBtn('modal-1856')">&times;</span>
+        <h3>1856 год</h3>
+        <p>Возвращение в Петербург.</p>
+        <p>6 июня — Писатель обвенчался с Елизаветой Болтиной в Москве.</p>
+        <p>Публикация сатирического цикла «Губернские очерки» в журнале «Русский вестник» (под псевдонимом Н. Щедрин).</p>
+        <p><strong>1856–1862:</strong> Государственная служба в Министерстве внутренних дел — вице-губернатор в Рязани (1858 г.) и Твери (1860 г.). Салтыкова заставляют уйти в отставку, запрещены его очерки «Глуповское распутство» и «Каплуны».</p>
+    </div>
+</div>
+
+<div id="modal-1863" class="modal" onclick="closeModal(event, this)">
+    <div class="modal-content">
+        <span class="modal-close" onclick="closeModalBtn('modal-1863')">&times;</span>
+        <h3>1863–1874</h3>
+        <p>Работа в редакции журнала «Современник» (1863–1864).</p>
+        <p>«Помпадуры и помпадурши» (гротескно-сатирические образы и фантастические сюжеты).</p>
+        <p><strong>1865–1868:</strong> Председатель Казённой палаты в Пензе, Туле и Рязани; выход в отставку.</p>
+    </div>
+</div>
+
+<div id="modal-1868" class="modal" onclick="closeModal(event, this)">
+    <div class="modal-content">
+        <span class="modal-close" onclick="closeModalBtn('modal-1868')">&times;</span>
+        <h3>1868–1884</h3>
+        <p>Один из редакторов журнала «Отечественные записки».</p>
+        <p>После смерти Н.А. Некрасова (1878 г.) – ответственный редактор.</p>
+        <p>Все свои произведения печатает только на страницах «Отечественных записок».</p>
+    </div>
+</div>
+
+<div id="modal-1869" class="modal" onclick="closeModal(event, this)">
+    <div class="modal-content">
+        <span class="modal-close" onclick="closeModalBtn('modal-1869')">&times;</span>
+        <h3>1869–1886</h3>
+        <p><strong>1869–1870:</strong> Публикация «Истории одного города» (характер отношений народа и власти).</p>
+        <p><strong>1875–1880:</strong> Работа над романом «Господа Головлёвы».</p>
+        <p><strong>1877–1883:</strong> Сатирический роман «Современная идиллия».</p>
+        <p><strong>1880-е:</strong> Напечатан очерк «За рубежом» (своеобразное «сатирическое путешествие по Европе»).</p>
+        <p>Завершены «Сказки» (сплав двух жанров: сказки и басни), их публикация в «Русских ведомостях»; запрещение цензурой издания щедринских сказок.</p>
+    </div>
+</div>
+
+<div id="modal-1875" class="modal" onclick="closeModal(event, this)">
+    <div class="modal-content">
+        <span class="modal-close" onclick="closeModalBtn('modal-1875')">&times;</span>
+        <h3>1875–1880</h3>
+        <p>Работа над романом «Господа Головлёвы».</p>
+    </div>
+</div>
+
+<div id="modal-1884" class="modal" onclick="closeModal(event, this)">
+    <div class="modal-content">
+        <span class="modal-close" onclick="closeModalBtn('modal-1884')">&times;</span>
+        <h3>1884 год</h3>
+        <p>Закрытие «Отечественных записок» (до этого — цензурное изъятие из журнала сказок «Премудрый пискарь» и «Самоотверженный заяц»).</p>
+    </div>
+</div>
+
+<div id="modal-1889" class="modal" onclick="closeModal(event, this)">
+    <div class="modal-content">
+        <span class="modal-close" onclick="closeModalBtn('modal-1889')">&times;</span>
+        <h3>1887–1889</h3>
+        <p>«Пошехонская старина. Житие Никанора Затрапезного, пошехонского дворянина».</p>
+        <p><strong>28 апреля (10 мая) 1889:</strong> Умер в Петербурге, похоронен на Литераторских мостках Волкова кладбища.</p>
+    </div>
+</div>
 
 </body>
 </html>
