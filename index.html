@@ -4,460 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Салтыков-Щедрин: Сатира на века</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            font-family: Georgia, serif;
-            background: #f5e6d3;
-            color: #3d2817;
-            text-align: center;
-        }
-        
-        /* Баннер */
-        .hero {
-            height: 600px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #f5e6d3;
-            overflow: hidden;
-        }
-        
-        .hero img {
-            height: 100%;
-            width: auto;
-            display: block;
-        }
-        
-        /* Текст и кнопка */
-        .intro-section {
-            background: #f5e6d3;
-            padding: 50px 20px;
-            border-bottom: 3px solid #8b4513;
-        }
-        
-        .intro-text {
-            font-size: 3rem;
-            font-style: italic;
-            color: #5d2e0c;
-            margin-bottom: 30px;
-            font-weight: bold;
-        }
-        
-        .cta-button {
-            background: #8b4513;
-            color: #f5e6d3;
-            border: none;
-            padding: 20px 60px;
-            font-size: 1.8rem;
-            cursor: pointer;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-        
-        .cta-button:hover {
-            background: #d4af37;
-            color: #3d2817;
-        }
-        
-        /* Навигация */
-        .navigation {
-            background: #3d2817;
-            padding: 15px;
-        }
-        
-        .navigation a {
-            color: #f5e6d3;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.1rem;
-        }
-        
-        /* ===== БИОГРАФИЯ ===== */
-        .section {
-            padding: 60px 20px;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        
-        .section-title {
-            font-family: Georgia, serif;
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 20px;
-            color: #8b4513;
-        }
-        
-        .timeline-instruction {
-            text-align: center;
-            font-style: italic;
-            color: #8b4513;
-            margin-bottom: 30px;
-        }
-        
-        /* ===== ТАЙМЛАЙН ===== */
-        .timeline-wrapper {
-            background: #fff8f0;
-            border-radius: 10px;
-            border: 2px solid #d4af37;
-            padding: 20px;
-        }
-        
-        .row-label {
-            text-align: center;
-            font-size: 1.2rem;
-            color: #8b4513;
-            font-weight: bold;
-            margin: 15px 0;
-            padding: 8px;
-            background: #d4af37;
-            border-radius: 5px;
-        }
-        
-        .timeline-row {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            gap: 5px;
-            padding: 40px 10px;
-            position: relative;
-        }
-        
-        /* Горизонтальная линия */
-        .timeline-row::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 20px;
-            right: 20px;
-            height: 3px;
-            background: linear-gradient(90deg, #8b4513, #d4af37, #8b4513);
-            transform: translateY(-50%);
-            z-index: 1;
-        }
-        
-        .timeline-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .timeline-item:hover {
-            transform: scale(1.1);
-        }
-        
-        /* Карточка СВЕРХУ */
-        .date-box-top {
-            background: #fff;
-            border: 2px solid #8b4513;
-            border-radius: 6px;
-            padding: 6px 8px;
-            width: 75px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-            margin-bottom: 35px;
-        }
-        
-        /* Карточка СНИЗУ */
-        .date-box-bottom {
-            background: #fff;
-            border: 2px solid #8b4513;
-            border-radius: 6px;
-            padding: 6px 8px;
-            width: 75px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-            margin-top: 35px;
-        }
-        
-        .date-year {
-            font-weight: bold;
-            color: #8b4513;
-            font-size: 0.7rem;
-            line-height: 1.1;
-        }
-        
-        .date-label {
-            font-size: 0.55rem;
-            color: #5d2e0c;
-            margin-top: 3px;
-            line-height: 1.1;
-        }
-        
-        /* Кружок с годом */
-        .year-dot {
-            width: 42px;
-            height: 42px;
-            background: linear-gradient(135deg, #d4af37, #f5e6d3);
-            border: 3px solid #8b4513;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            color: #3d2817;
-            font-size: 0.65rem;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-        }
-        
-        .timeline-item:hover .year-dot {
-            background: linear-gradient(135deg, #8b4513, #d4af37);
-            color: #f5e6d3;
-        }
-        
-        /* Линия-соединитель */
-        .connector {
-            width: 2px;
-            height: 18px;
-            background: #8b4513;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        
-        .connector-top {
-            bottom: 50%;
-            margin-bottom: 1px;
-        }
-        
-        .connector-bottom {
-            top: 50%;
-            margin-top: 1px;
-        }
-            </div>
-</section>
-
-<!-- ===== ПРОИЗВЕДЕНИЯ ===== -->
-<section id="works" class="section">
-    <h2 class="section-title">Главные произведения</h2>
-    <p class="section-subtitle">Кликните на книгу, чтобы узнать подробности</p>
-    
-    <div class="books-grid">
-        <!-- Книга 1 -->
-        <div class="book-card" onclick="openBookModal('book-1')">
-            <div class="book-cover">
-                <span class="book-title">История одного города</span>
-            </div>
-            <div class="book-year">1869–1870</div>
-            <div class="book-preview">Сатирический роман о вымышленном городе Глупове</div>
-        </div>
-        
-        <!-- Книга 2 -->
-        <div class="book-card" onclick="openBookModal('book-2')">
-            <div class="book-cover">
-                <span class="book-title">Господа Головлёвы</span>
-            </div>
-            <div class="book-year">1875–1880</div>
-            <div class="book-preview">Семейная хроника о вырождении дворянского рода</div>
-        </div>
-        
-        <!-- Книга 3 -->
-        <div class="book-card" onclick="openBookModal('book-3')">
-            <div class="book-cover">
-                <span class="book-title">Сказки</span>
-            </div>
-            <div class="book-year">1869–1886</div>
-            <div class="book-preview">«Премудрый пискарь», «Медведь на воеводстве»</div>
-        </div>
-        
-        <!-- Книга 4 -->
-        <div class="book-card" onclick="openBookModal('book-4')">
-            <div class="book-cover">
-                <span class="book-title">Губернские очерки</span>
-            </div>
-            <div class="book-year">1856–1857</div>
-            <div class="book-preview">Цикл очерков о провинциальной жизни</div>
-        </div>
-        
-        <!-- Книга 5 -->
-        <div class="book-card" onclick="openBookModal('book-5')">
-            <div class="book-cover">
-                <span class="book-title">Помпадуры и помпадурши</span>
-            </div>
-            <div class="book-year">1863–1874</div>
-            <div class="book-preview">Гротескно-сатирические образы чиновников</div>
-        </div>
-        
-        <!-- Книга 6 -->
-        <div class="book-card" onclick="openBookModal('book-6')">
-            <div class="book-cover">
-                <span class="book-title">Пошехонская старина</span>
-            </div>
-            <div class="book-year">1887–1889</div>
-            <div class="book-preview">Последнее произведение о крепостной деревне</div>
-        </div>
-    </div>
-</section>
-
-<!-- Модальные окна для книг -->
-<div id="book-1" class="modal" onclick="closeBookModal(event, this)">
-    <div class="modal-content book-modal">
-        <span class="modal-close" onclick="closeBookModalBtn('book-1')">&times;</span>
-        <h3>История одного города</h3>
-        <p class="book-years">1869–1870</p>
-        <p><strong>Жанр:</strong> Сатирический роман</p>
-        <p>История вымышленного города Глупова и его правителей. Через гротеск и абсурд Щедрин показывает пороки российской государственной системы.</p>
-    </div>
-</div>
-
-<div id="book-2" class="modal" onclick="closeBookModal(event, this)">
-    <div class="modal-content book-modal">
-        <span class="modal-close" onclick="closeBookModalBtn('book-2')">&times;</span>
-        <h3>Господа Головлёвы</h3>
-        <p class="book-years">1875–1880</p>
-        <p><strong>Жанр:</strong> Семейная хроника</p>
-        <p>История вырождения дворянского рода Головлёвых. Центральная фигура — Иудушка, ставший символом лицемерия.</p>
-    </div>
-</div>
-
-<div id="book-3" class="modal" onclick="closeBookModal(event, this)">
-    <div class="modal-content book-modal">
-        <span class="modal-close" onclick="closeBookModalBtn('book-3')">&times;</span>
-        <h3>Сказки для детей изрядного возраста</h3>
-        <p class="book-years">1869–1886</p>
-        <p><strong>Жанр:</strong> Сатирические сказки</p>
-        <p>«Премудрый пискарь», «Медведь на воеводстве», «Карась-идеалист» и другие.</p>
-    </div>
-</div>
-
-<div id="book-4" class="modal" onclick="closeBookModal(event, this)">
-    <div class="modal-content book-modal">
-        <span class="modal-close" onclick="closeBookModalBtn('book-4')">&times;</span>
-        <h3>Губернские очерки</h3>
-        <p class="book-years">1856–1857</p>
-        <p><strong>Жанр:</strong> Очерки</p>
-        <p>Цикл очерков о провинциальной жизни, опубликованный под псевдонимом Н. Щедрин.</p>
-    </div>
-</div>
-
-<div id="book-5" class="modal" onclick="closeBookModal(event, this)">
-    <div class="modal-content book-modal">
-        <span class="modal-close" onclick="closeBookModalBtn('book-5')">&times;</span>
-        <h3>Помпадуры и помпадурши</h3>
-        <p class="book-years">1863–1874</p>
-        <p><strong>Жанр:</strong> Сатирические очерки</p>
-        <p>Гротескно-сатирические образы губернаторов и их жён.</p>
-    </div>
-</div>
-
-<div id="book-6" class="modal" onclick="closeBookModal(event, this)">
-    <div class="modal-content book-modal">
-        <span class="modal-close" onclick="closeBookModalBtn('book-6')">&times;</span>
-        <h3>Пошехонская старина</h3>
-        <p class="book-years">1887–1889</p>
-        <p><strong>Жанр:</strong> Автобиографическая повесть</p>
-        <p>Последнее произведение Щедрина. Воспоминания о детстве, жизнь крепостной деревни.</p>
-    </div>
-</div>
-        /* ===== МОДАЛЬНЫЕ ОКНА ===== */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(61, 40, 23, 0.85);
-            z-index: 1000;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-        
-        .modal.active {
-            display: flex;
-        }
-        
-        .modal-content {
-            background: #f5e6d3;
-            padding: 30px;
-            border-radius: 15px;
-            max-width: 650px;
-            width: 100%;
-            max-height: 80vh;
-            overflow-y: auto;
-            position: relative;
-            border: 4px solid #8b4513;
-        }
-        
-        .modal-close {
-            position: absolute;
-            top: 10px;
-            right: 15px;
-            font-size: 2.5rem;
-            color: #8b4513;
-            cursor: pointer;
-            line-height: 1;
-        }
-        
-        .modal-close:hover {
-            color: #d4af37;
-        }
-        
-        .modal-content h3 {
-            color: #8b4513;
-            font-size: 1.5rem;
-            margin-bottom: 18px;
-            border-bottom: 3px solid #d4af37;
-            padding-bottom: 10px;
-        }
-        
-        .modal-content p {
-            color: #5d2e0c;
-            line-height: 1.7;
-            margin-bottom: 10px;
-            font-size: 1rem;
-            text-align: left;
-        }
-        
-        /* Футер */
-        .footer {
-            background: #3d2817;
-            color: #f5e6d3;
-            text-align: center;
-            padding: 30px;
-            margin-top: 50px;
-        }
-        
-        /* Адаптивность */
-        @media (max-width: 1024px) {
-            .timeline-row {
-                gap: 3px;
-            }
-            
-            .date-box-top, .date-box-bottom {
-                width: 65px;
-                padding: 5px 6px;
-            }
-            
-            .year-dot {
-                width: 38px;
-                height: 38px;
-                font-size: 0.6rem;
-            }
-            
-            .date-year {
-                font-size: 0.65rem;
-            }
-            
-            .date-label {
-                font-size: 0.5rem;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .timeline-row {
-                grid-template-columns: repeat(6, 1fr);
-                gap: 8px;
-            }
-            
-            .intro-text {
-                font-size: 2rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -712,7 +259,90 @@
         </div>
     </section>
 
-    <!-- Модальные окна (24 штуки) -->
+    <!-- Произведения -->
+    <section id="works" class="section">
+        <h2 class="section-title">Главные произведения</h2>
+        <p class="section-subtitle">Кликните на книгу, чтобы узнать подробности</p>
+        
+        <div class="books-grid">
+            <div class="book-card" onclick="openBookModal('book-1')">
+                <div class="book-cover">
+                    <span class="book-title">История одного города</span>
+                </div>
+                <div class="book-year">1869–1870</div>
+                <div class="book-preview">Сатирический роман о вымышленном городе Глупове</div>
+            </div>
+            
+            <div class="book-card" onclick="openBookModal('book-2')">
+                <div class="book-cover">
+                    <span class="book-title">Господа Головлёвы</span>
+                </div>
+                <div class="book-year">1875–1880</div>
+                <div class="book-preview">Семейная хроника о вырождении дворянского рода</div>
+            </div>
+            
+            <div class="book-card" onclick="openBookModal('book-3')">
+                <div class="book-cover">
+                    <span class="book-title">Сказки</span>
+                </div>
+                <div class="book-year">1869–1886</div>
+                <div class="book-preview">«Премудрый пискарь», «Медведь на воеводстве»</div>
+            </div>
+            
+            <div class="book-card" onclick="openBookModal('book-4')">
+                <div class="book-cover">
+                    <span class="book-title">Губернские очерки</span>
+                </div>
+                <div class="book-year">1856–1857</div>
+                <div class="book-preview">Цикл очерков о провинциальной жизни</div>
+            </div>
+            
+            <div class="book-card" onclick="openBookModal('book-5')">
+                <div class="book-cover">
+                    <span class="book-title">Помпадуры и помпадурши</span>
+                </div>
+                <div class="book-year">1863–1874</div>
+                <div class="book-preview">Гротескно-сатирические образы чиновников</div>
+            </div>
+            
+            <div class="book-card" onclick="openBookModal('book-6')">
+                <div class="book-cover">
+                    <span class="book-title">Пошехонская старина</span>
+                </div>
+                <div class="book-year">1887–1889</div>
+                <div class="book-preview">Последнее произведение о крепостной деревне</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Цитаты -->
+    <section id="quotes" class="section">
+        <h2 class="section-title">Генератор цитат</h2>
+        <div class="quote-container">
+            <blockquote id="quote-display">«Премудрый пискарь» — о страхе жить</blockquote>
+            <button class="quote-button" onclick="generateQuote()">Следующая цитата</button>
+        </div>
+    </section>
+
+    <!-- Тест -->
+    <section id="quiz" class="section">
+        <h2 class="section-title">Какой вы герой Щедрина?</h2>
+        <div class="quiz-container">
+            <div id="quiz-question"></div>
+            <div id="quiz-options"></div>
+            <div id="quiz-result" class="hidden"></div>
+            <button id="quiz-next" class="quiz-button hidden" onclick="nextQuestion()">Далее</button>
+            <button id="quiz-restart" class="quiz-button hidden" onclick="restartQuiz()">Пройти заново</button>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <p>Виртуальная выставка «Салтыков-Щедрин: Сатира на века»</p>
+        <p>2026</p>
+    </footer>
+
+    <!-- Модальные окна таймлайна (24 шт) -->
     <div id="modal-1826" class="modal" onclick="closeModal(event, this)">
         <div class="modal-content">
             <span class="modal-close" onclick="closeModalBtn('modal-1826')">&times;</span>
@@ -733,7 +363,7 @@
         <div class="modal-content">
             <span class="modal-close" onclick="closeModalBtn('modal-1838')">&times;</span>
             <h3>1838 год</h3>
-            <p>Перевод в Царскосельский (Александровский) лицей. Знакомство с литературной средой.</p>
+            <p>Перевод в Царскосельский (Александровский) лицей.</p>
         </div>
     </div>
 
@@ -741,7 +371,7 @@
         <div class="modal-content">
             <span class="modal-close" onclick="closeModalBtn('modal-1841')">&times;</span>
             <h3>1841–1845</h3>
-            <p>Начало литературной деятельности. Публикация первых стихотворений в журнале «Библиотека для чтения» и «Современник».</p>
+            <p>Начало литературной деятельности. Публикация первых стихотворений.</p>
         </div>
     </div>
 
@@ -749,7 +379,7 @@
         <div class="modal-content">
             <span class="modal-close" onclick="closeModalBtn('modal-1840e')">&times;</span>
             <h3>Конец 1840-х</h3>
-            <p>Участие в кружке М.В. Петрашевского. Знакомство с передовыми общественными идеями.</p>
+            <p>Участие в кружке М.В. Петрашевского.</p>
         </div>
     </div>
 
@@ -757,7 +387,7 @@
         <div class="modal-content">
             <span class="modal-close" onclick="closeModalBtn('modal-1847')">&times;</span>
             <h3>1847–1848</h3>
-            <p>Первые прозаические произведения: повести «Противоречия», «Запутанное дело» в журнале «Отечественные записки».</p>
+            <p>Первые прозаические произведения: «Противоречия», «Запутанное дело».</p>
         </div>
     </div>
 
@@ -773,7 +403,7 @@
         <div class="modal-content">
             <span class="modal-close" onclick="closeModalBtn('modal-1848-55')">&times;</span>
             <h3>1848–1855</h3>
-            <p>Годы ссылки. Служба в Вятке старшим чиновником, советником губернского правления. Изучение провинциальной жизни.</p>
+            <p>Годы ссылки. Служба в Вятке старшим чиновником.</p>
         </div>
     </div>
 
@@ -781,7 +411,7 @@
         <div class="modal-content">
             <span class="modal-close" onclick="closeModalBtn('modal-1856')">&times;</span>
             <h3>1856 год</h3>
-            <p>Возвращение в Петербург после 8 лет ссылки. Возобновление литературной деятельности.</p>
+            <p>Возвращение в Петербург после 8 лет ссылки.</p>
         </div>
     </div>
 
@@ -789,7 +419,7 @@
         <div class="modal-content">
             <span class="modal-close" onclick="closeModalBtn('modal-1856jun')">&times;</span>
             <h3>6 июня 1856</h3>
-            <p>Писатель обвенчался с Елизаветой Болтиной в Москве.</p>
+            <p>Обвенчался с Елизаветой Болтиной в Москве.</p>
         </div>
     </div>
 
@@ -797,7 +427,7 @@
         <div class="modal-content">
             <span class="modal-close" onclick="closeModalBtn('modal-1856-57')">&times;</span>
             <h3>1856–1857</h3>
-            <p>Публикация сатирического цикла «Губернские очерки» в журнале «Русский вестник» под псевдонимом Н. Щедрин.</p>
+            <p>Публикация «Губернских очерков» под псевдонимом Н. Щедрин.</p>
         </div>
     </div>
 
@@ -805,7 +435,7 @@
         <div class="modal-content">
             <span class="modal-close" onclick="closeModalBtn('modal-1856-62')">&times;</span>
             <h3>1856–1862</h3>
-            <p>Государственная служба в Министерстве внутренних дел — вице-губернатор в Рязани (1858 г.) и Твери (1860 г.). Салтыкова заставляют уйти в отставку, запрещены его очерки «Глуповское распутство» и «Каплуны».</p>
+            <p>Служба вице-губернатором в Рязани и Твери.</p>
         </div>
     </div>
 
@@ -821,7 +451,7 @@
         <div class="modal-content">
             <span class="modal-close" onclick="closeModalBtn('modal-1863-74')">&times;</span>
             <h3>1863–1874</h3>
-            <p>«Помпадуры и помпадурши» — гротескно-сатирические образы и фантастические сюжеты.</p>
+            <p>«Помпадуры и помпадурши».</p>
         </div>
     </div>
 
@@ -829,7 +459,7 @@
         <div class="modal-content">
             <span class="modal-close" onclick="closeModalBtn('modal-1865-68')">&times;</span>
             <h3>1865–1868</h3>
-            <p>Председатель Казённой палаты в Пензе, Туле и Рязани. Выход в отставку.</p>
+            <p>Председатель Казённой палаты. Выход в отставку.</p>
         </div>
     </div>
 
@@ -837,7 +467,7 @@
         <div class="modal-content">
             <span class="modal-close" onclick="closeModalBtn('modal-1868-84')">&times;</span>
             <h3>1868–1884</h3>
-            <p>Один из редакторов журнала «Отечественные записки». После смерти Н.А. Некрасова (1878 г.) – ответственный редактор. Все свои произведения печатает только на страницах «Отечественных записок».</p>
+            <p>Редактор «Отечественных записок».</p>
         </div>
     </div>
 
@@ -845,7 +475,7 @@
         <div class="modal-content">
             <span class="modal-close" onclick="closeModalBtn('modal-1869-70')">&times;</span>
             <h3>1869–1870</h3>
-            <p>Публикация «Истории одного города» — сатира на характер отношений народа и власти.</p>
+            <p>Публикация «Истории одного города».</p>
         </div>
     </div>
 
@@ -853,7 +483,7 @@
         <div class="modal-content">
             <span class="modal-close" onclick="closeModalBtn('modal-1875-80')">&times;</span>
             <h3>1875–1880</h3>
-            <p>Работа над романом «Господа Головлёвы» — история вырождения дворянского рода.</p>
+            <p>Работа над романом «Господа Головлёвы».</p>
         </div>
     </div>
 
@@ -861,7 +491,7 @@
         <div class="modal-content">
             <span class="modal-close" onclick="closeModalBtn('modal-1877-83')">&times;</span>
             <h3>1877–1883</h3>
-            <p>Сатирический роман «Современная идиллия».</p>
+            <p>«Современная идиллия».</p>
         </div>
     </div>
 
@@ -869,7 +499,7 @@
         <div class="modal-content">
             <span class="modal-close" onclick="closeModalBtn('modal-1880e')">&times;</span>
             <h3>1880-е годы</h3>
-            <p>Напечатан очерк «За рубежом» — своеобразное «сатирическое путешествие по Европе».</p>
+            <p>Очерк «За рубежом».</p>
         </div>
     </div>
 
@@ -877,7 +507,7 @@
         <div class="modal-content">
             <span class="modal-close" onclick="closeModalBtn('modal-1884')">&times;</span>
             <h3>1884 год</h3>
-            <p>Закрытие «Отечественных записок». До этого — цензурное изъятие из журнала сказок «Премудрый пискарь» и «Самоотверженный заяц».</p>
+            <p>Закрытие «Отечественных записок».</p>
         </div>
     </div>
 
@@ -885,7 +515,7 @@
         <div class="modal-content">
             <span class="modal-close" onclick="closeModalBtn('modal-1869-86')">&times;</span>
             <h3>1869–1886</h3>
-            <p>Завершены «Сказки» — сплав двух жанров: сказки и басни. Публикация в «Русских ведомостях». Запрещение цензурой издания щедринских сказок.</p>
+            <p>«Сказки для детей изрядного возраста».</p>
         </div>
     </div>
 
@@ -893,7 +523,7 @@
         <div class="modal-content">
             <span class="modal-close" onclick="closeModalBtn('modal-1887-89')">&times;</span>
             <h3>1887–1889</h3>
-            <p>«Пошехонская старина. Житие Никанора Затрапезного, пошехонского дворянина».</p>
+            <p>«Пошехонская старина».</p>
         </div>
     </div>
 
@@ -901,105 +531,71 @@
         <div class="modal-content">
             <span class="modal-close" onclick="closeModalBtn('modal-1889')">&times;</span>
             <h3>1889 год</h3>
-            <p>28 апреля (10 мая) – Умер в Петербурге. Похоронен на Литераторских мостках Волкова кладбища.</p>
+            <p>28 апреля (10 мая) – Умер в Петербурге.</p>
         </div>
     </div>
 
-    <!-- Футер -->
-    <footer class="footer">
-        <p>Виртуальная выставка «Салтыков-Щедрин: Сатира на века»</p>
-        <p>2026</p>
-    </footer>
+    <!-- Модальные окна книг (6 шт) -->
+    <div id="book-1" class="modal" onclick="closeBookModal(event, this)">
+        <div class="modal-content book-modal">
+            <span class="modal-close" onclick="closeBookModalBtn('book-1')">&times;</span>
+            <h3>История одного города</h3>
+            <p class="book-years">1869–1870</p>
+            <p><strong>Жанр:</strong> Сатирический роман</p>
+            <p>История вымышленного города Глупова и его правителей.</p>
+        </div>
+    </div>
 
-    <script>
-        function openModal(modalId) {
-            document.getElementById(modalId).classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-        
-        function closeModal(event, modal) {
-            if (event.target === modal) {
-                modal.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            }
-        }
-        
-        function closeModalBtn(modalId) {
-            document.getElementById(modalId).classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
-        
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                const activeModal = document.querySelector('.modal.active');
-                if (activeModal) {
-                    activeModal.classList.remove('active');
-                    document.body.style.overflow = 'auto';
-                }
-            }
-        });
-    </script>
+    <div id="book-2" class="modal" onclick="closeBookModal(event, this)">
+        <div class="modal-content book-modal">
+            <span class="modal-close" onclick="closeBookModalBtn('book-2')">&times;</span>
+            <h3>Господа Головлёвы</h3>
+            <p class="book-years">1875–1880</p>
+            <p><strong>Жанр:</strong> Семейная хроника</p>
+            <p>История вырождения дворянского рода Головлёвых.</p>
+        </div>
+    </div>
+
+    <div id="book-3" class="modal" onclick="closeBookModal(event, this)">
+        <div class="modal-content book-modal">
+            <span class="modal-close" onclick="closeBookModalBtn('book-3')">&times;</span>
+            <h3>Сказки для детей изрядного возраста</h3>
+            <p class="book-years">1869–1886</p>
+            <p><strong>Жанр:</strong> Сатирические сказки</p>
+            <p>«Премудрый пискарь», «Медведь на воеводстве» и другие.</p>
+        </div>
+    </div>
+
+    <div id="book-4" class="modal" onclick="closeBookModal(event, this)">
+        <div class="modal-content book-modal">
+            <span class="modal-close" onclick="closeBookModalBtn('book-4')">&times;</span>
+            <h3>Губернские очерки</h3>
+            <p class="book-years">1856–1857</p>
+            <p><strong>Жанр:</strong> Очерки</p>
+            <p>Цикл очерков о провинциальной жизни.</p>
+        </div>
+    </div>
+
+    <div id="book-5" class="modal" onclick="closeBookModal(event, this)">
+        <div class="modal-content book-modal">
+            <span class="modal-close" onclick="closeBookModalBtn('book-5')">&times;</span>
+            <h3>Помпадуры и помпадурши</h3>
+            <p class="book-years">1863–1874</p>
+            <p><strong>Жанр:</strong> Сатирические очерки</p>
+            <p>Гротескно-сатирические образы губернаторов.</p>
+        </div>
+    </div>
+
+    <div id="book-6" class="modal" onclick="closeBookModal(event, this)">
+        <div class="modal-content book-modal">
+            <span class="modal-close" onclick="closeBookModalBtn('book-6')">&times;</span>
+            <h3>Пошехонская старина</h3>
+            <p class="book-years">1887–1889</p>
+            <p><strong>Жанр:</strong> Автобиографическая повесть</p>
+            <p>Воспоминания о детстве, жизнь крепостной деревни.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
-<!-- ===== ПРОИЗВЕДЕНИЯ ===== -->
-<!-- ===== ПРОИЗВЕДЕНИЯ ===== -->
-<section id="works" class="section">
-    <h2 class="section-title">Главные произведения</h2>
-    <p class="section-subtitle">Кликните на книгу, чтобы узнать подробности</p>
-    
-    <div class="books-grid">
-        <!-- Книга 1 -->
-        <div class="book-card" onclick="openBookModal('book-1')">
-            <div class="book-cover">
-                <img src="book-history.jpg" alt="История одного города" class="book-image" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'book-title\'>История одного города</span>'">
-            </div>
-            <div class="book-year">1869–1870</div>
-            <div class="book-preview">Сатирический роман о вымышленном городе Глупове</div>
-        </div>
-        
-        <!-- Книга 2 -->
-        <div class="book-card" onclick="openBookModal('book-2')">
-            <div class="book-cover">
-                <img src="book-golovlyovy.jpg" alt="Господа Головлёвы" class="book-image" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'book-title\'>Господа Головлёвы</span>'">
-            </div>
-            <div class="book-year">1875–1880</div>
-            <div class="book-preview">Семейная хроника о вырождении дворянского рода</div>
-        </div>
-        
-        <!-- Книга 3 -->
-        <div class="book-card" onclick="openBookModal('book-3')">
-            <div class="book-cover">
-                <img src="book-tales.jpg" alt="Сказки" class="book-image" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'book-title\'>Сказки</span>'">
-            </div>
-            <div class="book-year">1869–1886</div>
-            <div class="book-preview">«Премудрый пискарь», «Медведь на воеводстве» и другие</div>
-        </div>
-        
-        <!-- Книга 4 -->
-        <div class="book-card" onclick="openBookModal('book-4')">
-            <div class="book-cover">
-                <img src="book-ocherki.jpg" alt="Губернские очерки" class="book-image" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'book-title\'>Губернские очерки</span>'">
-            </div>
-            <div class="book-year">1856–1857</div>
-            <div class="book-preview">Цикл очерков о провинциальной жизни</div>
-        </div>
-        
-        <!-- Книга 5 -->
-        <div class="book-card" onclick="openBookModal('book-5')">
-            <div class="book-cover">
-                <img src="book-pompadury.jpg" alt="Помпадуры и помпадурши" class="book-image" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'book-title\'>Помпадуры и помпадурши</span>'">
-            </div>
-            <div class="book-year">1863–1874</div>
-            <div class="book-preview">Гротескно-сатирические образы чиновников</div>
-        </div>
-        
-        <!-- Книга 6 -->
-        <div class="book-card" onclick="openBookModal('book-6')">
-            <div class="book-cover">
-                <img src="book-poshekhonie.jpg" alt="Пошехонская старина" class="book-image" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'book-title\'>Пошехонская старина</span>'">
-            </div>
-            <div class="book-year">1887–1889</div>
-            <div class="book-preview">Последнее произведение о жизни крепостной деревни</div>
-        </div>
-    </div>
-</section>
