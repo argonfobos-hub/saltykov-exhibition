@@ -226,7 +226,131 @@
             top: 50%;
             margin-top: 1px;
         }
+            </div>
+</section>
+
+<!-- ===== ПРОИЗВЕДЕНИЯ ===== -->
+<section id="works" class="section">
+    <h2 class="section-title">Главные произведения</h2>
+    <p class="section-subtitle">Кликните на книгу, чтобы узнать подробности</p>
+    
+    <div class="books-grid">
+        <!-- Книга 1 -->
+        <div class="book-card" onclick="openBookModal('book-1')">
+            <div class="book-cover">
+                <span class="book-title">История одного города</span>
+            </div>
+            <div class="book-year">1869–1870</div>
+            <div class="book-preview">Сатирический роман о вымышленном городе Глупове</div>
+        </div>
         
+        <!-- Книга 2 -->
+        <div class="book-card" onclick="openBookModal('book-2')">
+            <div class="book-cover">
+                <span class="book-title">Господа Головлёвы</span>
+            </div>
+            <div class="book-year">1875–1880</div>
+            <div class="book-preview">Семейная хроника о вырождении дворянского рода</div>
+        </div>
+        
+        <!-- Книга 3 -->
+        <div class="book-card" onclick="openBookModal('book-3')">
+            <div class="book-cover">
+                <span class="book-title">Сказки</span>
+            </div>
+            <div class="book-year">1869–1886</div>
+            <div class="book-preview">«Премудрый пискарь», «Медведь на воеводстве»</div>
+        </div>
+        
+        <!-- Книга 4 -->
+        <div class="book-card" onclick="openBookModal('book-4')">
+            <div class="book-cover">
+                <span class="book-title">Губернские очерки</span>
+            </div>
+            <div class="book-year">1856–1857</div>
+            <div class="book-preview">Цикл очерков о провинциальной жизни</div>
+        </div>
+        
+        <!-- Книга 5 -->
+        <div class="book-card" onclick="openBookModal('book-5')">
+            <div class="book-cover">
+                <span class="book-title">Помпадуры и помпадурши</span>
+            </div>
+            <div class="book-year">1863–1874</div>
+            <div class="book-preview">Гротескно-сатирические образы чиновников</div>
+        </div>
+        
+        <!-- Книга 6 -->
+        <div class="book-card" onclick="openBookModal('book-6')">
+            <div class="book-cover">
+                <span class="book-title">Пошехонская старина</span>
+            </div>
+            <div class="book-year">1887–1889</div>
+            <div class="book-preview">Последнее произведение о крепостной деревне</div>
+        </div>
+    </div>
+</section>
+
+<!-- Модальные окна для книг -->
+<div id="book-1" class="modal" onclick="closeBookModal(event, this)">
+    <div class="modal-content book-modal">
+        <span class="modal-close" onclick="closeBookModalBtn('book-1')">&times;</span>
+        <h3>История одного города</h3>
+        <p class="book-years">1869–1870</p>
+        <p><strong>Жанр:</strong> Сатирический роман</p>
+        <p>История вымышленного города Глупова и его правителей. Через гротеск и абсурд Щедрин показывает пороки российской государственной системы.</p>
+    </div>
+</div>
+
+<div id="book-2" class="modal" onclick="closeBookModal(event, this)">
+    <div class="modal-content book-modal">
+        <span class="modal-close" onclick="closeBookModalBtn('book-2')">&times;</span>
+        <h3>Господа Головлёвы</h3>
+        <p class="book-years">1875–1880</p>
+        <p><strong>Жанр:</strong> Семейная хроника</p>
+        <p>История вырождения дворянского рода Головлёвых. Центральная фигура — Иудушка, ставший символом лицемерия.</p>
+    </div>
+</div>
+
+<div id="book-3" class="modal" onclick="closeBookModal(event, this)">
+    <div class="modal-content book-modal">
+        <span class="modal-close" onclick="closeBookModalBtn('book-3')">&times;</span>
+        <h3>Сказки для детей изрядного возраста</h3>
+        <p class="book-years">1869–1886</p>
+        <p><strong>Жанр:</strong> Сатирические сказки</p>
+        <p>«Премудрый пискарь», «Медведь на воеводстве», «Карась-идеалист» и другие.</p>
+    </div>
+</div>
+
+<div id="book-4" class="modal" onclick="closeBookModal(event, this)">
+    <div class="modal-content book-modal">
+        <span class="modal-close" onclick="closeBookModalBtn('book-4')">&times;</span>
+        <h3>Губернские очерки</h3>
+        <p class="book-years">1856–1857</p>
+        <p><strong>Жанр:</strong> Очерки</p>
+        <p>Цикл очерков о провинциальной жизни, опубликованный под псевдонимом Н. Щедрин.</p>
+    </div>
+</div>
+
+<div id="book-5" class="modal" onclick="closeBookModal(event, this)">
+    <div class="modal-content book-modal">
+        <span class="modal-close" onclick="closeBookModalBtn('book-5')">&times;</span>
+        <h3>Помпадуры и помпадурши</h3>
+        <p class="book-years">1863–1874</p>
+        <p><strong>Жанр:</strong> Сатирические очерки</p>
+        <p>Гротескно-сатирические образы губернаторов и их жён.</p>
+    </div>
+</div>
+
+<div id="book-6" class="modal" onclick="closeBookModal(event, this)">
+    <div class="modal-content book-modal">
+        <span class="modal-close" onclick="closeBookModalBtn('book-6')">&times;</span>
+        <h3>Пошехонская старина</h3>
+        <p class="book-years">1887–1889</p>
+        <p><strong>Жанр:</strong> Автобиографическая повесть</p>
+        <p>Последнее произведение Щедрина. Воспоминания о детстве, жизнь крепостной деревни.</p>
+    </div>
+</div>
         /* ===== МОДАЛЬНЫЕ ОКНА ===== */
         .modal {
             display: none;
