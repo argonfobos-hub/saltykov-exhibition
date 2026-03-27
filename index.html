@@ -31,136 +31,36 @@
     <section id="biography" class="section">
         <h2 class="section-title">Временная линия жизни</h2>
         <p class="timeline-instruction">📌 Нажмите на год, чтобы увидеть подробности</p>
-        
         <div class="timeline-wrapper">
-            <!-- РЯД 1: 1826-1862 -->
             <div class="row-label">1826 – 1862</div>
             <div class="timeline-row">
-                <div class="timeline-item" onclick="openModal('modal-1826')">
-                    <div class="date-box-top"><div class="date-year">1826</div><div class="date-label">Рождение</div></div>
-                    <div class="connector connector-top"></div>
-                    <div class="year-dot">1826</div>
-                </div>
-                <div class="timeline-item" onclick="openModal('modal-1836')">
-                    <div class="year-dot">1836</div>
-                    <div class="connector connector-bottom"></div>
-                    <div class="date-box-bottom"><div class="date-year">1836</div><div class="date-label">Институт</div></div>
-                </div>
-                <div class="timeline-item" onclick="openModal('modal-1838')">
-                    <div class="date-box-top"><div class="date-year">1838</div><div class="date-label">Лицей</div></div>
-                    <div class="connector connector-top"></div>
-                    <div class="year-dot">1838</div>
-                </div>
-                <div class="timeline-item" onclick="openModal('modal-1841')">
-                    <div class="year-dot">1841</div>
-                    <div class="connector connector-bottom"></div>
-                    <div class="date-box-bottom"><div class="date-year">1841</div><div class="date-label">Стихи</div></div>
-                </div>
-                <div class="timeline-item" onclick="openModal('modal-1840e')">
-                    <div class="date-box-top"><div class="date-year">1840-е</div><div class="date-label">Петрашевский</div></div>
-                    <div class="connector connector-top"></div>
-                    <div class="year-dot">40-е</div>
-                </div>
-                <div class="timeline-item" onclick="openModal('modal-1847')">
-                    <div class="year-dot">1847</div>
-                    <div class="connector connector-bottom"></div>
-                    <div class="date-box-bottom"><div class="date-year">1847</div><div class="date-label">Проза</div></div>
-                </div>
-                <div class="timeline-item" onclick="openModal('modal-1848apr')">
-                    <div class="date-box-top"><div class="date-year">1848</div><div class="date-label">Арест</div></div>
-                    <div class="connector connector-top"></div>
-                    <div class="year-dot">1848</div>
-                </div>
-                <div class="timeline-item" onclick="openModal('modal-1848-55')">
-                    <div class="year-dot">48–55</div>
-                    <div class="connector connector-bottom"></div>
-                    <div class="date-box-bottom"><div class="date-year">1848–55</div><div class="date-label">Вятка</div></div>
-                </div>
-                <div class="timeline-item" onclick="openModal('modal-1856')">
-                    <div class="date-box-top"><div class="date-year">1856</div><div class="date-label">Петербург</div></div>
-                    <div class="connector connector-top"></div>
-                    <div class="year-dot">1856</div>
-                </div>
-                <div class="timeline-item" onclick="openModal('modal-1856jun')">
-                    <div class="year-dot">Июнь</div>
-                    <div class="connector connector-bottom"></div>
-                    <div class="date-box-bottom"><div class="date-year">1856</div><div class="date-label">Венчание</div></div>
-                </div>
-                <div class="timeline-item" onclick="openModal('modal-1856-57')">
-                    <div class="date-box-top"><div class="date-year">56–57</div><div class="date-label">Губ. очерки</div></div>
-                    <div class="connector connector-top"></div>
-                    <div class="year-dot">56–57</div>
-                </div>
-                <div class="timeline-item" onclick="openModal('modal-1856-62')">
-                    <div class="year-dot">56–62</div>
-                    <div class="connector connector-bottom"></div>
-                    <div class="date-box-bottom"><div class="date-year">1856–62</div><div class="date-label">МВД</div></div>
-                </div>
+                <div class="timeline-item" onclick="openModal('m1826')"><div class="date-box-top"><div class="date-year">1826</div><div class="date-label">Рождение</div></div><div class="connector connector-top"></div><div class="year-dot">1826</div></div>
+                <div class="timeline-item" onclick="openModal('m1836')"><div class="year-dot">1836</div><div class="connector connector-bottom"></div><div class="date-box-bottom"><div class="date-year">1836</div><div class="date-label">Институт</div></div></div>
+                <div class="timeline-item" onclick="openModal('m1838')"><div class="date-box-top"><div class="date-year">1838</div><div class="date-label">Лицей</div></div><div class="connector connector-top"></div><div class="year-dot">1838</div></div>
+                <div class="timeline-item" onclick="openModal('m1841')"><div class="year-dot">1841</div><div class="connector connector-bottom"></div><div class="date-box-bottom"><div class="date-year">1841</div><div class="date-label">Стихи</div></div></div>
+                <div class="timeline-item" onclick="openModal('m1840e')"><div class="date-box-top"><div class="date-year">1840-е</div><div class="date-label">Петрашевский</div></div><div class="connector connector-top"></div><div class="year-dot">40-е</div></div>
+                <div class="timeline-item" onclick="openModal('m1847')"><div class="year-dot">1847</div><div class="connector connector-bottom"></div><div class="date-box-bottom"><div class="date-year">1847</div><div class="date-label">Проза</div></div></div>
+                <div class="timeline-item" onclick="openModal('m1848a')"><div class="date-box-top"><div class="date-year">1848</div><div class="date-label">Арест</div></div><div class="connector connector-top"></div><div class="year-dot">1848</div></div>
+                <div class="timeline-item" onclick="openModal('m1848b')"><div class="year-dot">48–55</div><div class="connector connector-bottom"></div><div class="date-box-bottom"><div class="date-year">1848–55</div><div class="date-label">Вятка</div></div></div>
+                <div class="timeline-item" onclick="openModal('m1856a')"><div class="date-box-top"><div class="date-year">1856</div><div class="date-label">Петербург</div></div><div class="connector connector-top"></div><div class="year-dot">1856</div></div>
+                <div class="timeline-item" onclick="openModal('m1856b')"><div class="year-dot">Июнь</div><div class="connector connector-bottom"></div><div class="date-box-bottom"><div class="date-year">1856</div><div class="date-label">Венчание</div></div></div>
+                <div class="timeline-item" onclick="openModal('m1856c')"><div class="date-box-top"><div class="date-year">56–57</div><div class="date-label">Губ. очерки</div></div><div class="connector connector-top"></div><div class="year-dot">56–57</div></div>
+                <div class="timeline-item" onclick="openModal('m1856d')"><div class="year-dot">56–62</div><div class="connector connector-bottom"></div><div class="date-box-bottom"><div class="date-year">1856–62</div><div class="date-label">МВД</div></div></div>
             </div>
-            
-            <!-- РЯД 2: 1863-1889 -->
-            <div class="row-label" style="margin-top: 25px;">1863 – 1889</div>
+            <div class="row-label" style="margin-top:25px">1863 – 1889</div>
             <div class="timeline-row">
-                <div class="timeline-item" onclick="openModal('modal-1863-64')">
-                    <div class="date-box-top"><div class="date-year">1863–64</div><div class="date-label">Современник</div></div>
-                    <div class="connector connector-top"></div>
-                    <div class="year-dot">63–64</div>
-                </div>
-                <div class="timeline-item" onclick="openModal('modal-1863-74')">
-                    <div class="year-dot">63–74</div>
-                    <div class="connector connector-bottom"></div>
-                    <div class="date-box-bottom"><div class="date-year">1863–74</div><div class="date-label">Помпадуры</div></div>
-                </div>
-                <div class="timeline-item" onclick="openModal('modal-1865-68')">
-                    <div class="date-box-top"><div class="date-year">1865–68</div><div class="date-label">Казённая палата</div></div>
-                    <div class="connector connector-top"></div>
-                    <div class="year-dot">65–68</div>
-                </div>
-                <div class="timeline-item" onclick="openModal('modal-1868-84')">
-                    <div class="year-dot">68–84</div>
-                    <div class="connector connector-bottom"></div>
-                    <div class="date-box-bottom"><div class="date-year">1868–84</div><div class="date-label">Отеч. записки</div></div>
-                </div>
-                <div class="timeline-item" onclick="openModal('modal-1869-70')">
-                    <div class="date-box-top"><div class="date-year">1869–70</div><div class="date-label">История города</div></div>
-                    <div class="connector connector-top"></div>
-                    <div class="year-dot">69–70</div>
-                </div>
-                <div class="timeline-item" onclick="openModal('modal-1875-80')">
-                    <div class="year-dot">75–80</div>
-                    <div class="connector connector-bottom"></div>
-                    <div class="date-box-bottom"><div class="date-year">1875–80</div><div class="date-label">Головлёвы</div></div>
-                </div>
-                <div class="timeline-item" onclick="openModal('modal-1877-83')">
-                    <div class="date-box-top"><div class="date-year">1877–83</div><div class="date-label">Совр. идиллия</div></div>
-                    <div class="connector connector-top"></div>
-                    <div class="year-dot">77–83</div>
-                </div>
-                <div class="timeline-item" onclick="openModal('modal-1880e')">
-                    <div class="year-dot">80-е</div>
-                    <div class="connector connector-bottom"></div>
-                    <div class="date-box-bottom"><div class="date-year">1880-е</div><div class="date-label">За рубежом</div></div>
-                </div>
-                <div class="timeline-item" onclick="openModal('modal-1884')">
-                    <div class="date-box-top"><div class="date-year">1884</div><div class="date-label">Закрытие</div></div>
-                    <div class="connector connector-top"></div>
-                    <div class="year-dot">1884</div>
-                </div>
-                <div class="timeline-item" onclick="openModal('modal-1869-86')">
-                    <div class="year-dot">69–86</div>
-                    <div class="connector connector-bottom"></div>
-                    <div class="date-box-bottom"><div class="date-year">1869–86</div><div class="date-label">Сказки</div></div>
-                </div>
-                <div class="timeline-item" onclick="openModal('modal-1887-89')">
-                    <div class="date-box-top"><div class="date-year">1887–89</div><div class="date-label">Пошехонская</div></div>
-                    <div class="connector connector-top"></div>
-                    <div class="year-dot">87–89</div>
-                </div>
-                <div class="timeline-item" onclick="openModal('modal-1889')">
-                    <div class="year-dot">1889</div>
-                    <div class="connector connector-bottom"></div>
-                    <div class="date-box-bottom"><div class="date-year">1889</div><div class="date-label">Смерть</div></div>
-                </div>
+                <div class="timeline-item" onclick="openModal('m1863a')"><div class="date-box-top"><div class="date-year">1863–64</div><div class="date-label">Современник</div></div><div class="connector connector-top"></div><div class="year-dot">63–64</div></div>
+                <div class="timeline-item" onclick="openModal('m1863b')"><div class="year-dot">63–74</div><div class="connector connector-bottom"></div><div class="date-box-bottom"><div class="date-year">1863–74</div><div class="date-label">Помпадуры</div></div></div>
+                <div class="timeline-item" onclick="openModal('m1865')"><div class="date-box-top"><div class="date-year">1865–68</div><div class="date-label">Казённая палата</div></div><div class="connector connector-top"></div><div class="year-dot">65–68</div></div>
+                <div class="timeline-item" onclick="openModal('m1868')"><div class="year-dot">68–84</div><div class="connector connector-bottom"></div><div class="date-box-bottom"><div class="date-year">1868–84</div><div class="date-label">Отеч. записки</div></div></div>
+                <div class="timeline-item" onclick="openModal('m1869a')"><div class="date-box-top"><div class="date-year">1869–70</div><div class="date-label">История города</div></div><div class="connector connector-top"></div><div class="year-dot">69–70</div></div>
+                <div class="timeline-item" onclick="openModal('m1875')"><div class="year-dot">75–80</div><div class="connector connector-bottom"></div><div class="date-box-bottom"><div class="date-year">1875–80</div><div class="date-label">Головлёвы</div></div></div>
+                <div class="timeline-item" onclick="openModal('m1877')"><div class="date-box-top"><div class="date-year">1877–83</div><div class="date-label">Совр. идиллия</div></div><div class="connector connector-top"></div><div class="year-dot">77–83</div></div>
+                <div class="timeline-item" onclick="openModal('m1880')"><div class="year-dot">80-е</div><div class="connector connector-bottom"></div><div class="date-box-bottom"><div class="date-year">1880-е</div><div class="date-label">За рубежом</div></div></div>
+                <div class="timeline-item" onclick="openModal('m1884')"><div class="date-box-top"><div class="date-year">1884</div><div class="date-label">Закрытие</div></div><div class="connector connector-top"></div><div class="year-dot">1884</div></div>
+                <div class="timeline-item" onclick="openModal('m1869b')"><div class="year-dot">69–86</div><div class="connector connector-bottom"></div><div class="date-box-bottom"><div class="date-year">1869–86</div><div class="date-label">Сказки</div></div></div>
+                <div class="timeline-item" onclick="openModal('m1887')"><div class="date-box-top"><div class="date-year">1887–89</div><div class="date-label">Пошехонская</div></div><div class="connector connector-top"></div><div class="year-dot">87–89</div></div>
+                <div class="timeline-item" onclick="openModal('m1889')"><div class="year-dot">1889</div><div class="connector connector-bottom"></div><div class="date-box-bottom"><div class="date-year">1889</div><div class="date-label">Смерть</div></div></div>
             </div>
         </div>
     </section>
@@ -169,38 +69,13 @@
     <section id="works" class="section">
         <h2 class="section-title">Главные произведения</h2>
         <p class="section-subtitle">Кликните на книгу, чтобы узнать подробности</p>
-        
         <div class="books-grid">
-            <div class="book-card" onclick="openBookModal('book-1')">
-                <div class="book-cover"><span class="book-title">История одного города</span></div>
-                <div class="book-year">1869–1870</div>
-                <div class="book-preview">Сатирический роман о городе Глупове</div>
-            </div>
-            <div class="book-card" onclick="openBookModal('book-2')">
-                <div class="book-cover"><span class="book-title">Господа Головлёвы</span></div>
-                <div class="book-year">1875–1880</div>
-                <div class="book-preview">Семейная хроника о вырождении рода</div>
-            </div>
-            <div class="book-card" onclick="openBookModal('book-3')">
-                <div class="book-cover"><span class="book-title">Сказки</span></div>
-                <div class="book-year">1869–1886</div>
-                <div class="book-preview">«Премудрый пискарь» и другие</div>
-            </div>
-            <div class="book-card" onclick="openBookModal('book-4')">
-                <div class="book-cover"><span class="book-title">Губернские очерки</span></div>
-                <div class="book-year">1856–1857</div>
-                <div class="book-preview">Цикл очерков о провинции</div>
-            </div>
-            <div class="book-card" onclick="openBookModal('book-5')">
-                <div class="book-cover"><span class="book-title">Помпадуры и помпадурши</span></div>
-                <div class="book-year">1863–1874</div>
-                <div class="book-preview">Сатира на чиновников</div>
-            </div>
-            <div class="book-card" onclick="openBookModal('book-6')">
-                <div class="book-cover"><span class="book-title">Пошехонская старина</span></div>
-                <div class="book-year">1887–1889</div>
-                <div class="book-preview">Воспоминания о детстве</div>
-            </div>
+            <div class="book-card" onclick="openBook('b1')"><div class="book-cover"><span class="book-title">История одного города</span></div><div class="book-year">1869–1870</div><div class="book-preview">Сатирический роман о городе Глупове</div></div>
+            <div class="book-card" onclick="openBook('b2')"><div class="book-cover"><span class="book-title">Господа Головлёвы</span></div><div class="book-year">1875–1880</div><div class="book-preview">Семейная хроника о вырождении рода</div></div>
+            <div class="book-card" onclick="openBook('b3')"><div class="book-cover"><span class="book-title">Сказки</span></div><div class="book-year">1869–1886</div><div class="book-preview">«Премудрый пискарь» и другие</div></div>
+            <div class="book-card" onclick="openBook('b4')"><div class="book-cover"><span class="book-title">Губернские очерки</span></div><div class="book-year">1856–1857</div><div class="book-preview">Цикл очерков о провинции</div></div>
+            <div class="book-card" onclick="openBook('b5')"><div class="book-cover"><span class="book-title">Помпадуры и помпадурши</span></div><div class="book-year">1863–1874</div><div class="book-preview">Сатира на чиновников</div></div>
+            <div class="book-card" onclick="openBook('b6')"><div class="book-cover"><span class="book-title">Пошехонская старина</span></div><div class="book-year">1887–1889</div><div class="book-preview">Воспоминания о детстве</div></div>
         </div>
     </section>
 
@@ -209,7 +84,7 @@
         <h2 class="section-title">Генератор цитат</h2>
         <div class="quote-container">
             <blockquote id="quote-display">«Многие склонны путать понятия: «Отечество» и «Ваше превосходительство»</blockquote>
-            <button class="quote-button" onclick="generateQuote()">Следующая цитата</button>
+            <button class="quote-button" onclick="nextQuote()">Следующая цитата</button>
         </div>
     </section>
 
@@ -220,7 +95,6 @@
             <div id="quiz-question"></div>
             <div id="quiz-options"></div>
             <div id="quiz-result" class="hidden"></div>
-            <button id="quiz-next" class="quiz-button hidden" onclick="nextQuestion()">Далее</button>
             <button id="quiz-restart" class="quiz-button hidden" onclick="restartQuiz()">Пройти заново</button>
         </div>
     </section>
@@ -231,265 +105,101 @@
         <p>2026</p>
     </footer>
 
-    <!-- ===== МОДАЛЬНЫЕ ОКНА ТАЙМЛАЙНА (24 шт) ===== -->
-    <div id="modal-1826" class="modal" onclick="closeModal(event, this)"><div class="modal-content"><span class="modal-close" onclick="closeModalBtn('modal-1826')">&times;</span><h3>1826</h3><p>15 (27) января – Родился в селе Спас-Угол в Тверской губернии.</p></div></div>
-    <div id="modal-1836" class="modal" onclick="closeModal(event, this)"><div class="modal-content"><span class="modal-close" onclick="closeModalBtn('modal-1836')">&times;</span><h3>1836</h3><p>Начало учёбы в Московском Дворянском институте.</p></div></div>
-    <div id="modal-1838" class="modal" onclick="closeModal(event, this)"><div class="modal-content"><span class="modal-close" onclick="closeModalBtn('modal-1838')">&times;</span><h3>1838</h3><p>Перевод в Царскосельский (Александровский) лицей.</p></div></div>
-    <div id="modal-1841" class="modal" onclick="closeModal(event, this)"><div class="modal-content"><span class="modal-close" onclick="closeModalBtn('modal-1841')">&times;</span><h3>1841–1845</h3><p>Начало литературной деятельности. Первые стихотворения.</p></div></div>
-    <div id="modal-1840e" class="modal" onclick="closeModal(event, this)"><div class="modal-content"><span class="modal-close" onclick="closeModalBtn('modal-1840e')">&times;</span><h3>Конец 1840-х</h3><p>Участие в кружке М.В. Петрашевского.</p></div></div>
-    <div id="modal-1847" class="modal" onclick="closeModal(event, this)"><div class="modal-content"><span class="modal-close" onclick="closeModalBtn('modal-1847')">&times;</span><h3>1847–1848</h3><p>Первые прозаические произведения.</p></div></div>
-    <div id="modal-1848apr" class="modal" onclick="closeModal(event, this)"><div class="modal-content"><span class="modal-close" onclick="closeModalBtn('modal-1848apr')">&times;</span><h3>Апрель 1848</h3><p>Арест и ссылка в Вятку за «вредный образ мыслей».</p></div></div>
-    <div id="modal-1848-55" class="modal" onclick="closeModal(event, this)"><div class="modal-content"><span class="modal-close" onclick="closeModalBtn('modal-1848-55')">&times;</span><h3>1848–1855</h3><p>Годы ссылки. Служба в Вятке старшим чиновником.</p></div></div>
-    <div id="modal-1856" class="modal" onclick="closeModal(event, this)"><div class="modal-content"><span class="modal-close" onclick="closeModalBtn('modal-1856')">&times;</span><h3>1856</h3><p>Возвращение в Петербург после 8 лет ссылки.</p></div></div>
-    <div id="modal-1856jun" class="modal" onclick="closeModal(event, this)"><div class="modal-content"><span class="modal-close" onclick="closeModalBtn('modal-1856jun')">&times;</span><h3>Июнь 1856</h3><p>Обвенчался с Елизаветой Болтиной в Москве.</p></div></div>
-    <div id="modal-1856-57" class="modal" onclick="closeModal(event, this)"><div class="modal-content"><span class="modal-close" onclick="closeModalBtn('modal-1856-57')">&times;</span><h3>1856–1857</h3><p>«Губернские очерки» под псевдонимом Н. Щедрин.</p></div></div>
-    <div id="modal-1856-62" class="modal" onclick="closeModal(event, this)"><div class="modal-content"><span class="modal-close" onclick="closeModalBtn('modal-1856-62')">&times;</span><h3>1856–1862</h3><p>Служба вице-губернатором в Рязани и Твери.</p></div></div>
-    <div id="modal-1863-64" class="modal" onclick="closeModal(event, this)"><div class="modal-content"><span class="modal-close" onclick="closeModalBtn('modal-1863-64')">&times;</span><h3>1863–1864</h3><p>Работа в редакции журнала «Современник».</p></div></div>
-    <div id="modal-1863-74" class="modal" onclick="closeModal(event, this)"><div class="modal-content"><span class="modal-close" onclick="closeModalBtn('modal-1863-74')">&times;</span><h3>1863–1874</h3><p>«Помпадуры и помпадурши».</p></div></div>
-    <div id="modal-1865-68" class="modal" onclick="closeModal(event, this)"><div class="modal-content"><span class="modal-close" onclick="closeModalBtn('modal-1865-68')">&times;</span><h3>1865–1868</h3><p>Председатель Казённой палаты. Выход в отставку.</p></div></div>
-    <div id="modal-1868-84" class="modal" onclick="closeModal(event, this)"><div class="modal-content"><span class="modal-close" onclick="closeModalBtn('modal-1868-84')">&times;</span><h3>1868–1884</h3><p>Редактор «Отечественных записок».</p></div></div>
-    <div id="modal-1869-70" class="modal" onclick="closeModal(event, this)"><div class="modal-content"><span class="modal-close" onclick="closeModalBtn('modal-1869-70')">&times;</span><h3>1869–1870</h3><p>«История одного города».</p></div></div>
-    <div id="modal-1875-80" class="modal" onclick="closeModal(event, this)"><div class="modal-content"><span class="modal-close" onclick="closeModalBtn('modal-1875-80')">&times;</span><h3>1875–1880</h3><p>«Господа Головлёвы».</p></div></div>
-    <div id="modal-1877-83" class="modal" onclick="closeModal(event, this)"><div class="modal-content"><span class="modal-close" onclick="closeModalBtn('modal-1877-83')">&times;</span><h3>1877–1883</h3><p>«Современная идиллия».</p></div></div>
-    <div id="modal-1880e" class="modal" onclick="closeModal(event, this)"><div class="modal-content"><span class="modal-close" onclick="closeModalBtn('modal-1880e')">&times;</span><h3>1880-е</h3><p>Очерк «За рубежом».</p></div></div>
-    <div id="modal-1884" class="modal" onclick="closeModal(event, this)"><div class="modal-content"><span class="modal-close" onclick="closeModalBtn('modal-1884')">&times;</span><h3>1884</h3><p>Закрытие «Отечественных записок».</p></div></div>
-    <div id="modal-1869-86" class="modal" onclick="closeModal(event, this)"><div class="modal-content"><span class="modal-close" onclick="closeModalBtn('modal-1869-86')">&times;</span><h3>1869–1886</h3><p>«Сказки для детей изрядного возраста».</p></div></div>
-    <div id="modal-1887-89" class="modal" onclick="closeModal(event, this)"><div class="modal-content"><span class="modal-close" onclick="closeModalBtn('modal-1887-89')">&times;</span><h3>1887–1889</h3><p>«Пошехонская старина».</p></div></div>
-    <div id="modal-1889" class="modal" onclick="closeModal(event, this)"><div class="modal-content"><span class="modal-close" onclick="closeModalBtn('modal-1889')">&times;</span><h3>1889</h3><p>28 апреля (10 мая) – Умер в Петербурге.</p></div></div>
+    <!-- Модальные окна (сокращённо) -->
+    <div id="m1826" class="modal" onclick="closeM(event,this)"><div class="modal-content"><span class="modal-close" onclick="closeMbtn('m1826')">&times;</span><h3>1826</h3><p>15 (27) января – Родился в селе Спас-Угол.</p></div></div>
+    <div id="m1836" class="modal" onclick="closeM(event,this)"><div class="modal-content"><span class="modal-close" onclick="closeMbtn('m1836')">&times;</span><h3>1836</h3><p>Начало учёбы в Московском Дворянском институте.</p></div></div>
+    <div id="m1838" class="modal" onclick="closeM(event,this)"><div class="modal-content"><span class="modal-close" onclick="closeMbtn('m1838')">&times;</span><h3>1838</h3><p>Перевод в Царскосельский лицей.</p></div></div>
+    <div id="m1841" class="modal" onclick="closeM(event,this)"><div class="modal-content"><span class="modal-close" onclick="closeMbtn('m1841')">&times;</span><h3>1841–1845</h3><p>Начало литературной деятельности.</p></div></div>
+    <div id="m1840e" class="modal" onclick="closeM(event,this)"><div class="modal-content"><span class="modal-close" onclick="closeMbtn('m1840e')">&times;</span><h3>1840-е</h3><p>Участие в кружке Петрашевского.</p></div></div>
+    <div id="m1847" class="modal" onclick="closeM(event,this)"><div class="modal-content"><span class="modal-close" onclick="closeMbtn('m1847')">&times;</span><h3>1847–1848</h3><p>Первые прозаические произведения.</p></div></div>
+    <div id="m1848a" class="modal" onclick="closeM(event,this)"><div class="modal-content"><span class="modal-close" onclick="closeMbtn('m1848a')">&times;</span><h3>1848</h3><p>Арест и ссылка в Вятку.</p></div></div>
+    <div id="m1848b" class="modal" onclick="closeM(event,this)"><div class="modal-content"><span class="modal-close" onclick="closeMbtn('m1848b')">&times;</span><h3>1848–1855</h3><p>Годы ссылки в Вятке.</p></div></div>
+    <div id="m1856a" class="modal" onclick="closeM(event,this)"><div class="modal-content"><span class="modal-close" onclick="closeMbtn('m1856a')">&times;</span><h3>1856</h3><p>Возвращение в Петербург.</p></div></div>
+    <div id="m1856b" class="modal" onclick="closeM(event,this)"><div class="modal-content"><span class="modal-close" onclick="closeMbtn('m1856b')">&times;</span><h3>Июнь 1856</h3><p>Венчание с Елизаветой Болтиной.</p></div></div>
+    <div id="m1856c" class="modal" onclick="closeM(event,this)"><div class="modal-content"><span class="modal-close" onclick="closeMbtn('m1856c')">&times;</span><h3>1856–1857</h3><p>«Губернские очерки».</p></div></div>
+    <div id="m1856d" class="modal" onclick="closeM(event,this)"><div class="modal-content"><span class="modal-close" onclick="closeMbtn('m1856d')">&times;</span><h3>1856–1862</h3><p>Служба вице-губернатором.</p></div></div>
+    <div id="m1863a" class="modal" onclick="closeM(event,this)"><div class="modal-content"><span class="modal-close" onclick="closeMbtn('m1863a')">&times;</span><h3>1863–1864</h3><p>Работа в «Современнике».</p></div></div>
+    <div id="m1863b" class="modal" onclick="closeM(event,this)"><div class="modal-content"><span class="modal-close" onclick="closeMbtn('m1863b')">&times;</span><h3>1863–1874</h3><p>«Помпадуры и помпадурши».</p></div></div>
+    <div id="m1865" class="modal" onclick="closeM(event,this)"><div class="modal-content"><span class="modal-close" onclick="closeMbtn('m1865')">&times;</span><h3>1865–1868</h3><p>Председатель Казённой палаты.</p></div></div>
+    <div id="m1868" class="modal" onclick="closeM(event,this)"><div class="modal-content"><span class="modal-close" onclick="closeMbtn('m1868')">&times;</span><h3>1868–1884</h3><p>Редактор «Отечественных записок».</p></div></div>
+    <div id="m1869a" class="modal" onclick="closeM(event,this)"><div class="modal-content"><span class="modal-close" onclick="closeMbtn('m1869a')">&times;</span><h3>1869–1870</h3><p>«История одного города».</p></div></div>
+    <div id="m1875" class="modal" onclick="closeM(event,this)"><div class="modal-content"><span class="modal-close" onclick="closeMbtn('m1875')">&times;</span><h3>1875–1880</h3><p>«Господа Головлёвы».</p></div></div>
+    <div id="m1877" class="modal" onclick="closeM(event,this)"><div class="modal-content"><span class="modal-close" onclick="closeMbtn('m1877')">&times;</span><h3>1877–1883</h3><p>«Современная идиллия».</p></div></div>
+    <div id="m1880" class="modal" onclick="closeM(event,this)"><div class="modal-content"><span class="modal-close" onclick="closeMbtn('m1880')">&times;</span><h3>1880-е</h3><p>«За рубежом».</p></div></div>
+    <div id="m1884" class="modal" onclick="closeM(event,this)"><div class="modal-content"><span class="modal-close" onclick="closeMbtn('m1884')">&times;</span><h3>1884</h3><p>Закрытие «Отечественных записок».</p></div></div>
+    <div id="m1869b" class="modal" onclick="closeM(event,this)"><div class="modal-content"><span class="modal-close" onclick="closeMbtn('m1869b')">&times;</span><h3>1869–1886</h3><p>«Сказки».</p></div></div>
+    <div id="m1887" class="modal" onclick="closeM(event,this)"><div class="modal-content"><span class="modal-close" onclick="closeMbtn('m1887')">&times;</span><h3>1887–1889</h3><p>«Пошехонская старина».</p></div></div>
+    <div id="m1889" class="modal" onclick="closeM(event,this)"><div class="modal-content"><span class="modal-close" onclick="closeMbtn('m1889')">&times;</span><h3>1889</h3><p>28 апреля – Смерть в Петербурге.</p></div></div>
 
-    <!-- ===== МОДАЛЬНЫЕ ОКНА КНИГ (6 шт) ===== -->
-    <div id="book-1" class="modal" onclick="closeBookModal(event, this)">
-        <div class="modal-content book-modal">
-            <span class="modal-close" onclick="closeBookModalBtn('book-1')">&times;</span>
-            <h3>История одного города</h3>
-            <p class="book-years">1869–1870</p>
-            <p><strong>Жанр:</strong> Сатирический роман</p>
-            <p>«История одного города» М.Е. Салтыкова-Щедрина — сатирический роман-хроника, повествующий о вымышленном городе Глупове. Летопись описывает абсурдное правление череды градоначальников, сменяющих друг друга: от самодуров и воров до «просветителей» и безумцев, разрушающих город, — и покорность жителей (глуповцев), приводящую к полному разорению и хаосу. </p>
-        </div>
-    </div>
-
-    <div id="book-2" class="modal" onclick="closeBookModal(event, this)">
-        <div class="modal-content book-modal">
-            <span class="modal-close" onclick="closeBookModalBtn('book-2')">&times;</span>
-            <h3>Господа Головлёвы</h3>
-            <p class="book-years">1875–1880</p>
-            <p><strong>Жанр:</strong> Семейная хроника</p>
-            <p>Господа Головлёвы» (1880) — социально-психологический роман М.Е. Салтыкова-Щедрина, повествующий о моральном и физическом распаде дворянской семьи. Под влиянием жадности, лицемерия и отсутствия любви, олицетворяемых Порфирием Головлёвым (Иудушкой), род вырождается, а все члены семьи погибают. Это история о разрушительной силе праздности, корысти и одиночестве.</p>
-        </div>
-    </div>
-
-    <div id="book-3" class="modal" onclick="closeBookModal(event, this)">
-        <div class="modal-content book-modal">
-            <span class="modal-close" onclick="closeBookModalBtn('book-3')">&times;</span>
-            <h3>Сказки для детей изрядного возраста</h3>
-            <p class="book-years">1869–1886</p>
-            <p><strong>Жанр:</strong> Сатирические сказки</p>
-            <p>«Премудрый пискарь», «Медведь на воеводстве», «Карась-идеалист» и другие.</p>
-        </div>
-    </div>
-
-    <div id="book-4" class="modal" onclick="closeBookModal(event, this)">
-        <div class="modal-content book-modal">
-            <span class="modal-close" onclick="closeBookModalBtn('book-4')">&times;</span>
-            <h3>Губернские очерки</h3>
-            <p class="book-years">1856–1857</p>
-            <p><strong>Жанр:</strong> Очерки</p>
-            <p>Цикл сатирических произведений, обличающих взяточничество, казнокрадство и бездействие провинциального чиновничества. Через галерею образов — от губернатора до мелких канцеляристов — автор показал разложение административной системы, назвав это «общественными язвами». Книга стала гимном демократии, осуждая крепостничество. Опубликована под псевдонимом Н. Щедрин.</p>
-        </div>
-    </div>
-
-    <div id="book-5" class="modal" onclick="closeBookModal(event, this)">
-        <div class="modal-content book-modal">
-            <span class="modal-close" onclick="closeBookModalBtn('book-5')">&times;</span>
-            <h3>Помпадуры и помпадурши</h3>
-            <p class="book-years">1863–1874</p>
-            <p><strong>Жанр:</strong> Сатирические очерки</p>
-            <p>Цикл, высмеивающий чиновничий произвол, глупость и паразитизм провинциальной администрации. В 12 очерках автор описывает «помпадуров» (губернаторов) как временщиков, мыслящих лишь масштабами личной выгоды, и «помпадурш» — влиятельных женщин, управляющих их карьерами и настроениями. </p>
-        </div>
-    </div>
-
-    <div id="book-6" class="modal" onclick="closeBookModal(event, this)">
-        <div class="modal-content book-modal">
-            <span class="modal-close" onclick="closeBookModalBtn('book-6')">&times;</span>
-            <h3>Пошехонская старина</h3>
-            <p class="book-years">1887–1889</p>
-            <p><strong>Жанр:</strong> Автобиографическая повесть</p>
-            <p>Последнее автобиографическое произведение М.Е. Салтыкова-Щедрина, описывающее жестокую, застойную жизнь провинциального дворянства эпохи крепостного права через призму детства Никанора Затрапезного. Книга обличает произвол помещиков, невежество и бессмысленную жестокость, рисуя мрачную картину угасания усадебной культуры.</p>
-        </div>
-    </div>
+    <!-- Модальные окна книг -->
+    <div id="b1" class="modal" onclick="closeB(event,this)"><div class="modal-content book-modal"><span class="modal-close" onclick="closeBbtn('b1')">&times;</span><h3>История одного города</h3><p class="book-years">1869–1870</p><p><strong>Жанр:</strong> Сатирический роман</p><p>История вымышленного города Глупова и его правителей.</p></div></div>
+    <div id="b2" class="modal" onclick="closeB(event,this)"><div class="modal-content book-modal"><span class="modal-close" onclick="closeBbtn('b2')">&times;</span><h3>Господа Головлёвы</h3><p class="book-years">1875–1880</p><p><strong>Жанр:</strong> Семейная хроника</p><p>История вырождения дворянского рода Головлёвых.</p></div></div>
+    <div id="b3" class="modal" onclick="closeB(event,this)"><div class="modal-content book-modal"><span class="modal-close" onclick="closeBbtn('b3')">&times;</span><h3>Сказки</h3><p class="book-years">1869–1886</p><p><strong>Жанр:</strong> Сатирические сказки</p><p>«Премудрый пискарь», «Медведь на воеводстве» и другие.</p></div></div>
+    <div id="b4" class="modal" onclick="closeB(event,this)"><div class="modal-content book-modal"><span class="modal-close" onclick="closeBbtn('b4')">&times;</span><h3>Губернские очерки</h3><p class="book-years">1856–1857</p><p><strong>Жанр:</strong> Очерки</p><p>Цикл очерков о провинциальной жизни.</p></div></div>
+    <div id="b5" class="modal" onclick="closeB(event,this)"><div class="modal-content book-modal"><span class="modal-close" onclick="closeBbtn('b5')">&times;</span><h3>Помпадуры и помпадурши</h3><p class="book-years">1863–1874</p><p><strong>Жанр:</strong> Сатирические очерки</p><p>Гротескные образы губернаторов и их жён.</p></div></div>
+    <div id="b6" class="modal" onclick="closeB(event,this)"><div class="modal-content book-modal"><span class="modal-close" onclick="closeBbtn('b6')">&times;</span><h3>Пошехонская старина</h3><p class="book-years">1887–1889</p><p><strong>Жанр:</strong> Автобиографическая повесть</p><p>Воспоминания о детстве, жизнь крепостной деревни.</p></div></div>
 
     <!-- ===== JAVASCRIPT ===== -->
     <script>
-        // === МОДАЛЬНЫЕ ОКНА ТАЙМЛАЙНА ===
-        function openModal(modalId) {
-            var modal = document.getElementById(modalId);
-            if (modal) {
-                modal.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            }
-        }
+        // === МОДАЛЬНЫЕ ОКНА ===
+        function openModal(id){var m=document.getElementById(id);if(m){m.classList.add('active');document.body.style.overflow='hidden';}}
+        function closeM(e,m){if(e.target===m){m.classList.remove('active');document.body.style.overflow='auto';}}
+        function closeMbtn(id){var m=document.getElementById(id);if(m){m.classList.remove('active');document.body.style.overflow='auto';}}
+        function openBook(id){var m=document.getElementById(id);if(m){m.classList.add('active');document.body.style.overflow='hidden';}}
+        function closeB(e,m){if(e.target===m){m.classList.remove('active');document.body.style.overflow='auto';}}
+        function closeBbtn(id){var m=document.getElementById(id);if(m){m.classList.remove('active');document.body.style.overflow='auto';}}
+        document.addEventListener('keydown',function(e){if(e.key==='Escape'){var a=document.querySelector('.modal.active');if(a){a.classList.remove('active');document.body.style.overflow='auto';}}});
+        function scrollToSection(id){var s=document.getElementById(id);if(s){s.scrollIntoView({behavior:'smooth'});}}
 
-        function closeModal(event, modal) {
-            if (event.target === modal) {
-                modal.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            }
-        }
-
-        function closeModalBtn(modalId) {
-            var modal = document.getElementById(modalId);
-            if (modal) {
-                modal.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            }
-        }
-
-        // === МОДАЛЬНЫЕ ОКНА КНИГ ===
-        function openBookModal(bookId) {
-            var modal = document.getElementById(bookId);
-            if (modal) {
-                modal.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            }
-        }
-
-        function closeBookModal(event, modal) {
-            if (event.target === modal) {
-                modal.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            }
-        }
-
-        function closeBookModalBtn(bookId) {
-            var modal = document.getElementById(bookId);
-            if (modal) {
-                modal.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            }
-        }
-
-        // === ЗАКРЫТИЕ ПО ESCAPE ===
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                var activeModal = document.querySelector('.modal.active');
-                if (activeModal) {
-                    activeModal.classList.remove('active');
-                    document.body.style.overflow = 'auto';
-                }
-            }
-        });
-
-        // === ПРОКРУТКА ===
-        function scrollToSection(sectionId) {
-            var section = document.getElementById(sectionId);
-            if (section) {
-                section.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-
-        // === ГЕНЕРАТОР ЦИТАТ ===
-        var quotes = [
-            "Многие склонны путать понятия: «Отечество» и «Ваше превосходительство»",
+        // === ЦИТАТЫ ===
+        var quotes=[
+            "Многие склонны путать понятия:«Отечество» и «Ваше превосходительство»",
             "Российская власть должна держать свой народ в состоянии постоянного изумления",
-            "Чего-то хотелось: не то конституции, не то севрюжины с хреном, не то кого-нибудь ободрать.",
+            "Чего-то хотелось: не то конституции, не то севрюжины с хреном, не то кого-нибудь ободрать",
             "Самые плохие законы — в России, но этот недостаток компенсируется тем, что их никто не выполняет",
             "Литература и пропаганда — это одно и то же",
-            "Дозволяется при встрече с начальством вежливыми и почтительными телодвижениями выражать испытываемое при сем удовольствие"
-            "Во всех странах железные дороги для передвижения служат, а у нас сверх того и для воровства"
-            "Если я усну и проснусь через сто лет и меня спросят, что сейчас происходит в России, я отвечу: пьют и воруют..."
-            "У нас нет середины: либо в рыло, либо ручку пожалуйте!"
-            "— Mon cher, — говаривал Крутицын, — разделите сегодня все поровну, а завтра неравенство все-таки вступит в свои права."
-            "Для того чтобы воровать с успехом, нужно обладать только проворством и жадностью. Жадность в особенности необходима, потому что за малую кражу можно попасть под суд."
-            "...Крупными буквами печатались слова совершенно несущественные, а все существенное изображалось самым мелким шрифтом."
-            "Всякому безобразию своё приличие."
+            "Дозволяется при встрече с начальством вежливыми и почтительными телодвижениями выражать испытываемое при сем удовольствие",
+            "Во всех странах железные дороги для передвижения служат, а у нас сверх того и для воровства",
+            "Если я усну и проснусь через сто лет и меня спросят, что сейчас происходит в России, я отвечу: пьют и воруют",
+            "У нас нет середины: либо в рыло, либо ручку пожалуйте",
+            "— Mon cher, — говаривал Крутицын, — разделите сегодня все поровну, а завтра неравенство все-таки вступит в свои права.",
+            "Для того чтобы воровать с успехом, нужно обладать только проворством и жадностью. Жадность в особенности необходима, потому что за малую кражу можно попасть под суд",
+            "Крупными буквами печатались слова совершенно несущественные, а все существенное изображалось самым мелким шрифтом",
+            "Всякому безобразию своё приличие"
         ];
-
-        function generateQuote() {
-            var randomIndex = Math.floor(Math.random() * quotes.length);
-            document.getElementById('quote-display').textContent = quotes[randomIndex];
-        }
+        var qi=0;
+        function nextQuote(){qi=(qi+1)%quotes.length;document.getElementById('quote-display').textContent='«'+quotes[qi]+'»';}
 
         // === ТЕСТ ===
-        var quizQuestions = [
-            {
-                question: "Как вы относитесь к риску?",
-                options: ["Избегаю любой опасности", "Просчитываю все варианты", "Действую решительно", "Наблюдаю со стороны"]
-            },
-            {
-                question: "Что для вас важнее всего?",
-                options: ["Безопасность и покой", "Власть и влияние", "Идеалы и принципы", "Личная выгода"]
-            },
-            {
-                question: "Как вы ведёте споры?",
-                options: ["Избегаю конфликтов", "Говорю много, но по делу", "Настаиваю на своём", "Лицемерю и подстраиваюсь"]
-            }
+        var qs=[
+            {q:"Как вы относитесь к риску?",a:["Избегаю","Просчитываю","Действую","Наблюдаю"]},
+            {q:"Что для вас важнее?",a:["Безопасность","Власть","Идеалы","Выгода"]},
+            {q:"Как ведёте споры?",a:["Избегаю","Говорю по делу","Настаиваю","Подстраиваюсь"]}
         ];
-
-        var currentQuestion = 0;
-        var answers = [];
-
-        function loadQuestion() {
-            if (currentQuestion >= quizQuestions.length) {
-                showResult();
-                return;
-            }
-
-            var q = quizQuestions[currentQuestion];
-            document.getElementById('quiz-question').textContent = 'Вопрос ' + (currentQuestion + 1) + ': ' + q.question;
-
-            var optionsDiv = document.getElementById('quiz-options');
-            optionsDiv.innerHTML = '';
-
-            for (var i = 0; i < q.options.length; i++) {
-                var btn = document.createElement('button');
-                btn.textContent = q.options[i];
-                btn.onclick = (function(index) {
-                    return function() {
-                        answers.push(index);
-                        currentQuestion++;
-                        loadQuestion();
-                    };
-                })(i);
-                optionsDiv.appendChild(btn);
+        var qn=0,ans=[];
+        function loadQ(){
+            if(qn>=qs.length){showR();return;}
+            document.getElementById('quiz-question').textContent='Вопрос '+(qn+1)+': '+qs[qn].q;
+            var d=document.getElementById('quiz-options');d.innerHTML='';
+            for(var i=0;i<qs[qn].a.length;i++){
+                var b=document.createElement('button');
+                b.textContent=qs[qn].a[i];
+                b.onclick=function(x){return function(){ans.push(x);qn++;loadQ();}}(i);
+                d.appendChild(b);
             }
         }
-
-        function nextQuestion() {
-            currentQuestion++;
-            loadQuestion();
-        }
-
-        function showResult() {
-            var results = [
-                "🐟 Премудрый пискарь — вы осторожны и предпочитаете не высовываться",
-                "🦊 Иудушка Головлёв — вы хитры и расчётливы",
-                "🦅 Орёл-меценат — вы любите показную благотворительность",
-                "🐻 Медведь-воевода — вы склонны к произволу и власти"
-            ];
-
-            var randomResult = results[Math.floor(Math.random() * results.length)];
-
+        function showR(){
+            var r=["🐟 Премудрый пискарь","🦊 Иудушка Головлёв","🦅 Орёл-меценат","🐻 Медведь-воевода"];
             document.getElementById('quiz-question').classList.add('hidden');
             document.getElementById('quiz-options').classList.add('hidden');
-            document.getElementById('quiz-result').textContent = randomResult;
+            document.getElementById('quiz-result').textContent=r[Math.floor(Math.random()*r.length)];
             document.getElementById('quiz-result').classList.remove('hidden');
             document.getElementById('quiz-restart').classList.remove('hidden');
         }
-
-        function restartQuiz() {
-            currentQuestion = 0;
-            answers = [];
-            document.getElementById('quiz-question').classList.remove('hidden');
-            document.getElementById('quiz-options').classList.remove('hidden');
-            document.getElementById('quiz-result').classList.add('hidden');
-            document.getElementById('quiz-restart').classList.add('hidden');
-            loadQuestion();
-        }
-
-        // === ЗАПУСК ТЕСТА ПРИ ЗАГРУЗКЕ ===
-        document.addEventListener('DOMContentLoaded', function() {
-            loadQuestion();
-        });
+        function restartQuiz(){qn=0;ans=[];document.getElementById('quiz-question').classList.remove('hidden');document.getElementById('quiz-options').classList.remove('hidden');document.getElementById('quiz-result').classList.add('hidden');document.getElementById('quiz-restart').classList.add('hidden');loadQ();}
+        
+        // === ЗАПУСК ===
+        window.onload=function(){loadQ();};
     </script>
 </body>
 </html>
