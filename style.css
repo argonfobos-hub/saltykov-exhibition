@@ -67,6 +67,10 @@ body {
     font-size: 1.1rem;
 }
 
+.navigation a:hover {
+    color: #d4af37;
+}
+
 /* Секции */
 .section {
     padding: 60px 20px;
@@ -343,6 +347,7 @@ body {
     border: 2px solid #8b4513;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 1rem;
 }
 
 #quiz-options button:hover {
