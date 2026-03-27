@@ -1,1 +1,480 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
+body {
+    font-family: Georgia, serif;
+    background: #f5e6d3;
+    color: #3d2817;
+    text-align: center;
+}
+
+/* Баннер */
+.hero {
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5e6d3;
+    overflow: hidden;
+}
+
+.hero img {
+    height: 100%;
+    width: auto;
+    display: block;
+}
+
+/* Текст и кнопка */
+.intro-section {
+    background: #f5e6d3;
+    padding: 50px 20px;
+    border-bottom: 3px solid #8b4513;
+}
+
+.intro-text {
+    font-size: 3rem;
+    font-style: italic;
+    color: #5d2e0c;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.cta-button {
+    background: #8b4513;
+    color: #f5e6d3;
+    border: none;
+    padding: 20px 60px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    background: #d4af37;
+    color: #3d2817;
+}
+
+/* Навигация */
+.navigation {
+    background: #3d2817;
+    padding: 15px;
+}
+
+.navigation a {
+    color: #f5e6d3;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+}
+
+/* Секции */
+.section {
+    padding: 60px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-family: Georgia, serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #8b4513;
+}
+
+/* Таймлайн */
+.timeline-instruction {
+    text-align: center;
+    font-style: italic;
+    color: #8b4513;
+    margin-bottom: 30px;
+}
+
+.timeline-wrapper {
+    background: #fff8f0;
+    border-radius: 10px;
+    border: 2px solid #d4af37;
+    padding: 20px;
+}
+
+.row-label {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #8b4513;
+    font-weight: bold;
+    margin: 15px 0;
+    padding: 8px;
+    background: #d4af37;
+    border-radius: 5px;
+}
+
+.timeline-row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 5px;
+    padding: 40px 10px;
+    position: relative;
+}
+
+.timeline-row::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    right: 20px;
+    height: 3px;
+    background: linear-gradient(90deg, #8b4513, #d4af37, #8b4513);
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.timeline-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-item:hover {
+    transform: scale(1.1);
+}
+
+.date-box-top {
+    background: #fff;
+    border: 2px solid #8b4513;
+    border-radius: 6px;
+    padding: 6px 8px;
+    width: 75px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    margin-bottom: 35px;
+}
+
+.date-box-bottom {
+    background: #fff;
+    border: 2px solid #8b4513;
+    border-radius: 6px;
+    padding: 6px 8px;
+    width: 75px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    margin-top: 35px;
+}
+
+.date-year {
+    font-weight: bold;
+    color: #8b4513;
+    font-size: 0.7rem;
+    line-height: 1.1;
+}
+
+.date-label {
+    font-size: 0.55rem;
+    color: #5d2e0c;
+    margin-top: 3px;
+    line-height: 1.1;
+}
+
+.year-dot {
+    width: 42px;
+    height: 42px;
+    background: linear-gradient(135deg, #d4af37, #f5e6d3);
+    border: 3px solid #8b4513;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #3d2817;
+    font-size: 0.65rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.timeline-item:hover .year-dot {
+    background: linear-gradient(135deg, #8b4513, #d4af37);
+    color: #f5e6d3;
+}
+
+.connector {
+    width: 2px;
+    height: 18px;
+    background: #8b4513;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.connector-top {
+    bottom: 50%;
+    margin-bottom: 1px;
+}
+
+.connector-bottom {
+    top: 50%;
+    margin-top: 1px;
+}
+
+/* Книги */
+.section-subtitle {
+    text-align: center;
+    font-style: italic;
+    color: #8b4513;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.book-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #d4af37;
+}
+
+.book-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.book-cover {
+    background: linear-gradient(135deg, #8b4513 0%, #5d2e0c 100%);
+    color: #f5e6d3;
+    padding: 40px 20px;
+    text-align: center;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.book-title {
+    font-family: Georgia, serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    line-height: 1.3;
+}
+
+.book-year {
+    text-align: center;
+    padding: 12px;
+    color: #8b4513;
+    font-weight: bold;
+    font-size: 0.95rem;
+    background: #f5e6d3;
+    border-bottom: 2px solid #d4af37;
+}
+
+.book-preview {
+    padding: 15px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #5d2e0c;
+    line-height: 1.5;
+    min-height: 50px;
+}
+
+/* Цитаты */
+.quote-container {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border: 2px solid #d4af37;
+}
+
+#quote-display {
+    font-size: 1.3rem;
+    font-style: italic;
+    margin-bottom: 30px;
+    color: #3d2817;
+}
+
+.quote-button {
+    background: #8b4513;
+    color: #f5e6d3;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.quote-button:hover {
+    background: #5d2e0c;
+}
+
+/* Тест */
+.quiz-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border: 2px solid #d4af37;
+}
+
+#quiz-question {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+#quiz-options button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    background: #f5e6d3;
+    border: 2px solid #8b4513;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#quiz-options button:hover {
+    background: #8b4513;
+    color: #f5e6d3;
+}
+
+.quiz-button {
+    background: #d4af37;
+    color: #3d2817;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Модальные окна */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(61, 40, 23, 0.85);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: #f5e6d3;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 650px;
+    width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    border: 4px solid #8b4513;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2.5rem;
+    color: #8b4513;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.modal-close:hover {
+    color: #d4af37;
+}
+
+.modal-content h3 {
+    color: #8b4513;
+    font-size: 1.5rem;
+    margin-bottom: 18px;
+    border-bottom: 3px solid #d4af37;
+    padding-bottom: 10px;
+}
+
+.modal-content p {
+    color: #5d2e0c;
+    line-height: 1.7;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.book-modal h3 {
+    font-size: 1.7rem;
+}
+
+.book-years {
+    font-weight: bold;
+    color: #d4af37;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+/* Футер */
+.footer {
+    background: #3d2817;
+    color: #f5e6d3;
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+}
+
+/* Адаптивность */
+@media (max-width: 900px) {
+    .books-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .timeline-row {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 8px;
+    }
+    
+    .books-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .intro-text {
+        font-size: 2rem;
+    }
+    
+    .year-dot {
+        width: 38px;
+        height: 38px;
+        font-size: 0.6rem;
+    }
+    
+    .date-box-top, .date-box-bottom {
+        width: 65px;
+        padding: 5px 6px;
+    }
+}
