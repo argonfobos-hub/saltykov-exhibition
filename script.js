@@ -145,3 +145,20 @@ document.addEventListener('keydown', function(event) {
 document.addEventListener('DOMContentLoaded', () => {
     loadQuestion();
 });
+// Модальные окна для книг
+function openBookModal(bookId) {
+    document.getElementById(bookId).classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeBookModal(event, modal) {
+    if (event.target === modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+}
+
+function closeBookModalBtn(bookId) {
+    document.getElementById(bookId).classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
