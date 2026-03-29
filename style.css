@@ -501,3 +501,59 @@ body {
         height: 300px;
     }
 }
+/* ===== ВСТУПИТЕЛЬНЫЙ ТЕКСТ ===== */
+.intro-text-section {
+    background: linear-gradient(135deg, #fff8f0 0%, #f5e6d3 100%);
+    padding: 40px 20px;
+    border-bottom: 3px solid #d4af37;
+}
+
+.intro-text-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.intro-text-lead {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #3d2817;
+    text-align: center;
+    font-style: italic;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    border-left: 4px solid #8b4513;
+    border-right: 4px solid #8b4513;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.intro-text-lead::before {
+    content: '"';
+    font-size: 3rem;
+    color: #d4af37;
+    display: block;
+    line-height: 0.5;
+    margin-bottom: 10px;
+}
+
+.intro-text-lead::after {
+    content: '"';
+    font-size: 3rem;
+    color: #d4af37;
+    display: block;
+    line-height: 0.5;
+    margin-top: 10px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .intro-text-lead {
+        font-size: 1rem;
+        padding: 15px;
+    }
+    
+    .intro-text-lead::before,
+    .intro-text-lead::after {
+        font-size: 2rem;
+    }
+}
