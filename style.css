@@ -619,7 +619,7 @@ body {
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    gap: 30px;
     max-width: 1100px;
     margin: 0 auto;
     padding: 20px;
@@ -631,33 +631,64 @@ body {
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     border: 2px solid #d4af37;
-    padding: 15px;
+    padding: 20px;
     text-align: center;
 }
 
 .gallery-image {
     width: 100%;
-    height: 200px;
+    height: 180px;
     object-fit: cover;
     border-radius: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     background: #f5e6d3;
+    display: block;
 }
 
 .gallery-select {
     width: 100%;
-    padding: 10px;
+    padding: 12px 10px;
     font-size: 0.9rem;
     border: 2px solid #8b4513;
     border-radius: 5px;
     background: #fff;
     color: #3d2817;
     cursor: pointer;
+    margin-top: 5px;
 }
 
 .gallery-select:focus {
     outline: none;
     border-color: #d4af37;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.3);
+}
+
+/* Адаптивность для галереи */
+@media (max-width: 900px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .gallery-image {
+        height: 160px;
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .gallery-image {
+        height: 200px;
+    }
+    
+    .gallery-select {
+        font-size: 1rem;
+        padding: 14px 10px;
+    }
 }
 
 /* Адаптивность для галереи */
