@@ -449,6 +449,39 @@ function showGalleryResult() {
         
         // === ЗАПУСК ===
         window.onload=function(){loadQ();};
+                // === ЛАЙТБОКС ДЛЯ КАРТИНОК ===
+        var lightbox = document.getElementById('lightbox');
+        var lightboxImg = document.getElementById('lightbox-img');
+        var lightboxCaption = document.getElementById('lightbox-caption');
+
+        // Добавляем клик на все картинки галереи
+        document.addEventListener('DOMContentLoaded', function() {
+            var galleryImages = document.querySelectorAll('.gallery-image');
+            galleryImages.forEach(function(img) {
+                img.addEventListener('click', function() {
+                    openLightbox(this);
+                });
+            });
+        });
+
+        function openLightbox(img) {
+            lightboxImg.src = img.src;
+            lightboxCaption.textContent = img.alt;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Закрытие по Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
     </script>
         <!-- Лайтбокс для увеличения картинок -->
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
