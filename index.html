@@ -450,5 +450,11 @@ function showGalleryResult() {
         // === ЗАПУСК ===
         window.onload=function(){loadQ();};
     </script>
+        <!-- Лайтбокс для увеличения картинок -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" alt="Увеличенное изображение">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
 </body>
 </html>
