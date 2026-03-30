@@ -395,6 +395,41 @@
                 d.appendChild(b);
             }
         }
+        // === ГАЛЕРЕЯ: СОХРАНЕНИЕ ВЫБОРА ===
+var gallerySelections = {};
+
+function saveSelection(select, imgNum) {
+    gallerySelections[imgNum] = select.value;
+    // Можно добавить localStorage для сохранения между сессиями
+    // localStorage.setItem('gallerySelections', JSON.stringify(gallerySelections));
+}
+
+function showGalleryResult() {
+    var resultDiv = document.getElementById('gallery-result');
+    var resultList = document.getElementById('result-list');
+    var filled = false;
+    
+    resultList.innerHTML = '';
+    
+    for (var i = 1; i <= 9; i++) {
+        if (gallerySelections[i]) {
+            filled = true;
+            var p = document.createElement('p');
+            p.innerHTML = '<strong>Иллюстрация ' + i + '.png:</strong> ' + gallerySelections[i];
+            p.style.margin = '8px 0';
+            p.style.padding = '8px';
+            p.style.background = '#f5e6d3';
+            p.style.borderRadius = '5px';
+            resultList.appendChild(p);
+        }
+    }
+    
+    if (filled) {
+        resultDiv.classList.remove('hidden');
+    } else {
+        alert('Выберите хотя бы одно произведение!');
+    }
+}
         function showR(){
             var r=["🐟 Премудрый пискарь","🦊 Иудушка Головлёв","🦅 Орёл-меценат","🐻 Медведь-воевода"];
             document.getElementById('quiz-question').classList.add('hidden');
