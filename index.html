@@ -483,11 +483,50 @@ function showGalleryResult() {
             }
         });
     </script>
-        <!-- Лайтбокс для увеличения картинок -->
-    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-        <span class="lightbox-close">&times;</span>
-        <img class="lightbox-content" id="lightbox-img" alt="Увеличенное изображение">
-        <div class="lightbox-caption" id="lightbox-caption"></div>
-    </div>
+       <!-- Лайтбокс для увеличения картинок -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-img" id="lightbox-img" alt="">
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+</div>
+
+<script>
+    // === ЛАЙТБОКС ===
+    var lightbox = document.getElementById('lightbox');
+    var lightboxImg = document.getElementById('lightbox-img');
+    var lightboxCaption = document.getElementById('lightbox-caption');
+
+    function openLightbox(src, alt) {
+        lightboxImg.src = src;
+        lightboxCaption.textContent = alt;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox(e) {
+        if (e.target === lightbox || e.target.className === 'lightbox-close') {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    }
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeLightbox({target: lightbox});
+    });
+
+    // Вешаем клик на картинки галереи
+    document.addEventListener('DOMContentLoaded', function() {
+        var imgs = document.querySelectorAll('.gallery-image');
+        imgs.forEach(function(img) {
+            img.style.cursor = 'zoom-in';
+            img.addEventListener('click', function() {
+                openLightbox(this.src, this.alt);
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
 </body>
 </html>
