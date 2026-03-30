@@ -98,7 +98,7 @@
         </div>
     </section>
 
-      <!-- Цитаты -->
+    <!-- Цитаты -->
     <section id="quotes" class="section">
         <h2 class="section-title">Генератор цитат</h2>
         <div class="quote-container">
@@ -106,7 +106,179 @@
             <button class="quote-button" onclick="nextQuote()">Следующая цитата</button>
         </div>
     </section>
-
+    
+    <!-- Галерея иллюстраций -->
+    <section id="gallery" class="section">
+        <h2 class="section-title">Иллюстрации к произведениям</h2>
+        <p class="section-subtitle">Выберите произведение для каждой иллюстрации</p>
+        
+        <div class="gallery-grid">
+            <!-- Иллюстрация 1 -->
+            <div class="gallery-item">
+                <img src="1.png" alt="Иллюстрация 1" class="gallery-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22 viewBox=%220 0 300 200%22%3E%3Crect fill=%22%23f5e6d3%22 width=%22300%22 height=%22200%22/%3E%3Ctext fill=%22%238b4513%22 font-family=%22Georgia%22 font-size=%2214%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3E1.png%3C/text%3E%3C/svg%3E'">
+                <select class="gallery-select" onchange="saveSelection(this, '1')">
+                    <option value="">— Выберите произведение —</option>
+                    <option value="История одного города">История одного города</option>
+                    <option value="Господа Головлёвы">Господа Головлёвы</option>
+                    <option value="Сказки для детей изрядного возраста">Сказки</option>
+                    <option value="Губернские очерки">Губернские очерки</option>
+                    <option value="Помпадуры и помпадурши">Помпадуры и помпадурши</option>
+                    <option value="Пошехонская старина">Пошехонская старина</option>
+                    <option value="Современная идиллия">Современная идиллия</option>
+                    <option value="За рубежом">За рубежом</option>
+                    <option value="Мелочи жизни">Мелочи жизни</option>
+                </select>
+            </div>
+            
+            <!-- Иллюстрация 2 -->
+            <div class="gallery-item">
+                <img src="2.png" alt="Иллюстрация 2" class="gallery-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22 viewBox=%220 0 300 200%22%3E%3Crect fill=%22%23f5e6d3%22 width=%22300%22 height=%22200%22/%3E%3Ctext fill=%22%238b4513%22 font-family=%22Georgia%22 font-size=%2214%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3E2.png%3C/text%3E%3C/svg%3E'">
+                <select class="gallery-select" onchange="saveSelection(this, '2')">
+                    <option value="">— Выберите произведение —</option>
+                    <option value="История одного города">История одного города</option>
+                    <option value="Господа Головлёвы">Господа Головлёвы</option>
+                    <option value="Сказки для детей изрядного возраста">Сказки</option>
+                    <option value="Губернские очерки">Губернские очерки</option>
+                    <option value="Помпадуры и помпадурши">Помпадуры и помпадурши</option>
+                    <option value="Пошехонская старина">Пошехонская старина</option>
+                    <option value="Современная идиллия">Современная идиллия</option>
+                    <option value="За рубежом">За рубежом</option>
+                    <option value="Мелочи жизни">Мелочи жизни</option>
+                </select>
+            </div>
+            
+            <!-- Иллюстрация 3 -->
+            <div class="gallery-item">
+                <img src="3.png" alt="Иллюстрация 3" class="gallery-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22 viewBox=%220 0 300 200%22%3E%3Crect fill=%22%23f5e6d3%22 width=%22300%22 height=%22200%22/%3E%3Ctext fill=%22%238b4513%22 font-family=%22Georgia%22 font-size=%2214%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3E3.png%3C/text%3E%3C/svg%3E'">
+                <select class="gallery-select" onchange="saveSelection(this, '3')">
+                    <option value="">— Выберите произведение —</option>
+                    <option value="История одного города">История одного города</option>
+                    <option value="Господа Головлёвы">Господа Головлёвы</option>
+                    <option value="Сказки для детей изрядного возраста">Сказки</option>
+                    <option value="Губернские очерки">Губернские очерки</option>
+                    <option value="Помпадуры и помпадурши">Помпадуры и помпадурши</option>
+                    <option value="Пошехонская старина">Пошехонская старина</option>
+                    <option value="Современная идиллия">Современная идиллия</option>
+                    <option value="За рубежом">За рубежом</option>
+                    <option value="Мелочи жизни">Мелочи жизни</option>
+                </select>
+            </div>
+            
+            <!-- Иллюстрация 4 -->
+            <div class="gallery-item">
+                <img src="4.png" alt="Иллюстрация 4" class="gallery-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22 viewBox=%220 0 300 200%22%3E%3Crect fill=%22%23f5e6d3%22 width=%22300%22 height=%22200%22/%3E%3Ctext fill=%22%238b4513%22 font-family=%22Georgia%22 font-size=%2214%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3E4.png%3C/text%3E%3C/svg%3E'">
+                <select class="gallery-select" onchange="saveSelection(this, '4')">
+                    <option value="">— Выберите произведение —</option>
+                    <option value="История одного города">История одного города</option>
+                    <option value="Господа Головлёвы">Господа Головлёвы</option>
+                    <option value="Сказки для детей изрядного возраста">Сказки</option>
+                    <option value="Губернские очерки">Губернские очерки</option>
+                    <option value="Помпадуры и помпадурши">Помпадуры и помпадурши</option>
+                    <option value="Пошехонская старина">Пошехонская старина</option>
+                    <option value="Современная идиллия">Современная идиллия</option>
+                    <option value="За рубежом">За рубежом</option>
+                    <option value="Мелочи жизни">Мелочи жизни</option>
+                </select>
+            </div>
+            
+            <!-- Иллюстрация 5 -->
+            <div class="gallery-item">
+                <img src="5.png" alt="Иллюстрация 5" class="gallery-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22 viewBox=%220 0 300 200%22%3E%3Crect fill=%22%23f5e6d3%22 width=%22300%22 height=%22200%22/%3E%3Ctext fill=%22%238b4513%22 font-family=%22Georgia%22 font-size=%2214%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3E5.png%3C/text%3E%3C/svg%3E'">
+                <select class="gallery-select" onchange="saveSelection(this, '5')">
+                    <option value="">— Выберите произведение —</option>
+                    <option value="История одного города">История одного города</option>
+                    <option value="Господа Головлёвы">Господа Головлёвы</option>
+                    <option value="Сказки для детей изрядного возраста">Сказки</option>
+                    <option value="Губернские очерки">Губернские очерки</option>
+                    <option value="Помпадуры и помпадурши">Помпадуры и помпадурши</option>
+                    <option value="Пошехонская старина">Пошехонская старина</option>
+                    <option value="Современная идиллия">Современная идиллия</option>
+                    <option value="За рубежом">За рубежом</option>
+                    <option value="Мелочи жизни">Мелочи жизни</option>
+                </select>
+            </div>
+            
+            <!-- Иллюстрация 6 -->
+            <div class="gallery-item">
+                <img src="6.png" alt="Иллюстрация 6" class="gallery-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22 viewBox=%220 0 300 200%22%3E%3Crect fill=%22%23f5e6d3%22 width=%22300%22 height=%22200%22/%3E%3Ctext fill=%22%238b4513%22 font-family=%22Georgia%22 font-size=%2214%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3E6.png%3C/text%3E%3C/svg%3E'">
+                <select class="gallery-select" onchange="saveSelection(this, '6')">
+                    <option value="">— Выберите произведение —</option>
+                    <option value="История одного города">История одного города</option>
+                    <option value="Господа Головлёвы">Господа Головлёвы</option>
+                    <option value="Сказки для детей изрядного возраста">Сказки</option>
+                    <option value="Губернские очерки">Губернские очерки</option>
+                    <option value="Помпадуры и помпадурши">Помпадуры и помпадурши</option>
+                    <option value="Пошехонская старина">Пошехонская старина</option>
+                    <option value="Современная идиллия">Современная идиллия</option>
+                    <option value="За рубежом">За рубежом</option>
+                    <option value="Мелочи жизни">Мелочи жизни</option>
+                </select>
+            </div>
+            
+            <!-- Иллюстрация 7 -->
+            <div class="gallery-item">
+                <img src="7.png" alt="Иллюстрация 7" class="gallery-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22 viewBox=%220 0 300 200%22%3E%3Crect fill=%22%23f5e6d3%22 width=%22300%22 height=%22200%22/%3E%3Ctext fill=%22%238b4513%22 font-family=%22Georgia%22 font-size=%2214%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3E7.png%3C/text%3E%3C/svg%3E'">
+                <select class="gallery-select" onchange="saveSelection(this, '7')">
+                    <option value="">— Выберите произведение —</option>
+                    <option value="История одного города">История одного города</option>
+                    <option value="Господа Головлёвы">Господа Головлёвы</option>
+                    <option value="Сказки для детей изрядного возраста">Сказки</option>
+                    <option value="Губернские очерки">Губернские очерки</option>
+                    <option value="Помпадуры и помпадурши">Помпадуры и помпадурши</option>
+                    <option value="Пошехонская старина">Пошехонская старина</option>
+                    <option value="Современная идиллия">Современная идиллия</option>
+                    <option value="За рубежом">За рубежом</option>
+                    <option value="Мелочи жизни">Мелочи жизни</option>
+                </select>
+            </div>
+            
+            <!-- Иллюстрация 8 -->
+            <div class="gallery-item">
+                <img src="8.png" alt="Иллюстрация 8" class="gallery-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22 viewBox=%220 0 300 200%22%3E%3Crect fill=%22%23f5e6d3%22 width=%22300%22 height=%22200%22/%3E%3Ctext fill=%22%238b4513%22 font-family=%22Georgia%22 font-size=%2214%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3E8.png%3C/text%3E%3C/svg%3E'">
+                <select class="gallery-select" onchange="saveSelection(this, '8')">
+                    <option value="">— Выберите произведение —</option>
+                    <option value="История одного города">История одного города</option>
+                    <option value="Господа Головлёвы">Господа Головлёвы</option>
+                    <option value="Сказки для детей изрядного возраста">Сказки</option>
+                    <option value="Губернские очерки">Губернские очерки</option>
+                    <option value="Помпадуры и помпадурши">Помпадуры и помпадурши</option>
+                    <option value="Пошехонская старина">Пошехонская старина</option>
+                    <option value="Современная идиллия">Современная идиллия</option>
+                    <option value="За рубежом">За рубежом</option>
+                    <option value="Мелочи жизни">Мелочи жизни</option>
+                </select>
+            </div>
+            
+            <!-- Иллюстрация 9 -->
+            <div class="gallery-item">
+                <img src="9.png" alt="Иллюстрация 9" class="gallery-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22 viewBox=%220 0 300 200%22%3E%3Crect fill=%22%23f5e6d3%22 width=%22300%22 height=%22200%22/%3E%3Ctext fill=%22%238b4513%22 font-family=%22Georgia%22 font-size=%2214%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3E9.png%3C/text%3E%3C/svg%3E'">
+                <select class="gallery-select" onchange="saveSelection(this, '9')">
+                    <option value="">— Выберите произведение —</option>
+                    <option value="История одного города">История одного города</option>
+                    <option value="Господа Головлёвы">Господа Головлёвы</option>
+                    <option value="Сказки для детей изрядного возраста">Сказки</option>
+                    <option value="Губернские очерки">Губернские очерки</option>
+                    <option value="Помпадуры и помпадурши">Помпадуры и помпадурши</option>
+                    <option value="Пошехонская старина">Пошехонская старина</option>
+                    <option value="Современная идиллия">Современная идиллия</option>
+                    <option value="За рубежом">За рубежом</option>
+                    <option value="Мелочи жизни">Мелочи жизни</option>
+                </select>
+            </div>
+        </div>
+        
+        <!-- Кнопка сохранения -->
+        <div style="text-align: center; margin-top: 30px;">
+            <button class="cta-button" onclick="showGalleryResult()">Показать результат</button>
+        </div>
+        
+        <!-- Результат -->
+        <div id="gallery-result" class="hidden" style="margin-top: 30px; background: #fff; padding: 20px; border-radius: 10px; border: 2px solid #d4af37;">
+            <h3 style="color: #8b4513; margin-bottom: 15px;">✅ Ваши соответствия:</h3>
+            <div id="result-list"></div>
+        </div>
+    </section>
+    
     <!-- Тест -->
     <section id="quiz" class="section">
         <h2 class="section-title">Какой вы герой Щедрина?</h2>
