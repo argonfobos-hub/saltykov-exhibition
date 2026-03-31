@@ -8,39 +8,48 @@
 </head>
 <body>
 
-    <!-- Баннер -->
-    <header class="hero">
-        <img src="banner.jpg" alt="Салтыков-Щедрин" onerror="this.style.display='none'">
+    <!-- Титульный баннер -->
+    <header class="hero-banner">
+        <div class="hero-content">
+            <div class="hero-top">
+                <h1 class="hero-title">САЛТЫКОВ-ЩЕДРИН:<br><span class="title-accent">САТИРА НА ВЕКА</span></h1>
+                <p class="hero-subtitle">Виртуальная выставка к юбилею великого сатирика</p>
+            </div>
+            <div class="hero-center">
+                <div class="years-badge">1826 – 1889</div>
+            </div>
+            <div class="hero-cta">
+                <button class="cta-button-large" onclick="scrollToSection('portrait')">📚 Начать экскурсию</button>
+            </div>
+        </div>
     </header>
-
-    <!-- Текст -->
-    <div class="intro-section">
-        <p class="intro-text">Виртуальная выставка к юбилею великого сатирика</p>
-        <button class="cta-button" onclick="scrollToSection('biography')">Начать экскурсию</button>
-    </div>
 
     <!-- Навигация -->
     <nav class="navigation">
+        <a href="#portrait">Портрет</a>
         <a href="#biography">Биография</a>
         <a href="#works">Произведения</a>
         <a href="#quotes">Цитаты</a>
         <a href="#quiz">Тест</a>
     </nav>
-        <!-- Портрет писателя -->
-    <section class="portrait-section">
+
+    <!-- Портрет писателя -->
+    <section id="portrait" class="portrait-section">
         <div class="portrait-frame">
-            <img src="Портрет.jpg" alt="М.Е. Салтыков-Щедрин" class="portrait-img" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'portrait-placeholder\'>👤<br>Портрет писателя</div>'">
+            <img src="Портрет.jpg" alt="М.Е. Салтыков-Щедрин" class="portrait-img" onerror="this.style.display='none'">
         </div>
         <p class="portrait-caption">Михаил Евграфович Салтыков-Щедрин<br><span>(1826 – 1889)</span></p>
     </section>
+
     <!-- Вступительный текст -->
-<section class="intro-text-section">
-    <div class="intro-text-content">
-        <p class="intro-text-lead">
-            Михаил Евграфович Салтыков-Щедрин – мастер сатиры, чей юмор искрится острой иронией, подобно бритве, обнажающей пороки общества. Меткие высказывания бьют в цель с хирургической точностью: глупость власти, лицемерие элиты, абсурд бюрократии. Они остаются актуальными и сегодня, напоминая, что человеческие слабости вечны, а смех над ними – лучший способ их преодолеть.
-        </p>
-    </div>
-</section>
+    <section class="intro-text-section">
+        <div class="intro-text-content">
+            <p class="intro-text-lead">
+                Михаил Евграфович Салтыков-Щедрин – мастер сатиры, чей юмор искрится острой иронией, подобно бритве, обнажающей пороки общества. Меткие высказывания бьют в цель с хирургической точностью: глупость власти, лицемерие элиты, абсурд бюрократии. Они остаются актуальными и сегодня, напоминая, что человеческие слабости вечны, а смех над ними – лучший способ их преодолеть.
+            </p>
+        </div>
+    </section>
+
     <!-- Биография -->
     <section id="biography" class="section">
         <h2 class="section-title">Временная линия жизни</h2>
@@ -78,87 +87,75 @@
             </div>
         </div>
     </section>
-    
-    <!-- Статистика творчества -->
+
+    <!-- Масштаб творчества -->
     <section class="stats-section">
         <h2 class="section-title">Масштаб творчества</h2>
         <div class="stats-content">
-            <p class="stats-intro">
-                Михаил Салтыков-Щедрин написал сотни произведений, включая романы, повести, очерки, рассказы, пьесы, сказки и публицистику — точное число варьируется от 300 до 500 в зависимости от подсчёта фрагментов и циклов.
-            </p>
-            
+            <p class="stats-intro">Михаил Салтыков-Щедрин написал сотни произведений, включая романы, повести, очерки, рассказы, пьесы, сказки и публицистику — точное число варьируется от 300 до 500 в зависимости от подсчёта фрагментов и циклов.</p>
             <div class="stats-grid">
                 <div class="stats-card">
                     <div class="stats-icon">📚</div>
                     <div class="stats-number">20 томов</div>
-                    <div class="stats-label">Полное собрание сочинений (24 книги)</div>
-                    <p class="stats-text">Помимо крупных романов собраны циклы очерков и 32 сказки (полный свод опубликован в 1927 г.)</p>
+                    <div class="stats-label">Полное собрание сочинений</div>
                 </div>
-                
                 <div class="stats-card">
                     <div class="stats-icon">📝</div>
                     <div class="stats-number">100+</div>
                     <div class="stats-label">Отдельных произведений</div>
-                    <p class="stats-text">За 1848–1889 гг. вышло более 100 повестей, рассказов и очерков, плюс тысячи фельетонов в «Отечественных записках»</p>
                 </div>
-                
                 <div class="stats-card">
                     <div class="stats-icon">📖</div>
                     <div class="stats-number">~400</div>
                     <div class="stats-label">Художественных произведений</div>
-                    <p class="stats-text">Без публицистики, но в библиографиях учитывают до 1000 текстов с фельетонами</p>
                 </div>
             </div>
-            
-            <div class="stats-details">
-                <h3>Крупные циклы</h3>
-                <div class="stats-list">
-                    <div class="stats-list-item">
-                        <span class="stats-list-icon">📕</span>
-                        <div>
-                            <strong>Романы:</strong> 5 крупных (История одного города, Господа Головлёвы, Пошехонская старина и др.)
-                        </div>
-                    </div>
-                    <div class="stats-list-item">
-                        <span class="stats-list-icon">🧚</span>
-                        <div>
-                            <strong>Сказки:</strong> 23–32 (Премудрый пискарь, Дикая помещица и т.д.)
-                        </div>
-                    </div>
-                    <div class="stats-list-item">
-                        <span class="stats-list-icon">📰</span>
-                        <div>
-                            <strong>Очерки:</strong> 10+ циклов (Губернские очерки — первое крупное, Мелочи жизни и др.)
-                        </div>
+        </div>
+    </section>
+
+    <!-- Призыв к чтению -->
+    <section class="promo-section">
+        <div class="promo-container">
+            <div class="promo-badge">📚 ВНИМАНИЕ!</div>
+            <h2 class="promo-title">Вас заинтересовал Салтыков-Щедрин?</h2>
+            <p class="promo-subtitle">Хотите погрузиться в мир его сатиры и остроумия?</p>
+            <div class="promo-content">
+                <div class="promo-text-block">
+                    <p class="promo-text"><strong>Не откладывайте!</strong> Произведения великого сатирика ждут вас в библиотеках города!</p>
+                    <p class="promo-text">«История одного города», «Господа Головлёвы», бессмертные сказки — все эти шедевры доступны <strong>бесплатно</strong>!</p>
+                </div>
+                <div class="promo-cta">
+                    <div class="promo-icon-large">🏛️</div>
+                    <h3>Посетите библиотеку!</h3>
+                    <div class="promo-benefits">
+                        <div class="benefit-item">✅ Бесплатно</div>
+                        <div class="benefit-item">✅ Доступно</div>
+                        <div class="benefit-item">✅ Незабываемо</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
     <!-- Произведения -->
     <section id="works" class="section">
         <h2 class="section-title">Главные произведения</h2>
         <p class="section-subtitle">Кликните на книгу, чтобы узнать подробности</p>
         <div class="books-grid">
-            <div class="book-card" onclick="openBook('b1')"><div class="book-cover"><span class="book-title">История одного города</span></div><div class="book-year">1869–1870</div><div class="book-preview">История города Глупова и его правителей.</div></div>
-            <div class="book-card" onclick="openBook('b2')"><div class="book-cover"><span class="book-title">Господа Головлёвы</span></div><div class="book-year">1875–1880</div><div class="book-preview">Семейная хроника о вырождении рода.</div></div>
+            <div class="book-card" onclick="openBook('b1')"><div class="book-cover"><span class="book-title">История одного города</span></div><div class="book-year">1869–1870</div><div class="book-preview">Сатирический роман о городе Глупове</div></div>
+            <div class="book-card" onclick="openBook('b2')"><div class="book-cover"><span class="book-title">Господа Головлёвы</span></div><div class="book-year">1875–1880</div><div class="book-preview">Семейная хроника о вырождении рода</div></div>
             <div class="book-card" onclick="openBook('b3')"><div class="book-cover"><span class="book-title">Сказки</span></div><div class="book-year">1869–1886</div><div class="book-preview">«Премудрый пискарь» и другие</div></div>
             <div class="book-card" onclick="openBook('b4')"><div class="book-cover"><span class="book-title">Губернские очерки</span></div><div class="book-year">1856–1857</div><div class="book-preview">Цикл очерков о провинции</div></div>
             <div class="book-card" onclick="openBook('b5')"><div class="book-cover"><span class="book-title">Помпадуры и помпадурши</span></div><div class="book-year">1863–1874</div><div class="book-preview">Сатира на чиновников</div></div>
             <div class="book-card" onclick="openBook('b6')"><div class="book-cover"><span class="book-title">Пошехонская старина</span></div><div class="book-year">1887–1889</div><div class="book-preview">Воспоминания о детстве</div></div>
         </div>
     </section>
-    
+
     <!-- Видео -->
     <section id="video" class="section">
         <h2 class="section-title">Самоотверженный заяц</h2>
         <div class="video-container">
-            <iframe src="https://drive.google.com/file/d/1LdHgd-37UHLk5CdXzw-onxi44MFJChld/preview" 
-                    width="100%" 
-                    height="500" 
-                    allow="autoplay" 
-                    style="border:none; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.2);">
-            </iframe>
+            <iframe src="https://drive.google.com/file/d/1LdHgd-37UHLk5CdXzw-onxi44MFJChld/preview" width="100%" height="500" allow="autoplay" style="border:none; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.2);"></iframe>
         </div>
     </section>
 
@@ -170,297 +167,83 @@
             <button class="quote-button" onclick="nextQuote()">Следующая цитата</button>
         </div>
     </section>
-    
-           <!-- Галерея иллюстраций -->
+
+    <!-- Галерея иллюстраций -->
     <section id="gallery" class="section">
-        <h2 class="section-title">Проверь себя. Узнай произведение по иллюстрации. Увеличение по клику.</h2>
-        <p class="section-subtitle">Выберите название произведения для каждой иллюстрации</p>
-        
+        <h2 class="section-title">Иллюстрации к произведениям</h2>
+        <p class="section-subtitle">Выберите произведение для каждой иллюстрации</p>
         <div class="gallery-grid">
-            <!-- Иллюстрация 1 -->
-            <div class="gallery-item">
-                <img src="1.png" alt="Иллюстрация 1" class="gallery-image">
-                <div class="gallery-spacer"></div>
-                <select class="gallery-select" onchange="saveSelection(this, '1')">
-                    <option value="">— Выберите произведение —</option>
-                    <option value="Губернские очерки">Губернские очерки</option>
-                    <option value="История одного города">История одного города</option>
-                    <option value="Пошехонская старина">Пошехонская старина</option>
-                    <option value="Сказки">Сказки для детей изрядного возраста</option>
-                    <option value="Помпадуры и помпадурши">Помпадуры и помпадурши</option>
-                    <option value="Господа Головлёвы">Господа Головлёвы</option>
-                    <option value="За рубежом">За рубежом</option>
-                    <option value="Современная идиллия">Современная идиллия</option>
-                    <option value="Мелочи жизни">Мелочи жизни</option>
-                </select>
-            </div>
-            
-            <!-- Иллюстрация 2 -->
-            <div class="gallery-item">
-                <img src="2.png" alt="Иллюстрация 2" class="gallery-image">
-                <div class="gallery-spacer"></div>
-                <select class="gallery-select" onchange="saveSelection(this, '2')">
-                    <option value="">— Выберите произведение —</option>
-                    <option value="Современная идиллия">Современная идиллия</option>
-                    <option value="Пошехонская старина">Пошехонская старина</option>
-                    <option value="Господа Головлёвы">Господа Головлёвы</option>
-                    <option value="История одного города">История одного города</option>
-                    <option value="Мелочи жизни">Мелочи жизни</option>
-                    <option value="Сказки">Сказки для детей изрядного возраста</option>
-                    <option value="Помпадуры и помпадурши">Помпадуры и помпадурши</option>
-                    <option value="За рубежом">За рубежом</option>
-                    <option value="Губернские очерки">Губернские очерки</option>
-                </select>
-            </div>
-            
-            <!-- Иллюстрация 3 -->
-            <div class="gallery-item">
-                <img src="3.png" alt="Иллюстрация 3" class="gallery-image">
-                <div class="gallery-spacer"></div>
-                <select class="gallery-select" onchange="saveSelection(this, '3')">
-                    <option value="">— Выберите произведение —</option>
-                    <option value="Помпадуры и помпадурши">Помпадуры и помпадурши</option>
-                    <option value="За рубежом">За рубежом</option>
-                    <option value="Сказки">Сказки для детей изрядного возраста</option>
-                    <option value="Господа Головлёвы">Господа Головлёвы</option>
-                    <option value="История одного города">История одного города</option>
-                    <option value="Мелочи жизни">Мелочи жизни</option>
-                    <option value="Губернские очерки">Губернские очерки</option>
-                    <option value="Пошехонская старина">Пошехонская старина</option>
-                    <option value="Современная идиллия">Современная идиллия</option>
-                </select>
-            </div>
-            
-            <!-- Иллюстрация 4 -->
-            <div class="gallery-item">
-                <img src="4.png" alt="Иллюстрация 4" class="gallery-image">
-                <div class="gallery-spacer"></div>
-                <select class="gallery-select" onchange="saveSelection(this, '4')">
-                    <option value="">— Выберите произведение —</option>
-                    <option value="Мелочи жизни">Мелочи жизни</option>
-                    <option value="История одного города">История одного города</option>
-                    <option value="Губернские очерки">Губернские очерки</option>
-                    <option value="Пошехонская старина">Пошехонская старина</option>
-                    <option value="За рубежом">За рубежом</option>
-                    <option value="Помпадуры и помпадурши">Помпадуры и помпадурши</option>
-                    <option value="Современная идиллия">Современная идиллия</option>
-                    <option value="Господа Головлёвы">Господа Головлёвы</option>
-                    <option value="Сказки">Сказки для детей изрядного возраста</option>
-                </select>
-            </div>
-            
-            <!-- Иллюстрация 5 -->
-            <div class="gallery-item">
-                <img src="5.png" alt="Иллюстрация 5" class="gallery-image">
-                <div class="gallery-spacer"></div>
-                <select class="gallery-select" onchange="saveSelection(this, '5')">
-                    <option value="">— Выберите произведение —</option>
-                    <option value="За рубежом">За рубежом</option>
-                    <option value="Сказки">Сказки для детей изрядного возраста</option>
-                    <option value="Помпадуры и помпадурши">Помпадуры и помпадурши</option>
-                    <option value="Мелочи жизни">Мелочи жизни</option>
-                    <option value="Господа Головлёвы">Господа Головлёвы</option>
-                    <option value="История одного города">История одного города</option>
-                    <option value="Пошехонская старина">Пошехонская старина</option>
-                    <option value="Современная идиллия">Современная идиллия</option>
-                    <option value="Губернские очерки">Губернские очерки</option>
-                </select>
-            </div>
-            
-            <!-- Иллюстрация 6 -->
-            <div class="gallery-item">
-                <img src="6.png" alt="Иллюстрация 6" class="gallery-image">
-                <div class="gallery-spacer"></div>
-                <select class="gallery-select" onchange="saveSelection(this, '6')">
-                    <option value="">— Выберите произведение —</option>
-                    <option value="Пошехонская старина">Пошехонская старина</option>
-                    <option value="Господа Головлёвы">Господа Головлёвы</option>
-                    <option value="Мелочи жизни">Мелочи жизни</option>
-                    <option value="Современная идиллия">Современная идиллия</option>
-                    <option value="Губернские очерки">Губернские очерки</option>
-                    <option value="За рубежом">За рубежом</option>
-                    <option value="История одного города">История одного города</option>
-                    <option value="Сказки">Сказки для детей изрядного возраста</option>
-                    <option value="Помпадуры и помпадурши">Помпадуры и помпадурши</option>
-                </select>
-            </div>
-            
-            <!-- Иллюстрация 7 -->
-            <div class="gallery-item">
-                <img src="7.png" alt="Иллюстрация 7" class="gallery-image">
-                <div class="gallery-spacer"></div>
-                <select class="gallery-select" onchange="saveSelection(this, '7')">
-                    <option value="">— Выберите произведение —</option>
-                    <option value="Сказки">Сказки для детей изрядного возраста</option>
-                    <option value="Мелочи жизни">Мелочи жизни</option>
-                    <option value="Губернские очерки">Губернские очерки</option>
-                    <option value="За рубежом">За рубежом</option>
-                    <option value="Помпадуры и помпадурши">Помпадуры и помпадурши</option>
-                    <option value="Современная идиллия">Современная идиллия</option>
-                    <option value="Пошехонская старина">Пошехонская старина</option>
-                    <option value="История одного города">История одного города</option>
-                    <option value="Господа Головлёвы">Господа Головлёвы</option>
-                </select>
-            </div>
-            
-            <!-- Иллюстрация 8 -->
-            <div class="gallery-item">
-                <img src="8.png" alt="Иллюстрация 8" class="gallery-image">
-                <div class="gallery-spacer"></div>
-                <select class="gallery-select" onchange="saveSelection(this, '8')">
-                    <option value="">— Выберите произведение —</option>
-                    <option value="История одного города">История одного города</option>
-                    <option value="Помпадуры и помпадурши">Помпадуры и помпадурши</option>
-                    <option value="Современная идиллия">Современная идиллия</option>
-                    <option value="Губернские очерки">Губернские очерки</option>
-                    <option value="Сказки">Сказки для детей изрядного возраста</option>
-                    <option value="Пошехонская старина">Пошехонская старина</option>
-                    <option value="Господа Головлёвы">Господа Головлёвы</option>
-                    <option value="Мелочи жизни">Мелочи жизни</option>
-                    <option value="За рубежом">За рубежом</option>
-                </select>
-            </div>
-            
-            <!-- Иллюстрация 9 -->
-            <div class="gallery-item">
-                <img src="9.png" alt="Иллюстрация 9" class="gallery-image">
-                <div class="gallery-spacer"></div>
-                <select class="gallery-select" onchange="saveSelection(this, '9')">
-                    <option value="">— Выберите произведение —</option>
-                    <option value="Господа Головлёвы">Господа Головлёвы</option>
-                    <option value="За рубежом">За рубежом</option>
-                    <option value="Пошехонская старина">Пошехонская старина</option>
-                    <option value="История одного города">История одного города</option>
-                    <option value="Современная идиллия">Современная идиллия</option>
-                    <option value="Губернские очерки">Губернские очерки</option>
-                    <option value="Мелочи жизни">Мелочи жизни</option>
-                    <option value="Помпадуры и помпадурши">Помпадуры и помпадурши</option>
-                    <option value="Сказки">Сказки для детей изрядного возраста</option>
-                </select>
-            </div>
+            <div class="gallery-item" data-correct="История одного города"><img src="1.png" alt="Иллюстрация 1" class="gallery-image"><div class="gallery-spacer"></div><select class="gallery-select" onchange="saveSelection(this, '1')"><option value="">— Выберите произведение —</option><option value="Губернские очерки">Губернские очерки</option><option value="История одного города">История одного города</option><option value="Пошехонская старина">Пошехонская старина</option><option value="Сказки">Сказки</option><option value="Помпадуры и помпадурши">Помпадуры и помпадурши</option><option value="Господа Головлёвы">Господа Головлёвы</option><option value="За рубежом">За рубежом</option><option value="Современная идиллия">Современная идиллия</option><option value="Мелочи жизни">Мелочи жизни</option></select><div class="gallery-feedback" id="feedback-1"></div></div>
+            <div class="gallery-item" data-correct="Господа Головлёвы"><img src="2.png" alt="Иллюстрация 2" class="gallery-image"><div class="gallery-spacer"></div><select class="gallery-select" onchange="saveSelection(this, '2')"><option value="">— Выберите произведение —</option><option value="Современная идиллия">Современная идиллия</option><option value="Пошехонская старина">Пошехонская старина</option><option value="Господа Головлёвы">Господа Головлёвы</option><option value="История одного города">История одного города</option><option value="Мелочи жизни">Мелочи жизни</option><option value="Сказки">Сказки</option><option value="Помпадуры и помпадурши">Помпадуры и помпадурши</option><option value="За рубежом">За рубежом</option><option value="Губернские очерки">Губернские очерки</option></select><div class="gallery-feedback" id="feedback-2"></div></div>
+            <div class="gallery-item" data-correct="Сказки"><img src="3.png" alt="Иллюстрация 3" class="gallery-image"><div class="gallery-spacer"></div><select class="gallery-select" onchange="saveSelection(this, '3')"><option value="">— Выберите произведение —</option><option value="Помпадуры и помпадурши">Помпадуры и помпадурши</option><option value="За рубежом">За рубежом</option><option value="Сказки">Сказки</option><option value="Господа Головлёвы">Господа Головлёвы</option><option value="История одного города">История одного города</option><option value="Мелочи жизни">Мелочи жизни</option><option value="Губернские очерки">Губернские очерки</option><option value="Пошехонская старина">Пошехонская старина</option><option value="Современная идиллия">Современная идиллия</option></select><div class="gallery-feedback" id="feedback-3"></div></div>
+            <div class="gallery-item" data-correct="Губернские очерки"><img src="4.png" alt="Иллюстрация 4" class="gallery-image"><div class="gallery-spacer"></div><select class="gallery-select" onchange="saveSelection(this, '4')"><option value="">— Выберите произведение —</option><option value="Мелочи жизни">Мелочи жизни</option><option value="История одного города">История одного города</option><option value="Губернские очерки">Губернские очерки</option><option value="Пошехонская старина">Пошехонская старина</option><option value="За рубежом">За рубежом</option><option value="Помпадуры и помпадурши">Помпадуры и помпадурши</option><option value="Современная идиллия">Современная идиллия</option><option value="Господа Головлёвы">Господа Головлёвы</option><option value="Сказки">Сказки</option></select><div class="gallery-feedback" id="feedback-4"></div></div>
+            <div class="gallery-item" data-correct="Помпадуры и помпадурши"><img src="5.png" alt="Иллюстрация 5" class="gallery-image"><div class="gallery-spacer"></div><select class="gallery-select" onchange="saveSelection(this, '5')"><option value="">— Выберите произведение —</option><option value="За рубежом">За рубежом</option><option value="Сказки">Сказки</option><option value="Помпадуры и помпадурши">Помпадуры и помпадурши</option><option value="Мелочи жизни">Мелочи жизни</option><option value="Господа Головлёвы">Господа Головлёвы</option><option value="История одного города">История одного города</option><option value="Пошехонская старина">Пошехонская старина</option><option value="Современная идиллия">Современная идиллия</option><option value="Губернские очерки">Губернские очерки</option></select><div class="gallery-feedback" id="feedback-5"></div></div>
+            <div class="gallery-item" data-correct="Пошехонская старина"><img src="6.png" alt="Иллюстрация 6" class="gallery-image"><div class="gallery-spacer"></div><select class="gallery-select" onchange="saveSelection(this, '6')"><option value="">— Выберите произведение —</option><option value="Пошехонская старина">Пошехонская старина</option><option value="Господа Головлёвы">Господа Головлёвы</option><option value="Мелочи жизни">Мелочи жизни</option><option value="Современная идиллия">Современная идиллия</option><option value="Губернские очерки">Губернские очерки</option><option value="За рубежом">За рубежом</option><option value="История одного города">История одного города</option><option value="Сказки">Сказки</option><option value="Помпадуры и помпадурши">Помпадуры и помпадурши</option></select><div class="gallery-feedback" id="feedback-6"></div></div>
+            <div class="gallery-item" data-correct="Современная идиллия"><img src="7.png" alt="Иллюстрация 7" class="gallery-image"><div class="gallery-spacer"></div><select class="gallery-select" onchange="saveSelection(this, '7')"><option value="">— Выберите произведение —</option><option value="Сказки">Сказки</option><option value="Мелочи жизни">Мелочи жизни</option><option value="Губернские очерки">Губернские очерки</option><option value="За рубежом">За рубежом</option><option value="Помпадуры и помпадурши">Помпадуры и помпадурши</option><option value="Современная идиллия">Современная идиллия</option><option value="Пошехонская старина">Пошехонская старина</option><option value="История одного города">История одного города</option><option value="Господа Головлёвы">Господа Головлёвы</option></select><div class="gallery-feedback" id="feedback-7"></div></div>
+            <div class="gallery-item" data-correct="За рубежом"><img src="8.png" alt="Иллюстрация 8" class="gallery-image"><div class="gallery-spacer"></div><select class="gallery-select" onchange="saveSelection(this, '8')"><option value="">— Выберите произведение —</option><option value="История одного города">История одного города</option><option value="Помпадуры и помпадурши">Помпадуры и помпадурши</option><option value="Современная идиллия">Современная идиллия</option><option value="Губернские очерки">Губернские очерки</option><option value="Сказки">Сказки</option><option value="Пошехонская старина">Пошехонская старина</option><option value="Господа Головлёвы">Господа Головлёвы</option><option value="Мелочи жизни">Мелочи жизни</option><option value="За рубежом">За рубежом</option></select><div class="gallery-feedback" id="feedback-8"></div></div>
+            <div class="gallery-item" data-correct="Мелочи жизни"><img src="9.png" alt="Иллюстрация 9" class="gallery-image"><div class="gallery-spacer"></div><select class="gallery-select" onchange="saveSelection(this, '9')"><option value="">— Выберите произведение —</option><option value="Господа Головлёвы">Господа Головлёвы</option><option value="За рубежом">За рубежом</option><option value="Пошехонская старина">Пошехонская старина</option><option value="История одного города">История одного города</option><option value="Современная идиллия">Современная идиллия</option><option value="Губернские очерки">Губернские очерки</option><option value="Мелочи жизни">Мелочи жизни</option><option value="Помпадуры и помпадурши">Помпадуры и помпадурши</option><option value="Сказки">Сказки</option></select><div class="gallery-feedback" id="feedback-9"></div></div>
         </div>
-        
-        <!-- Кнопка и результат -->
-        <div style="text-align: center; margin-top: 40px;">
-            <button class="cta-button" onclick="showGalleryResult()">Показать результат</button>
+        <div style="text-align: center; margin-top: 30px;">
+            <button class="cta-button" onclick="checkAnswers()" style="margin-right: 15px;">✅ Проверить ответы</button>
+            <button class="cta-button" onclick="resetGallery()" style="background: #5d2e0c;">🔄 Сбросить</button>
         </div>
-        <div id="gallery-result" class="hidden" style="margin-top: 30px; background: #fff; padding: 20px; border-radius: 10px; border: 2px solid #d4af37; max-width: 600px; margin-left: auto; margin-right: auto;">
-            <h3 style="color: #8b4513; margin-bottom: 15px;">✅ Ваши соответствия:</h3>
+        <div id="gallery-result" class="hidden" style="margin-top: 30px; background: #fff; padding: 25px; border-radius: 10px; border: 3px solid #d4af37; max-width: 600px; margin-left: auto; margin-right: auto;">
+            <h3 style="color: #8b4513; margin-bottom: 15px;" id="result-title">📊 Ваши результаты:</h3>
+            <div id="result-summary" style="font-size: 1.3rem; font-weight: bold; color: #3d2817; margin-bottom: 20px;"></div>
             <div id="result-list"></div>
         </div>
     </section>
-    <!-- Аннотации и рецензии -->
-<section id="reviews" class="section">
-    <h2 class="section-title">Критика и отзывы</h2>
-    <p class="section-subtitle">Что говорили о Салтыкове-Щедрине</p>
-    
-    <div class="reviews-container">
-        <!-- Рецензия 1 -->
-        <div class="review-card">
-            <div class="review-header">
-                <span class="review-icon">✍️</span>
-                <h3>Л.Н. Толстой о Щедрине</h3>
-            </div>
-            <blockquote class="review-quote">
-                «Щедрин — один из самых замечательных писателей наших... 
-                Он один из тех редких людей, которые могут учить других»
-            </blockquote>
-            <p class="review-source">— Из письма Л.Н. Толстого, 1885 г.</p>
+
+    <!-- Полезные ресурсы -->
+    <section id="resources" class="section">
+        <h2 class="section-title">Полезные ресурсы</h2>
+        <p class="section-subtitle">Электронные библиотеки и информационные порталы</p>
+        <div class="resources-single-block">
+            <div class="resource-item"><span class="resource-icon">🏛️</span><div class="resource-content"><a href="https://www.prlib.ru/search?key=Салтыков-Щедрин" target="_blank">Президентская библиотека (ПРЛИБ)</a><p>Оцифрованные издания, документы, материалы о писателе</p></div></div>
+            <div class="resource-item"><span class="resource-icon">📚</span><div class="resource-content"><a href="https://нэб.рф/search/?q=Салтыков-Щедрин" target="_blank">Национальная электронная библиотека (НЭБ)</a><p>Полные тексты произведений, научные издания</p></div></div>
+            <div class="resource-item"><span class="resource-icon">🎧</span><div class="resource-content"><a href="https://www.litres.ru/avtor/mihail-evgrafovich-saltykov-schedrin/" target="_blank">ЛитРес</a><p>Электронные и аудиокниги Щедрина</p></div></div>
+            <div class="resource-item"><span class="resource-icon">🏛️</span><div class="resource-content"><a href="https://www.rsl.ru/" target="_blank">Российская государственная библиотека (РГБ)</a><p>Электронные ресурсы, диссертации, редкие издания</p></div></div>
+            <div class="resource-item"><span class="resource-icon">📖</span><div class="resource-content"><a href="https://azbyka.ru/otechnik/" target="_blank">Азбука веры</a><p>Электронная библиотека русской классики</p></div></div>
+            <div class="resource-item"><span class="resource-icon">📱</span><div class="resource-content"><a href="https://www.libking.ru/books/prose-/prose-classic/mikhail-saltyikov-shchedrin/" target="_blank">LibKing.ru</a><p>Все произведения Щедрина онлайн, удобно читать</p></div></div>
         </div>
-        
-        <!-- Рецензия 2 -->
-        <div class="review-card">
-            <div class="review-header">
-                <span class="review-icon">📰</span>
-                <h3>Современная критика</h3>
+        <div class="resources-note"><h3>💡 Не нашли нужное?</h3><p>Обратитесь к нашим библиотекарям — они помогут найти редкие издания, критические статьи и аудиокниги</p><p class="contact-emphasis">📞 <strong>(3435) 412-888</strong> | 📧 <strong>cgb@tagillib.ru</strong></p></div>
+    </section>
+
+    <!-- Электронный каталог -->
+    <section id="catalog" class="section">
+        <div class="catalog-container">
+            <div class="catalog-badge">🔍 ПОИСК В КАТАЛОГЕ</div>
+            <h2 class="catalog-title">Проверьте наличие книг в библиотеках города</h2>
+            <div class="catalog-stats">
+                <div class="stat-item"><span class="stat-number">348</span><span class="stat-label">печатных изданий<br>М.Е. Салтыкова-Щедрина</span></div>
+                <div class="stat-item"><span class="stat-number">📚</span><span class="stat-label">в фондах библиотек<br>г. Нижний Тагил</span></div>
             </div>
-            <blockquote class="review-quote">
-                «История одного города» — это не просто сатира, это глубокое 
-                философское осмысление российской истории и власти»
-            </blockquote>
-            <p class="review-source">— Литературный критик Д.И. Писарев</p>
-        </div>
-        <!-- Полезные ресурсы -->
-<section id="resources" class="section">
-    <h2 class="section-title">Полезные ресурсы</h2>
-    <p class="section-subtitle">Электронные библиотеки и информационные порталы</p>
-    
-    <div class="resources-single-block">
-        <div class="resource-item">
-            <span class="resource-icon">🏛️</span>
-            <div class="resource-content">
-                <a href="https://www.prlib.ru/search?key=Салтыков-Щедрин" target="_blank">
-                    Президентская библиотека (ПРЛИБ)
-                </a>
-                <p>Оцифрованные издания, документы, материалы о писателе</p>
+            <p class="catalog-description">В нашем электронном каталоге вы можете:</p>
+            <ul class="catalog-features">
+                <li>✅ Проверить наличие интересующей вас книги</li>
+                <li>✅ Узнать, в какой библиотеке она находится</li>
+                <li>✅ Посмотреть шифр для заказа</li>
+                <li>✅ Забронировать издание онлайн</li>
+            </ul>
+            <div class="catalog-cta">
+                <a href="http://www.tagillib.ru:8087/jirbis2/index.php?option=com_irbis&view=irbis&Itemid=114" target="_blank" class="catalog-button">🔎 Перейти в электронный каталог</a>
+                <p class="catalog-note"><small>Откроется в новой вкладке • Система ИРБИС64</small></p>
             </div>
-        </div>
-        
-        <div class="resource-item">
-            <span class="resource-icon">📚</span>
-            <div class="resource-content">
-                <a href="https://нэб.рф/search/?q=Салтыков-Щедрин" target="_blank">
-                    Национальная электронная библиотека (НЭБ)
-                </a>
-                <p>Полные тексты произведений, научные издания</p>
+            <div class="catalog-help">
+                <h3>💡 Как искать?</h3>
+                <ol class="help-steps">
+                    <li>В поле «Автор» введите: <strong>Салтыков-Щедрин</strong></li>
+                    <li>Или в поле «Заглавие» — название произведения</li>
+                    <li>Нажмите «Поиск»</li>
+                    <li>В результатах увидите наличие и шифр</li>
+                </ol>
             </div>
         </div>
-        
-        <div class="resource-item">
-            <span class="resource-icon">🎧</span>
-            <div class="resource-content">
-                <a href="https://www.litres.ru/avtor/mihail-evgrafovich-saltykov-schedrin/" target="_blank">
-                    ЛитРес
-                </a>
-                <p>Электронные и аудиокниги Щедрина</p>
-            </div>
-        </div>
-        
-        <div class="resource-item">
-            <span class="resource-icon">🏛️</span>
-            <div class="resource-content">
-                <a href="https://www.rsl.ru/" target="_blank">
-                    Российская государственная библиотека (РГБ)
-                </a>
-                <p>Электронные ресурсы, диссертации, редкие издания</p>
-            </div>
-        </div>
-        
-        <div class="resource-item">
-            <span class="resource-icon">📖</span>
-            <div class="resource-content">
-                <a href="https://azbyka.ru/otechnik/" target="_blank">
-                    Азбука веры
-                </a>
-                <p>Электронная библиотека русской классики</p>
-            </div>
-        </div>
-        
-        <div class="resource-item">
-            <span class="resource-icon">📱</span>
-            <div class="resource-content">
-                <a href="https://www.libking.ru/books/prose-/prose-classic/mikhail-saltyikov-shchedrin/" target="_blank">
-                    LibKing.ru
-                </a>
-                <p>Все произведения Щедрина онлайн, удобно читать</p>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Дополнительная информация -->
-    <div class="resources-note">
-        <h3>💡 Не нашли нужное?</h3>
-        <p>Обратитесь к нашим библиотекарям — они помогут найти редкие издания, критические статьи и аудиокниги</p>
-        <p class="contact-emphasis">
-            📞 <strong>(3435) 412-888</strong> | 📧 <strong>cgb@tagillib.ru</strong>
-        </p>
-    </div>
-</section>
-       </div>
-</section>    
+    </section>
+
     <!-- Тест -->
     <section id="quiz" class="section">
-        <h2 class="section-title">Какой вы герой Салтыкова-Щедрина?</h2>
+        <h2 class="section-title">Какой вы герой Щедрина?</h2>
         <div class="quiz-container">
             <div id="quiz-question"></div>
             <div id="quiz-options"></div>
@@ -468,121 +251,22 @@
             <button id="quiz-restart" class="quiz-button hidden" onclick="restartQuiz()">Пройти заново</button>
         </div>
     </section>
-    <!-- Электронный каталог -->
-<section id="catalog" class="section">
-    <div class="catalog-container">
-        <div class="catalog-badge">🔍 ПОИСК В КАТАЛОГЕ</div>
-        
-        <h2 class="catalog-title">Проверьте наличие книг в библиотеках города</h2>
-        
-        <div class="catalog-stats">
-            <div class="stat-item">
-                <span class="stat-number">348</span>
-                <span class="stat-label">печатных изданий<br>М.Е. Салтыкова-Щедрина</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">📚</span>
-                <span class="stat-label">в фондах библиотек<br>г. Нижний Тагил</span>
-            </div>
-        </div>
-        
-        <p class="catalog-description">
-            В нашем электронном каталоге вы можете:
-        </p>
-        
-        <ul class="catalog-features">
-            <li>✅ Проверить наличие интересующей вас книги</li>
-            <li>✅ Узнать, в какой библиотеке она находится</li>
-           </ul>
-        
-        <div class="catalog-cta">
-            <a href="http://www.tagillib.ru:8087/jirbis2/index.php?option=com_irbis&view=irbis&Itemid=114" 
-               target="_blank" 
-               class="catalog-button">
-                🔎 Перейти в электронный каталог
-            </a>
-            <p class="catalog-note">
-                <small>Откроется в новой вкладке • Система ИРБИС64</small>
-            </p>
-        </div>
-        
-        <div class="catalog-help">
-            <h3>💡 Как искать?</h3>
-            <ol class="help-steps">
-                <li>В поле «Автор» введите: <strong>Салтыков-Щедрин</strong></li>
-                <li>Или в поле «Заглавие» — название произведения</li>
-                <li>Нажмите «Поиск»</li>
-                <li>В результатах увидите наличие и шифр</li>
-            </ol>
-        </div>
-    </div>
-</section>
-
-        <!-- Призыв к чтению -->
-    <section class="promo-section">
-        <div class="promo-container">
-            <div class="promo-badge">📚 ВНИМАНИЕ!</div>
-            <h2 class="promo-title">Вас заинтересовал Салтыков-Щедрин?</h2>
-            <p class="promo-subtitle">Хотите погрузиться в мир его сатиры и остроумия?</p>
-            
-            <div class="promo-content">
-                <div class="promo-text-block">
-                    <p class="promo-text">
-                        <strong>Не откладывайте!</strong> Произведения великого сатирика ждут вас в библиотеках города!
-                    </p>
-                    <p class="promo-text">
-                        «История одного города», «Господа Головлёвы», бессмертные сказки — 
-                        все эти шедевры доступны <strong>бесплатно</strong>!
-                    </p>
-                </div>
-                
-                <div class="promo-cta">
-                    <div class="promo-icon-large">🏛️</div>
-                    <h3>Посетите библиотеку!</h3>
-                    <p>Возьмите книгу и откройте для себя гений русской сатиры!</p>
-                    <div class="promo-benefits">
-                        <div class="benefit-item">✅ Бесплатно</div>
-                        <div class="benefit-item">✅ Доступно</div>
-                        <div class="benefit-item">✅ Незабываемо</div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="promo-quote">
-                <p>«Книга — это окно в мир. Откройте его!»</p>
-                <span class="promo-author">— Народная мудрость</span>
-            </div>
-            
-            <div class="promo-button-wrapper">
-                <a href="https://tagillib.ru/about_lib/struktura/" target="_blank" class="promo-button">
-                    📍 Узнать адреса библиотек
-                </a>
-            </div>
-        </div>
-    </section>
 
     <!-- Футер -->
     <footer class="footer">
         <div class="footer-content">
-            <div class="footer-logo">
-                <strong>МУНИЦИПАЛЬНОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ КУЛЬТУРЫ</strong><br>
-                «ЦЕНТРАЛЬНАЯ ГОРОДСКАЯ БИБЛИОТЕКА»
-            </div>
-            
+            <div class="footer-logo"><strong>МУНИЦИПАЛЬНОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ КУЛЬТУРЫ</strong><br>«ЦЕНТРАЛЬНАЯ ГОРОДСКАЯ БИБЛИОТЕКА»</div>
             <div class="footer-info">
                 <p>📍 г. Нижний Тагил</p>
                 <p>📧 <a href="mailto:cgb@tagillib.ru">cgb@tagillib.ru</a></p>
                 <p>📞 <a href="tel:+73435412888">+7(3435) 412-888</a></p>
                 <p>📘 <a href="https://vk.com/public50257368" target="_blank">VK: общественная страница</a></p>
             </div>
-            
-            <div class="footer-copyright">
-                <p>© 2026 • Виртуальная выставка «Салтыков-Щедрин: Сатира на века» Автор: Попова Т.В.</p>
-            </div>
+            <div class="footer-copyright"><p>© 2026 • Виртуальная выставка «Салтыков-Щедрин: Сатира на века»</p></div>
         </div>
     </footer>
 
-    <!-- Модальные окна (сокращённо) -->
+    <!-- Модальные окна (таймлайн 24 шт + книги 6 шт + лайтбокс) -->
     <div id="m1826" class="modal" onclick="closeM(event,this)"><div class="modal-content"><span class="modal-close" onclick="closeMbtn('m1826')">&times;</span><h3>1826</h3><p>15 (27) января – Родился в селе Спас-Угол.</p></div></div>
     <div id="m1836" class="modal" onclick="closeM(event,this)"><div class="modal-content"><span class="modal-close" onclick="closeMbtn('m1836')">&times;</span><h3>1836</h3><p>Начало учёбы в Московском Дворянском институте.</p></div></div>
     <div id="m1838" class="modal" onclick="closeM(event,this)"><div class="modal-content"><span class="modal-close" onclick="closeMbtn('m1838')">&times;</span><h3>1838</h3><p>Перевод в Царскосельский лицей.</p></div></div>
@@ -607,19 +291,16 @@
     <div id="m1869b" class="modal" onclick="closeM(event,this)"><div class="modal-content"><span class="modal-close" onclick="closeMbtn('m1869b')">&times;</span><h3>1869–1886</h3><p>«Сказки».</p></div></div>
     <div id="m1887" class="modal" onclick="closeM(event,this)"><div class="modal-content"><span class="modal-close" onclick="closeMbtn('m1887')">&times;</span><h3>1887–1889</h3><p>«Пошехонская старина».</p></div></div>
     <div id="m1889" class="modal" onclick="closeM(event,this)"><div class="modal-content"><span class="modal-close" onclick="closeMbtn('m1889')">&times;</span><h3>1889</h3><p>28 апреля – Смерть в Петербурге.</p></div></div>
+    <div id="b1" class="modal" onclick="closeB(event,this)"><div class="modal-content book-modal"><span class="modal-close" onclick="closeBbtn('b1')">&times;</span><h3>История одного города</h3><p class="book-years">1869–1870</p><p><strong>Жанр:</strong> Сатирический роман</p><p>История вымышленного города Глупова и его правителей.</p></div></div>
+    <div id="b2" class="modal" onclick="closeB(event,this)"><div class="modal-content book-modal"><span class="modal-close" onclick="closeBbtn('b2')">&times;</span><h3>Господа Головлёвы</h3><p class="book-years">1875–1880</p><p><strong>Жанр:</strong> Семейная хроника</p><p>История вырождения дворянского рода Головлёвых.</p></div></div>
+    <div id="b3" class="modal" onclick="closeB(event,this)"><div class="modal-content book-modal"><span class="modal-close" onclick="closeBbtn('b3')">&times;</span><h3>Сказки</h3><p class="book-years">1869–1886</p><p><strong>Жанр:</strong> Сатирические сказки</p><p>«Премудрый пискарь», «Медведь на воеводстве» и другие.</p></div></div>
+    <div id="b4" class="modal" onclick="closeB(event,this)"><div class="modal-content book-modal"><span class="modal-close" onclick="closeBbtn('b4')">&times;</span><h3>Губернские очерки</h3><p class="book-years">1856–1857</p><p><strong>Жанр:</strong> Очерки</p><p>Цикл очерков о провинциальной жизни.</p></div></div>
+    <div id="b5" class="modal" onclick="closeB(event,this)"><div class="modal-content book-modal"><span class="modal-close" onclick="closeBbtn('b5')">&times;</span><h3>Помпадуры и помпадурши</h3><p class="book-years">1863–1874</p><p><strong>Жанр:</strong> Сатирические очерки</p><p>Гротескные образы губернаторов и их жён.</p></div></div>
+    <div id="b6" class="modal" onclick="closeB(event,this)"><div class="modal-content book-modal"><span class="modal-close" onclick="closeBbtn('b6')">&times;</span><h3>Пошехонская старина</h3><p class="book-years">1887–1889</p><p><strong>Жанр:</strong> Автобиографическая повесть</p><p>Воспоминания о детстве, жизнь крепостной деревни.</p></div></div>
+    <div id="lightbox" class="lightbox" onclick="closeLightbox(event)"><span class="lightbox-close">&times;</span><img class="lightbox-img" id="lightbox-img" alt=""><div class="lightbox-caption" id="lightbox-caption"></div></div>
 
-    <!-- Модальные окна книг -->
-    <div id="b1" class="modal" onclick="closeB(event,this)"><div class="modal-content book-modal"><span class="modal-close" onclick="closeBbtn('b1')">&times;</span><h3>История одного города</h3><p class="book-years">1869–1870</p><p><strong>Жанр:</strong> Сатирический роман</p><p>Представьте город Глупов – зеркало любой эпохи, где градоначальники сменяют друг друга как перчатки: один правит с хлыстом, другой – с табакеркой, третий – вообще с табличкой "Долг превыше всего". Михаил Салтыков-Щедрин в этой гротескной хронике разоблачает абсурд бюрократии, глупость элиты и вечный фарс истории.Книга, которая смешит до слёз и заставляет задуматься: а не живём ли мы в новом Глупове? Идеально для любителей "Двенадцати стульев" и "Мастер и Маргарита". Погрузитесь в сатиру 1869 года – она актуальнее, чем вчерашние новости!</p></div></div>
-    <div id="b2" class="modal" onclick="closeB(event,this)"><div class="modal-content book-modal"><span class="modal-close" onclick="closeBbtn('b2')">&times;</span><h3>Господа Головлёвы</h3><p class="book-years">1875–1880</p><p><strong>Жанр:</strong> Семейная хроника</p><p>"Господа Головлёвы": династия, где любовь – это нож в спину! 
-Арина Петровна – "генерал-аншеф" усадьбы, где сыновья тонут в своих пороках: один в вине, другой в молитвах, третий – Иудушка – плетёт паутину лести и расчёта. Салтыков-Щедрин мастерски показывает, как богатство тает, а ненависть растёт: банкротства, сироты, галлюцинации в пустом доме. Финал – как удар молнии: "Что же ты стоишь, нищий?"</p></div></div>
-    <div id="b3" class="modal" onclick="closeB(event,this)"><div class="modal-content book-modal"><span class="modal-close" onclick="closeBbtn('b3')">&times;</span><h3>Сказки</h3><p class="book-years">1869–1886</p><p><strong>Жанр:</strong> Сатирические сказки</p><p>В этих коротких историях оживают знакомые сказочные мотивы, но с глубоким взглядом на жизнь. Почему пискарь выбрал безопасность в норе? Что происходит с помещиком без народа? Как совесть находит свой голос? Салтыков-Щедрин мягко, но точно рассказывает о добре, трусости, власти и человечности – через юмор и простоту. Идеально для уютного вечера: каждая сказка – как разговор с умным другом. Они учат видеть мир яснее, ценить честность и не бояться правды. Актуальны и сегодня!</p></div></div>
-    <div id="b4" class="modal" onclick="closeB(event,this)"><div class="modal-content book-modal"><span class="modal-close" onclick="closeBbtn('b4')">&times;</span><h3>Губернские очерки</h3><p class="book-years">1856–1857</p><p><strong>Жанр:</strong> Очерки</p><p>Путешествие по губернским просторам XIX века: чиновники в вихре суеты, помещики в своих замках, народ с тихой мудростью. Салтыков-Щедрин рисует живые зарисовки – от бала до ярмарки, от сплетен до размышлений о долге. С лёгким юмором и глубоким взглядом он показывает, как люди ищут своё место в мире. Эти очерки – как уютный разговор у самовара: учат замечать детали, ценить человечность и смеятся над пороками. Идеально для тех, кто любит русскую прозу и хочет лучше понять корни нашей культуры.</p></div></div>
-    <div id="b5" class="modal" onclick="closeB(event,this)"><div class="modal-content book-modal"><span class="modal-close" onclick="closeBbtn('b5')">&times;</span><h3>Помпадуры и помпадурши</h3><p class="book-years">1863–1874</p><p><strong>Жанр:</strong> Сатирические очерки</p><p>Гротескные образы губернаторов и их жён.Генерал Полторажицын хвастается подвигами (сомнительными), барыня Наклонская вещает о нравственности (с намёком), а их чада плывут по течению. Салтыков-Щедрин с тонкой иронией зарисовывает дворянский быт: сплетни, чины, пустые идеалы и вечная суета. За кажущимся уютом – зеркало тщеславия и упадка. Короткие очерки – мастер-класс по наблюдению за миром. Учат смеяться над абсурдом и видеть правду. Идеально для любителей классики с перчинкой.</p></div></div>
-    <div id="b6" class="modal" onclick="closeB(event,this)"><div class="modal-content book-modal"><span class="modal-close" onclick="closeBbtn('b6')">&times;</span><h3>Пошехонская старина</h3><p class="book-years">1887–1889</p><p><strong>Жанр:</strong> Автобиографическая повесть</p><p>Хроники Пошехонья – вымышленной глуши, где помещики тонут в спорах о чинах, бабушки вспоминают "золотой век крепостничества", а прогресс приходит с опозданием веков. Салтыков-Щедрин мастерски смешивает ностальгию с сарказмом: за идиллией – жадность, глупость и вечный застой. От ярмарок до бунтов – всё с едким юмором. Эти очерки – ключ к пониманию русской души: смешной, грустный, узнаваемый. Учат видеть за фасадом историю.</p></div></div>
-
-    <!-- ===== JAVASCRIPT ===== -->
     <script>
-        // === МОДАЛЬНЫЕ ОКНА ===
+        // МОДАЛЬНЫЕ ОКНА
         function openModal(id){var m=document.getElementById(id);if(m){m.classList.add('active');document.body.style.overflow='hidden';}}
         function closeM(e,m){if(e.target===m){m.classList.remove('active');document.body.style.overflow='auto';}}
         function closeMbtn(id){var m=document.getElementById(id);if(m){m.classList.remove('active');document.body.style.overflow='auto';}}
@@ -629,168 +310,30 @@
         document.addEventListener('keydown',function(e){if(e.key==='Escape'){var a=document.querySelector('.modal.active');if(a){a.classList.remove('active');document.body.style.overflow='auto';}}});
         function scrollToSection(id){var s=document.getElementById(id);if(s){s.scrollIntoView({behavior:'smooth'});}}
 
-        // === ЦИТАТЫ ===
-        var quotes=[
-            "Многие склонны путать понятия:«Отечество» и «Ваше превосходительство»",
-            "Российская власть должна держать свой народ в состоянии постоянного изумления",
-            "Чего-то хотелось: не то конституции, не то севрюжины с хреном, не то кого-нибудь ободрать",
-            "Самые плохие законы — в России, но этот недостаток компенсируется тем, что их никто не выполняет",
-            "Литература и пропаганда — это одно и то же",
-            "Дозволяется при встрече с начальством вежливыми и почтительными телодвижениями выражать испытываемое при сем удовольствие",
-            "Во всех странах железные дороги для передвижения служат, а у нас сверх того и для воровства",
-            "Если я усну и проснусь через сто лет, и меня спросят, что сейчас происходит в России, я отвечу: пьют и воруют",
-            "У нас нет середины: либо в рыло, либо ручку пожалуйте",
-            "— Mon cher, — говаривал Крутицын, — разделите сегодня все поровну, а завтра неравенство все-таки вступит в свои права.",
-            "Для того чтобы воровать с успехом, нужно обладать только проворством и жадностью. Жадность в особенности необходима, потому что за малую кражу можно попасть под суд",
-            "Крупными буквами печатались слова совершенно несущественные, а все существенное изображалось самым мелким шрифтом",
-            "Всякому безобразию своё приличие"
-        ];
+        // ЦИТАТЫ
+        var quotes=["Многие склонны путать понятия:«Отечество» и «Ваше превосходительство»","Российская власть должна держать свой народ в состоянии постоянного изумления","Чего-то хотелось: не то конституции, не то севрюжины с хреном, не то кого-нибудь ободрать","Самые плохие законы — в России, но этот недостаток компенсируется тем, что их никто не выполняет","Литература и пропаганда — это одно и то же","Дозволяется при встрече с начальством вежливыми и почтительными телодвижениями выражать испытываемое при сем удовольствие","Во всех странах железные дороги для передвижения служат, а у нас сверх того и для воровства","Если я усну и проснусь через сто лет и меня спросят, что сейчас происходит в России, я отвечу: пьют и воруют","У нас нет середины: либо в рыло, либо ручку пожалуйте","— Mon cher, — говаривал Крутицын, — разделите сегодня все поровну, а завтра неравенство все-таки вступит в свои права.","Для того чтобы воровать с успехом, нужно обладать только проворством и жадностью. Жадность в особенности необходима, потому что за малую кражу можно попасть под суд","Крупными буквами печатались слова совершенно несущественные, а все существенное изображалось самым мелким шрифтом","Всякому безобразию своё приличие"];
         var qi=0;
         function nextQuote(){qi=(qi+1)%quotes.length;document.getElementById('quote-display').textContent='«'+quotes[qi]+'»';}
 
-        // === ТЕСТ ===
-        var qs=[
-            {q:"Как вы относитесь к риску?",a:["Избегаю","Просчитываю","Действую","Наблюдаю"]},
-            {q:"Что для вас важнее?",a:["Безопасность","Власть","Идеалы","Выгода"]},
-            {q:"Как ведёте споры?",a:["Избегаю","Говорю по делу","Настаиваю","Подстраиваюсь"]}
-        ];
+        // ТЕСТ
+        var qs=[{q:"Как вы относитесь к риску?",a:["Избегаю","Просчитываю","Действую","Наблюдаю"]},{q:"Что для вас важнее?",a:["Безопасность","Власть","Идеалы","Выгода"]},{q:"Как ведёте споры?",a:["Избегаю","Говорю по делу","Настаиваю","Подстраиваюсь"]}];
         var qn=0,ans=[];
-        function loadQ(){
-            if(qn>=qs.length){showR();return;}
-            document.getElementById('quiz-question').textContent='Вопрос '+(qn+1)+': '+qs[qn].q;
-            var d=document.getElementById('quiz-options');d.innerHTML='';
-            for(var i=0;i<qs[qn].a.length;i++){
-                var b=document.createElement('button');
-                b.textContent=qs[qn].a[i];
-                b.onclick=function(x){return function(){ans.push(x);qn++;loadQ();}}(i);
-                d.appendChild(b);
-            }
-        }
-        // === ГАЛЕРЕЯ: СОХРАНЕНИЕ ВЫБОРА ===
-var gallerySelections = {};
-
-function saveSelection(select, imgNum) {
-    gallerySelections[imgNum] = select.value;
-    // Можно добавить localStorage для сохранения между сессиями
-    // localStorage.setItem('gallerySelections', JSON.stringify(gallerySelections));
-}
-
-function showGalleryResult() {
-    var resultDiv = document.getElementById('gallery-result');
-    var resultList = document.getElementById('result-list');
-    var filled = false;
-    
-    resultList.innerHTML = '';
-    
-    for (var i = 1; i <= 9; i++) {
-        if (gallerySelections[i]) {
-            filled = true;
-            var p = document.createElement('p');
-            p.innerHTML = '<strong>Иллюстрация ' + i + '.png:</strong> ' + gallerySelections[i];
-            p.style.margin = '8px 0';
-            p.style.padding = '8px';
-            p.style.background = '#f5e6d3';
-            p.style.borderRadius = '5px';
-            resultList.appendChild(p);
-        }
-    }
-    
-    if (filled) {
-        resultDiv.classList.remove('hidden');
-    } else {
-        alert('Выберите хотя бы одно произведение!');
-    }
-}
-        function showR(){
-            var r=["🐟 Премудрый пискарь","🦊 Иудушка Головлёв","🦅 Орёл-меценат","🐻 Медведь-воевода"];
-            document.getElementById('quiz-question').classList.add('hidden');
-            document.getElementById('quiz-options').classList.add('hidden');
-            document.getElementById('quiz-result').textContent=r[Math.floor(Math.random()*r.length)];
-            document.getElementById('quiz-result').classList.remove('hidden');
-            document.getElementById('quiz-restart').classList.remove('hidden');
-        }
+        function loadQ(){if(qn>=qs.length){showR();return;}document.getElementById('quiz-question').textContent='Вопрос '+(qn+1)+': '+qs[qn].q;var d=document.getElementById('quiz-options');d.innerHTML='';for(var i=0;i<qs[qn].a.length;i++){var b=document.createElement('button');b.textContent=qs[qn].a[i];b.onclick=function(x){return function(){ans.push(x);qn++;loadQ();}}(i);d.appendChild(b);}}
+        function showR(){var r=["🐟 Премудрый пискарь","🦊 Иудушка Головлёв","🦅 Орёл-меценат","🐻 Медведь-воевода"];document.getElementById('quiz-question').classList.add('hidden');document.getElementById('quiz-options').classList.add('hidden');document.getElementById('quiz-result').textContent=r[Math.floor(Math.random()*r.length)];document.getElementById('quiz-result').classList.remove('hidden');document.getElementById('quiz-restart').classList.remove('hidden');}
         function restartQuiz(){qn=0;ans=[];document.getElementById('quiz-question').classList.remove('hidden');document.getElementById('quiz-options').classList.remove('hidden');document.getElementById('quiz-result').classList.add('hidden');document.getElementById('quiz-restart').classList.add('hidden');loadQ();}
-        
-        // === ЗАПУСК ===
-        window.onload=function(){loadQ();};
-                // === ЛАЙТБОКС ДЛЯ КАРТИНОК ===
-        var lightbox = document.getElementById('lightbox');
-        var lightboxImg = document.getElementById('lightbox-img');
-        var lightboxCaption = document.getElementById('lightbox-caption');
 
-        // Добавляем клик на все картинки галереи
-        document.addEventListener('DOMContentLoaded', function() {
-            var galleryImages = document.querySelectorAll('.gallery-image');
-            galleryImages.forEach(function(img) {
-                img.addEventListener('click', function() {
-                    openLightbox(this);
-                });
-            });
-        });
+        // ГАЛЕРЕЯ
+        var gallerySelections={};
+        function saveSelection(select,imgNum){gallerySelections[imgNum]=select.value;var feedback=document.getElementById('feedback-'+imgNum);if(feedback){feedback.className='gallery-feedback';feedback.textContent='';}var item=select.closest('.gallery-item');if(item){item.classList.remove('correct','incorrect');}}
+        function checkAnswers(){var correctCount=0;var totalAnswered=0;var resultList=document.getElementById('result-list');var resultSummary=document.getElementById('result-summary');var resultTitle=document.getElementById('result-title');resultList.innerHTML='';for(var i=1;i<=9;i++){var select=document.querySelector('.gallery-select[onchange*="'+i+'"]');if(select&&select.value){totalAnswered++;var userAnswer=select.value;var correctAnswer=select.closest('.gallery-item').dataset.correct;var isCorrect=(userAnswer===correctAnswer);var feedback=document.getElementById('feedback-'+i);if(isCorrect){correctCount++;if(feedback){feedback.className='gallery-feedback correct';feedback.textContent='✅ Правильно!';}select.closest('.gallery-item').classList.add('correct');select.closest('.gallery-item').classList.remove('incorrect');}else{if(feedback){feedback.className='gallery-feedback incorrect';feedback.textContent='❌ Неверно. Правильно: '+correctAnswer;}select.closest('.gallery-item').classList.add('incorrect');select.closest('.gallery-item').classList.remove('correct');}var p=document.createElement('p');p.innerHTML=(isCorrect?'✅ ':'❌ ')+'<strong>Иллюстрация '+i+':</strong> '+userAnswer+(isCorrect?'':' <span style="color:#721c24">→ '+correctAnswer+'</span>');p.style.margin='8px 0';p.style.padding='8px 12px';p.style.background=isCorrect?'#d4edda':'#f8d7da';p.style.borderRadius='5px';p.style.borderLeft='4px solid '+(isCorrect?'#28a745':'#dc3545');resultList.appendChild(p);}}if(totalAnswered>0){document.getElementById('gallery-result').classList.remove('hidden');resultSummary.textContent=correctCount+' из '+totalAnswered+' правильных ответов';if(resultTitle){if(correctCount===totalAnswered){resultTitle.textContent='🎉 Отлично! Все верно!';resultTitle.style.color='#155724';}else if(correctCount>=totalAnswered/2){resultTitle.textContent='👍 Хорошо!';resultTitle.style.color='#856404';}else{resultTitle.textContent='📚 Попробуйте ещё раз!';resultTitle.style.color='#721c24';}}}else{alert('Выберите хотя бы одно произведение!');}}
+        function resetGallery(){document.querySelectorAll('.gallery-select').forEach(function(select){select.value='';});document.querySelectorAll('.gallery-feedback').forEach(function(fb){fb.className='gallery-feedback';fb.textContent='';});document.querySelectorAll('.gallery-item').forEach(function(item){item.classList.remove('correct','incorrect');});var resultDiv=document.getElementById('gallery-result');if(resultDiv){resultDiv.classList.add('hidden');}gallerySelections={};}
 
-        function openLightbox(img) {
-            lightboxImg.src = img.src;
-            lightboxCaption.textContent = img.alt;
-            lightbox.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeLightbox() {
-            lightbox.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
-
-        // Закрытие по Escape
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeLightbox();
-            }
-        });
+        // ЛАЙТБОКС
+        var lightbox=document.getElementById('lightbox');var lightboxImg=document.getElementById('lightbox-img');var lightboxCaption=document.getElementById('lightbox-caption');
+        function openLightbox(src,alt){if(lightboxImg)lightboxImg.src=src;if(lightboxCaption)lightboxCaption.textContent=alt;if(lightbox){lightbox.classList.add('active');document.body.style.overflow='hidden';}}
+        function closeLightbox(e){if(!lightbox)return;if(e.target===lightbox||e.target.className==='lightbox-close'){lightbox.classList.remove('active');document.body.style.overflow='auto';}}
+        document.addEventListener('keydown',function(e){if(e.key==='Escape'&&lightbox&&lightbox.classList.contains('active')){closeLightbox({target:lightbox});}});
+        document.addEventListener('DOMContentLoaded',function(){loadQ();var galleryImages=document.querySelectorAll('.gallery-image');galleryImages.forEach(function(img){img.style.cursor='zoom-in';img.addEventListener('click',function(){openLightbox(this.src,this.alt);});});});
     </script>
-       <!-- Лайтбокс для увеличения картинок -->
-<div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
-    <span class="lightbox-close">&times;</span>
-    <img class="lightbox-img" id="lightbox-img" alt="">
-    <div class="lightbox-caption" id="lightbox-caption"></div>
-</div>
-
-<script>
-    // === ЛАЙТБОКС ===
-    var lightbox = document.getElementById('lightbox');
-    var lightboxImg = document.getElementById('lightbox-img');
-    var lightboxCaption = document.getElementById('lightbox-caption');
-
-    function openLightbox(src, alt) {
-        lightboxImg.src = src;
-        lightboxCaption.textContent = alt;
-        lightbox.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    }
-
-    function closeLightbox(e) {
-        if (e.target === lightbox || e.target.className === 'lightbox-close') {
-            lightbox.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
-    }
-
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') closeLightbox({target: lightbox});
-    });
-
-    // Вешаем клик на картинки галереи
-    document.addEventListener('DOMContentLoaded', function() {
-        var imgs = document.querySelectorAll('.gallery-image');
-        imgs.forEach(function(img) {
-            img.style.cursor = 'zoom-in';
-            img.addEventListener('click', function() {
-                openLightbox(this.src, this.alt);
-            });
-        });
-    });
-</script>
-
-</body>
-</html>
 </body>
 </html>
