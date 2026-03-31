@@ -10,39 +10,45 @@
 
     <!-- Титульный баннер -->
     <header class="hero-banner">
+        <div class="hero-overlay"></div>
         <div class="hero-content">
             <div class="hero-top">
                 <h1 class="hero-title">САЛТЫКОВ-ЩЕДРИН:<br><span class="title-accent">САТИРА НА ВЕКА</span></h1>
                 <p class="hero-subtitle">Виртуальная выставка к юбилею великого сатирика</p>
             </div>
             <div class="hero-center">
+                <div class="portrait-frame-banner">
+                    <img src="Портрет.jpg" alt="М.Е. Салтыков-Щедрин" class="portrait-img-banner" onerror="this.style.display='none'">
+                </div>
                 <div class="years-badge">1826 – 1889</div>
             </div>
+            <div class="hero-bottom">
+                <div class="institution-info-banner">
+                    <p class="institution-name">МУНИЦИПАЛЬНОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ КУЛЬТУРЫ</p>
+                    <p class="library-name">«ЦЕНТРАЛЬНАЯ ГОРОДСКАЯ БИБЛИОТЕКА»</p>
+                    <p class="city">г. Нижний Тагил</p>
+                </div>
+                <div class="contact-info-banner">
+                    <p class="contact-item">📧 <a href="mailto:cgb@tagillib.ru">cgb@tagillib.ru</a></p>
+                    <p class="contact-item">📞 <a href="tel:+73435412888">(3435) 412-888</a></p>
+                </div>
+            </div>
             <div class="hero-cta">
-                <button class="cta-button-large" onclick="scrollToSection('portrait')">📚 Начать экскурсию</button>
+                <button class="cta-button-large" onclick="scrollToSection('intro')">📚 Начать экскурсию</button>
             </div>
         </div>
     </header>
 
     <!-- Навигация -->
     <nav class="navigation">
-        <a href="#portrait">Портрет</a>
         <a href="#biography">Биография</a>
         <a href="#works">Произведения</a>
         <a href="#quotes">Цитаты</a>
         <a href="#quiz">Тест</a>
     </nav>
 
-    <!-- Портрет писателя -->
-    <section id="portrait" class="portrait-section">
-        <div class="portrait-frame">
-            <img src="Портрет.jpg" alt="М.Е. Салтыков-Щедрин" class="portrait-img" onerror="this.style.display='none'">
-        </div>
-        <p class="portrait-caption">Михаил Евграфович Салтыков-Щедрин<br><span>(1826 – 1889)</span></p>
-    </section>
-
     <!-- Вступительный текст -->
-    <section class="intro-text-section">
+    <section id="intro" class="intro-text-section">
         <div class="intro-text-content">
             <p class="intro-text-lead">
                 Михаил Евграфович Салтыков-Щедрин – мастер сатиры, чей юмор искрится острой иронией, подобно бритве, обнажающей пороки общества. Меткие высказывания бьют в цель с хирургической точностью: глупость власти, лицемерие элиты, абсурд бюрократии. Они остаются актуальными и сегодня, напоминая, что человеческие слабости вечны, а смех над ними – лучший способ их преодолеть.
@@ -94,21 +100,9 @@
         <div class="stats-content">
             <p class="stats-intro">Михаил Салтыков-Щедрин написал сотни произведений, включая романы, повести, очерки, рассказы, пьесы, сказки и публицистику — точное число варьируется от 300 до 500 в зависимости от подсчёта фрагментов и циклов.</p>
             <div class="stats-grid">
-                <div class="stats-card">
-                    <div class="stats-icon">📚</div>
-                    <div class="stats-number">20 томов</div>
-                    <div class="stats-label">Полное собрание сочинений</div>
-                </div>
-                <div class="stats-card">
-                    <div class="stats-icon">📝</div>
-                    <div class="stats-number">100+</div>
-                    <div class="stats-label">Отдельных произведений</div>
-                </div>
-                <div class="stats-card">
-                    <div class="stats-icon">📖</div>
-                    <div class="stats-number">~400</div>
-                    <div class="stats-label">Художественных произведений</div>
-                </div>
+                <div class="stats-card"><div class="stats-icon">📚</div><div class="stats-number">20 томов</div><div class="stats-label">Полное собрание сочинений</div></div>
+                <div class="stats-card"><div class="stats-icon">📝</div><div class="stats-number">100+</div><div class="stats-label">Отдельных произведений</div></div>
+                <div class="stats-card"><div class="stats-icon">📖</div><div class="stats-number">~400</div><div class="stats-label">Художественных произведений</div></div>
             </div>
         </div>
     </section>
@@ -153,7 +147,7 @@
 
     <!-- Видео -->
     <section id="video" class="section">
-        <h2 class="section-title">Самоотверженный заяц</h2>
+        <h2 class="section-title">Видеозарисовки к произведению "Самоотверженный заяц"</h2>
         <div class="video-container">
             <iframe src="https://drive.google.com/file/d/1LdHgd-37UHLk5CdXzw-onxi44MFJChld/preview" width="100%" height="500" allow="autoplay" style="border:none; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.2);"></iframe>
         </div>
@@ -171,7 +165,7 @@
     <!-- Галерея иллюстраций -->
     <section id="gallery" class="section">
         <h2 class="section-title">Иллюстрации к произведениям</h2>
-        <p class="section-subtitle">Выберите произведение для каждой иллюстрации</p>
+        <p class="section-subtitle">Выберите к какому произведению каждая иллюстрация. Для увеличения нажмите на картинку.</p>
         <div class="gallery-grid">
             <div class="gallery-item" data-correct="История одного города"><img src="1.png" alt="Иллюстрация 1" class="gallery-image"><div class="gallery-spacer"></div><select class="gallery-select" onchange="saveSelection(this, '1')"><option value="">— Выберите произведение —</option><option value="Губернские очерки">Губернские очерки</option><option value="История одного города">История одного города</option><option value="Пошехонская старина">Пошехонская старина</option><option value="Сказки">Сказки</option><option value="Помпадуры и помпадурши">Помпадуры и помпадурши</option><option value="Господа Головлёвы">Господа Головлёвы</option><option value="За рубежом">За рубежом</option><option value="Современная идиллия">Современная идиллия</option><option value="Мелочи жизни">Мелочи жизни</option></select><div class="gallery-feedback" id="feedback-1"></div></div>
             <div class="gallery-item" data-correct="Господа Головлёвы"><img src="2.png" alt="Иллюстрация 2" class="gallery-image"><div class="gallery-spacer"></div><select class="gallery-select" onchange="saveSelection(this, '2')"><option value="">— Выберите произведение —</option><option value="Современная идиллия">Современная идиллия</option><option value="Пошехонская старина">Пошехонская старина</option><option value="Господа Головлёвы">Господа Головлёвы</option><option value="История одного города">История одного города</option><option value="Мелочи жизни">Мелочи жизни</option><option value="Сказки">Сказки</option><option value="Помпадуры и помпадурши">Помпадуры и помпадурши</option><option value="За рубежом">За рубежом</option><option value="Губернские очерки">Губернские очерки</option></select><div class="gallery-feedback" id="feedback-2"></div></div>
@@ -201,10 +195,10 @@
         <div class="resources-single-block">
             <div class="resource-item"><span class="resource-icon">🏛️</span><div class="resource-content"><a href="https://www.prlib.ru/search?key=Салтыков-Щедрин" target="_blank">Президентская библиотека (ПРЛИБ)</a><p>Оцифрованные издания, документы, материалы о писателе</p></div></div>
             <div class="resource-item"><span class="resource-icon">📚</span><div class="resource-content"><a href="https://нэб.рф/search/?q=Салтыков-Щедрин" target="_blank">Национальная электронная библиотека (НЭБ)</a><p>Полные тексты произведений, научные издания</p></div></div>
-            <div class="resource-item"><span class="resource-icon">🎧</span><div class="resource-content"><a href="https://www.litres.ru/avtor/mihail-evgrafovich-saltykov-schedrin/" target="_blank">ЛитРес</a><p>Электронные и аудиокниги Салтыкова-Щедрина</p></div></div>
+            <div class="resource-item"><span class="resource-icon">🎧</span><div class="resource-content"><a href="https://www.litres.ru/avtor/mihail-evgrafovich-saltykov-schedrin/" target="_blank">ЛитРес</a><p>Электронные и аудиокниги  Салтыкова-Щедрина</p></div></div>
             <div class="resource-item"><span class="resource-icon">🏛️</span><div class="resource-content"><a href="https://www.rsl.ru/" target="_blank">Российская государственная библиотека (РГБ)</a><p>Электронные ресурсы, диссертации, редкие издания</p></div></div>
             <div class="resource-item"><span class="resource-icon">📖</span><div class="resource-content"><a href="https://azbyka.ru/otechnik/" target="_blank">Азбука веры</a><p>Электронная библиотека русской классики</p></div></div>
-            <div class="resource-item"><span class="resource-icon">📱</span><div class="resource-content"><a href="https://www.libking.ru/books/prose-/prose-classic/mikhail-saltyikov-shchedrin/" target="_blank">LibKing.ru</a><p>Все произведения Салтыкова-Щедрина онлайн, удобно читать</p></div></div>
+            <div class="resource-item"><span class="resource-icon">📱</span><div class="resource-content"><a href="https://www.libking.ru/books/prose-/prose-classic/mikhail-saltyikov-shchedrin/" target="_blank">LibKing.ru</a><p>Все произведения  Салтыкова-Щедрина онлайн, удобно читать</p></div></div>
         </div>
         <div class="resources-note"><h3>💡 Не нашли нужное?</h3><p>Обратитесь к нашим библиотекарям — они помогут найти редкие издания, критические статьи и аудиокниги</p><p class="contact-emphasis">📞 <strong>(3435) 412-888</strong> | 📧 <strong>cgb@tagillib.ru</strong></p></div>
     </section>
@@ -212,7 +206,6 @@
     <!-- Электронный каталог -->
     <section id="catalog" class="section">
         <div class="catalog-container">
-            <div class="catalog-badge">🔍 ПОИСК В КАТАЛОГЕ</div>
             <h2 class="catalog-title">Проверьте наличие книг в библиотеках города</h2>
             <div class="catalog-stats">
                 <div class="stat-item"><span class="stat-number">348</span><span class="stat-label">печатных изданий<br>М.Е. Салтыкова-Щедрина</span></div>
@@ -222,8 +215,6 @@
             <ul class="catalog-features">
                 <li>✅ Проверить наличие интересующей вас книги</li>
                 <li>✅ Узнать, в какой библиотеке она находится</li>
-                <li>✅ Посмотреть шифр для заказа</li>
-                <li>✅ Забронировать издание онлайн</li>
             </ul>
             <div class="catalog-cta">
                 <a href="http://www.tagillib.ru:8087/jirbis2/index.php?option=com_irbis&view=irbis&Itemid=114" target="_blank" class="catalog-button">🔎 Перейти в электронный каталог</a>
