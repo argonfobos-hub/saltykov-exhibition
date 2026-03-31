@@ -127,7 +127,7 @@
 
     <!-- Видео -->
     <section id="video" class="section section-bordered">
-        <h2 class="section-title">Самоотверженный заяц</h2>
+        <h2 class="section-title">Видеозарисовки "Самоотверженный заяц"</h2>
         <div class="video-container">
             <iframe src="https://drive.google.com/file/d/1LdHgd-37UHLk5CdXzw-onxi44MFJChld/preview" width="100%" height="500" allow="autoplay" style="border:none; border-radius:10px;"></iframe>
         </div>
@@ -145,7 +145,7 @@
     <!-- Галерея иллюстраций -->
     <section id="gallery" class="section section-bordered">
         <h2 class="section-title">Иллюстрации к произведениям</h2>
-        <p class="section-subtitle">Выберите произведение для каждой иллюстрации</p>
+        <p class="section-subtitle">Выберите к какому произведению относится иллюстрация. Для увеличения кликните на изображении.</p>
         <div class="gallery-grid">
             <div class="gallery-item" data-correct="История одного города"><img src="1.png" alt="Иллюстрация 1" class="gallery-image"><div class="gallery-spacer"></div><select class="gallery-select" onchange="saveSelection(this, '1')"><option value="">— Выберите произведение —</option><option value="Губернские очерки">Губернские очерки</option><option value="История одного города">История одного города</option><option value="Пошехонская старина">Пошехонская старина</option><option value="Сказки">Сказки</option><option value="Помпадуры и помпадурши">Помпадуры и помпадурши</option><option value="Господа Головлёвы">Господа Головлёвы</option><option value="За рубежом">За рубежом</option><option value="Современная идиллия">Современная идиллия</option><option value="Мелочи жизни">Мелочи жизни</option></select><div class="gallery-feedback" id="feedback-1"></div></div>
             <div class="gallery-item" data-correct="Господа Головлёвы"><img src="2.png" alt="Иллюстрация 2" class="gallery-image"><div class="gallery-spacer"></div><select class="gallery-select" onchange="saveSelection(this, '2')"><option value="">— Выберите произведение —</option><option value="Современная идиллия">Современная идиллия</option><option value="Пошехонская старина">Пошехонская старина</option><option value="Господа Головлёвы">Господа Головлёвы</option><option value="История одного города">История одного города</option><option value="Мелочи жизни">Мелочи жизни</option><option value="Сказки">Сказки</option><option value="Помпадуры и помпадурши">Помпадуры и помпадурши</option><option value="За рубежом">За рубежом</option><option value="Губернские очерки">Губернские очерки</option></select><div class="gallery-feedback" id="feedback-2"></div></div>
@@ -175,10 +175,10 @@
         <div class="resources-single-block">
             <div class="resource-item"><span class="resource-icon">🏛️</span><div class="resource-content"><a href="https://www.prlib.ru/search?key=Салтыков-Щедрин" target="_blank">Президентская библиотека (ПРЛИБ)</a><p>Оцифрованные издания, документы, материалы о писателе</p></div></div>
             <div class="resource-item"><span class="resource-icon">📚</span><div class="resource-content"><a href="https://нэб.рф/search/?q=Салтыков-Щедрин" target="_blank">Национальная электронная библиотека (НЭБ)</a><p>Полные тексты произведений, научные издания</p></div></div>
-            <div class="resource-item"><span class="resource-icon">🎧</span><div class="resource-content"><a href="https://www.litres.ru/avtor/mihail-evgrafovich-saltykov-schedrin/" target="_blank">ЛитРес</a><p>Электронные и аудиокниги Щедрина</p></div></div>
+            <div class="resource-item"><span class="resource-icon">🎧</span><div class="resource-content"><a href="https://www.litres.ru/avtor/mihail-evgrafovich-saltykov-schedrin/" target="_blank">ЛитРес</a><p>Электронные и аудиокниги Салтыкова-Щедрина</p></div></div>
             <div class="resource-item"><span class="resource-icon">🏛️</span><div class="resource-content"><a href="https://www.rsl.ru/" target="_blank">Российская государственная библиотека (РГБ)</a><p>Электронные ресурсы, диссертации, редкие издания</p></div></div>
             <div class="resource-item"><span class="resource-icon">📖</span><div class="resource-content"><a href="https://azbyka.ru/otechnik/" target="_blank">Азбука веры</a><p>Электронная библиотека русской классики</p></div></div>
-            <div class="resource-item"><span class="resource-icon">📱</span><div class="resource-content"><a href="https://www.libking.ru/books/prose-/prose-classic/mikhail-saltyikov-shchedrin/" target="_blank">LibKing.ru</a><p>Все произведения Щедрина онлайн, удобно читать</p></div></div>
+            <div class="resource-item"><span class="resource-icon">📱</span><div class="resource-content"><a href="https://www.libking.ru/books/prose-/prose-classic/mikhail-saltyikov-shchedrin/" target="_blank">LibKing.ru</a><p>Все произведения Салтыкова-Щедрина онлайн, удобно читать</p></div></div>
         </div>
         <div class="resources-note"><h3>💡 Не нашли нужное?</h3><p>Обратитесь к нашим библиотекарям — они помогут найти редкие издания, критические статьи и аудиокниги</p><p class="contact-emphasis">📞 <strong>(3435) 412-888</strong> | 📧 <strong>cgb@tagillib.ru</strong></p></div>
     </section>
@@ -186,7 +186,6 @@
     <!-- Электронный каталог -->
     <section id="catalog" class="section section-bordered">
         <div class="catalog-container">
-            <div class="catalog-badge">🔍 ПОИСК В КАТАЛОГЕ</div>
             <h2 class="catalog-title">Проверьте наличие книг в библиотеках города</h2>
             <div class="catalog-stats">
                 <div class="stat-item"><span class="stat-number">348</span><span class="stat-label">печатных изданий<br>М.Е. Салтыкова-Щедрина</span></div>
@@ -196,9 +195,7 @@
             <ul class="catalog-features">
                 <li>✅ Проверить наличие интересующей вас книги</li>
                 <li>✅ Узнать, в какой библиотеке она находится</li>
-                <li>✅ Посмотреть шифр для заказа</li>
-                <li>✅ Забронировать издание онлайн</li>
-            </ul>
+                </ul>
             <div class="catalog-cta">
                 <a href="http://www.tagillib.ru:8087/jirbis2/index.php?option=com_irbis&view=irbis&Itemid=114" target="_blank" class="catalog-button">🔎 Перейти в электронный каталог</a>
                 <p class="catalog-note"><small>Откроется в новой вкладке • Система ИРБИС64</small></p>
