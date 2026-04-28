@@ -1149,6 +1149,24 @@ body {
     padding: 15px;
     text-align: center;
     border-bottom: 3px solid #8b4513;
+    transition: transform 0.3s ease;
+}
+
+.rare-book-cover:hover {
+    transform: scale(1.02);
+}
+
+.rare-book-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.rare-book-img:hover {
+    transform: scale(1.05);
 }
 
 .rare-book-img {
