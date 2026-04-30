@@ -1242,7 +1242,7 @@ body {
     display: grid;
     grid-template-columns: 1.1fr 1fr;
     gap: 30px;
-    align-items: stretch;
+    align-items: start;  /* КЛЮЧЕВОЕ: не растягивать! */
 }
 
 .rare-featured-images {
@@ -1260,30 +1260,30 @@ body {
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
-/* ИНФО-БЛОК: ТОЧНАЯ ВЫСОТА = 500px */
+/* ИНФО-БЛОК: ТОЧНАЯ ВЫСОТА 500px */
 .rare-featured-info {
     height: 500px !important;
     max-height: 500px !important;
-    overflow: hidden !important;
+    min-height: 500px !important;
     text-align: left;
     background: #fff;
-    padding: 15px !important;
+    padding: 15px;
     border-radius: 10px;
     border: 3px solid #d4af37;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-sizing: border-box;  /* Включаем border и padding в высоту */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    box-sizing: border-box;
+    margin: 0 !important;  /* Убираем внешние отступы */
 }
 
 .rare-featured-title {
     font-size: 1.1rem !important;
     color: #8b4513;
-    margin-bottom: 10px !important;
+    margin: 0 0 10px 0 !important;
     font-weight: bold;
     line-height: 1.2;
-    padding-bottom: 8px;
+    padding: 0 0 8px 0;
     border-bottom: 2px solid #d4af37;
 }
 
@@ -1291,8 +1291,8 @@ body {
     font-size: 0.8rem !important;
     line-height: 1.5;
     color: #3d2817;
-    margin-bottom: 10px !important;
-    padding: 10px !important;
+    margin: 0 0 10px 0 !important;
+    padding: 10px;
     background: #f5e6d3;
     border-left: 3px solid #8b4513;
     border-radius: 4px;
@@ -1302,8 +1302,8 @@ body {
     font-size: 0.8rem !important;
     color: #5d2e0c;
     font-style: italic;
-    margin-bottom: 10px !important;
-    padding: 8px !important;
+    margin: 0 0 10px 0 !important;
+    padding: 8px;
     background: #fff8f0;
     border-radius: 4px;
     border: 1px solid #d4af37;
@@ -1318,17 +1318,19 @@ body {
     background: linear-gradient(135deg, #d4af37, #f5e6d3);
     border-radius: 15px;
     border: 2px solid #8b4513;
+    margin-top: auto;  /* Прижимаем год к низу */
 }
 
 /* Адаптивность */
 @media (max-width: 900px) {
     .rare-featured-content { grid-template-columns: 1fr; }
-    .rare-featured-info { height: auto !important; max-height: none !important; }
+    .rare-featured-info { height: auto !important; max-height: none !important; min-height: auto !important; }
 }
 @media (max-width: 600px) {
     .rare-featured-images { grid-template-columns: 1fr; }
     .rare-featured-img { height: 200px; }
 }
+
 /* ===== ПОЛНОЕ СОБРАНИЕ ===== */
 .rare-collection {
     max-width: 1200px;
