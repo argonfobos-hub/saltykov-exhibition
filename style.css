@@ -21,76 +21,22 @@ body {
     width: auto; 
     display: block; 
 }
-/* ===== БЫСТРАЯ НАВИГАЦИЯ ===== */
-.quick-nav {
-    background: linear-gradient(135deg, #3d2817 0%, #5d2e0c 100%);
-    padding: 20px;
-    border-bottom: 4px solid #d4af37;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
-
-.quick-nav-container {
-    max-width: 800px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.quick-nav-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: linear-gradient(135deg, #d4af37, #f5e6d3);
-    color: #3d2817;
-    padding: 15px 30px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    border: 2px solid #8b4513;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-.quick-nav-item:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
-    background: linear-gradient(135deg, #f5e6d3, #d4af37);
-}
-
-.quick-nav-icon {
-    font-size: 1.5rem;
-}
-
-.quick-nav-text {
-    white-space: nowrap;
-}
-
-/* Адаптивность для быстрой навигации */
-@media (max-width: 768px) {
-    .quick-nav-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .quick-nav-item {
-        width: 100%;
-        max-width: 300px;
-        justify-content: center;
-    }
-}
 /* ===== НАВИГАЦИЯ ===== */
 .navigation { 
     background: #3d2817; 
     padding: 15px; 
     border-bottom: 3px solid #d4af37; 
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 .navigation a { 
     color: #f5e6d3; 
     text-decoration: none; 
-    margin: 0 15px; 
-    font-size: 1.1rem; 
+    margin: 0 12px; 
+    font-size: 1rem; 
+    white-space: nowrap;
+    transition: color 0.3s ease;
 }
 .navigation a:hover { 
     color: #d4af37; 
