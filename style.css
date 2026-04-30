@@ -1242,7 +1242,7 @@ body {
     display: grid;
     grid-template-columns: 1.1fr 1fr;
     gap: 30px;
-    align-items: stretch;  /* Колонки одинаковой высоты */
+    align-items: stretch;
 }
 
 .rare-featured-images {
@@ -1261,7 +1261,7 @@ body {
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
-/* ИНФО-БЛОК: БЕЗ ФИКСИРОВАННОЙ ВЫСОТЫ */
+/* ИНФО-БЛОК */
 .rare-featured-info {
     text-align: left;
     background: #fff;
@@ -1271,7 +1271,7 @@ body {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;  /* Распределяем контент */
+    justify-content: space-between;
 }
 
 .rare-featured-title {
@@ -1293,7 +1293,7 @@ body {
     background: #f5e6d3;
     border-left: 3px solid #8b4513;
     border-radius: 4px;
-    flex-grow: 1;  /* Заполняет пространство */
+    flex-grow: 1;
 }
 
 .rare-featured-note {
@@ -1307,16 +1307,19 @@ body {
     border: 1px solid #d4af37;
 }
 
+/* ГОД ПО ЦЕНТРУ */
 .rare-featured-year {
     font-size: 0.9rem !important;
     color: #8b4513;
     font-weight: bold;
-    display: inline-block;
+    display: block;  /* Меняем с inline-block на block */
     padding: 6px 15px;
     background: linear-gradient(135deg, #d4af37, #f5e6d3);
     border-radius: 15px;
     border: 2px solid #8b4513;
-    margin: 0 !important;
+    margin: 0 auto !important;  /* Центрируем */
+    text-align: center;
+    width: fit-content;  /* По ширине контента */
 }
 
 /* Адаптивность */
