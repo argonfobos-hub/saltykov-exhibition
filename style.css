@@ -1242,13 +1242,14 @@ body {
     display: grid;
     grid-template-columns: 1.1fr 1fr;
     gap: 30px;
-    align-items: start;
+    align-items: stretch;  /* Колонки одинаковой высоты */
 }
 
 .rare-featured-images {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+    align-content: start;
 }
 
 .rare-featured-img {
@@ -1260,17 +1261,17 @@ body {
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
-/* ИНФО-БЛОК: ТОЧНО 500px БЕЗ РАСТЯГИВАНИЯ */
+/* ИНФО-БЛОК: БЕЗ ФИКСИРОВАННОЙ ВЫСОТЫ */
 .rare-featured-info {
-    height: 500px !important;
-    max-height: 500px !important;
     text-align: left;
     background: #fff;
-    padding: 15px !important;
+    padding: 20px;
     border-radius: 10px;
     border: 3px solid #d4af37;
-    box-sizing: border-box !important;
-    overflow: hidden !important;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  /* Распределяем контент */
 }
 
 .rare-featured-title {
@@ -1292,6 +1293,7 @@ body {
     background: #f5e6d3;
     border-left: 3px solid #8b4513;
     border-radius: 4px;
+    flex-grow: 1;  /* Заполняет пространство */
 }
 
 .rare-featured-note {
@@ -1314,13 +1316,12 @@ body {
     background: linear-gradient(135deg, #d4af37, #f5e6d3);
     border-radius: 15px;
     border: 2px solid #8b4513;
-    margin: 0 !important;  /* УБРАЛИ margin-top: auto! */
+    margin: 0 !important;
 }
 
 /* Адаптивность */
 @media (max-width: 900px) {
     .rare-featured-content { grid-template-columns: 1fr; }
-    .rare-featured-info { height: auto !important; }
 }
 @media (max-width: 600px) {
     .rare-featured-images { grid-template-columns: 1fr; }
