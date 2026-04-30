@@ -1242,7 +1242,7 @@ body {
     display: grid;
     grid-template-columns: 1.1fr 1fr;
     gap: 30px;
-    align-items: start;  /* КЛЮЧЕВОЕ: не растягивать! */
+    align-items: start;
 }
 
 .rare-featured-images {
@@ -1260,27 +1260,23 @@ body {
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
-/* ИНФО-БЛОК: ТОЧНАЯ ВЫСОТА 500px */
+/* ИНФО-БЛОК: ТОЧНО 500px БЕЗ РАСТЯГИВАНИЯ */
 .rare-featured-info {
     height: 500px !important;
     max-height: 500px !important;
-    min-height: 500px !important;
     text-align: left;
     background: #fff;
-    padding: 15px;
+    padding: 15px !important;
     border-radius: 10px;
     border: 3px solid #d4af37;
-    box-sizing: border-box;  /* Включаем border и padding в высоту */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    margin: 0 !important;  /* Убираем внешние отступы */
+    box-sizing: border-box !important;
+    overflow: hidden !important;
 }
 
 .rare-featured-title {
     font-size: 1.1rem !important;
     color: #8b4513;
-    margin: 0 0 10px 0 !important;
+    margin: 0 0 8px 0 !important;
     font-weight: bold;
     line-height: 1.2;
     padding: 0 0 8px 0;
@@ -1291,7 +1287,7 @@ body {
     font-size: 0.8rem !important;
     line-height: 1.5;
     color: #3d2817;
-    margin: 0 0 10px 0 !important;
+    margin: 0 0 8px 0 !important;
     padding: 10px;
     background: #f5e6d3;
     border-left: 3px solid #8b4513;
@@ -1302,7 +1298,7 @@ body {
     font-size: 0.8rem !important;
     color: #5d2e0c;
     font-style: italic;
-    margin: 0 0 10px 0 !important;
+    margin: 0 0 8px 0 !important;
     padding: 8px;
     background: #fff8f0;
     border-radius: 4px;
@@ -1318,13 +1314,13 @@ body {
     background: linear-gradient(135deg, #d4af37, #f5e6d3);
     border-radius: 15px;
     border: 2px solid #8b4513;
-    margin-top: auto;  /* Прижимаем год к низу */
+    margin: 0 !important;  /* УБРАЛИ margin-top: auto! */
 }
 
 /* Адаптивность */
 @media (max-width: 900px) {
     .rare-featured-content { grid-template-columns: 1fr; }
-    .rare-featured-info { height: auto !important; max-height: none !important; min-height: auto !important; }
+    .rare-featured-info { height: auto !important; }
 }
 @media (max-width: 600px) {
     .rare-featured-images { grid-template-columns: 1fr; }
