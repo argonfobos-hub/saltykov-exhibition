@@ -394,14 +394,13 @@ body {
     margin: 0 auto !important; 
 }
 
-/* КАРТОЧКА КНИГИ — ИСПРАВЛЕННАЯ ВЕРСИЯ */
+/* КАРТОЧКА КНИГИ (ФИНАЛЬНАЯ ВЕРСИЯ) */
 .rare-book { 
     display: flex !important; 
     flex-direction: column !important; 
-    /* width: 100% !important;  ← УДАЛИЛИ или заменили на auto */
-    width: auto !important;  /* ← Позволяем сетке управлять шириной */
+    width: auto !important; 
     min-width: 0 !important; 
-    height: 430px !important; 
+    height: 480px !important; /* Увеличили на 50px для комфортного размещения */
     background: #fff8f0 !important; 
     border-radius: 10px !important; 
     border: 2px solid #d4af37 !important; 
@@ -409,26 +408,55 @@ body {
     overflow: hidden !important; 
     box-sizing: border-box !important; 
 }
+
 .rare-book-cover { 
     padding: 12px !important; text-align: center !important; 
     background: linear-gradient(135deg, #d4af37, #f5e6d3) !important; 
     border-bottom: 3px solid #8b4513 !important; flex-shrink: 0 !important; 
 }
-.rare-book-img { width: 100% !important; height: 200px !important; object-fit: cover !important; border-radius: 6px !important; border: 3px solid #8b4513 !important; }
-.rare-book-info { padding: 12px !important; display: flex !important; flex-direction: column !important; flex-grow: 1 !important; text-align: left !important; }
-.rare-book-title { font-size: 0.95rem !important; font-weight: bold !important; color: #8b4513 !important; margin: 0 0 8px 0 !important; line-height: 1.3 !important; flex-shrink: 0 !important; }
+
+.rare-book-img { 
+    width: 100% !important; height: 200px !important; object-fit: cover !important; 
+    border-radius: 6px !important; border: 3px solid #8b4513 !important; 
+}
+
+/* Инфо-блок с правильным распределением пространства */
+.rare-book-info { 
+    padding: 12px !important; 
+    display: flex !important; 
+    flex-direction: column !important; 
+    flex-grow: 1 !important; 
+    text-align: left !important; 
+    overflow: hidden !important; /* Скролл будет только у текста */
+}
+
+.rare-book-title { 
+    font-size: 0.95rem !important; font-weight: bold !important; color: #8b4513 !important; 
+    margin: 0 0 8px 0 !important; line-height: 1.3 !important; flex-shrink: 0 !important; 
+}
+
+/* Библиография: занимает всё доступное место и прокручивается */
 .rare-book-biblio { 
     font-size: 0.7rem !important; line-height: 1.4 !important; color: #5d2e0c !important; 
     margin: 0 0 8px 0 !important; padding: 8px !important; background: #f5e6d3 !important; 
     border-left: 3px solid #8b4513 !important; border-radius: 4px !important; 
-    flex-grow: 1 !important; overflow-y: auto !important; max-height: 150px !important; 
+    flex-grow: 1 !important; overflow-y: auto !important; 
 }
+
+/* Год: всегда прижат к низу, не сжимается */
 .rare-book-year { 
     font-size: 0.85rem !important; font-weight: bold !important; color: #8b4513 !important; 
     text-align: center !important; padding: 6px !important; 
     background: linear-gradient(135deg, #d4af37, #f5e6d3) !important; 
-    border-radius: 5px !important; border: 1px solid #8b4513 !important; flex-shrink: 0 !important; 
+    border-radius: 5px !important; border: 1px solid #8b4513 !important; 
+    flex-shrink: 0 !important; 
+    margin-top: auto !important; /* 🔑 КЛЮЧЕВОЕ: прижимает год к самому низу карточки */
 }
+
+/* Красивый скроллбар для библиографии */
+.rare-book-biblio::-webkit-scrollbar { width: 6px; }
+.rare-book-biblio::-webkit-scrollbar-track { background: #f5e6d3; border-radius: 3px; }
+.rare-book-biblio::-webkit-scrollbar-thumb { background: #8b4513; border-radius: 3px; }
 
 /* ПРОКРУТКА В БИБЛИОГРАФИИ */
 .rare-book-biblio::-webkit-scrollbar { width: 6px; }
