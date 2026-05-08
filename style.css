@@ -380,7 +380,7 @@ body {
 }
 
 /* ПОЛНОЕ СОБРАНИЕ — СЕТКА 12 ТОМОВ */
-.rare-collection { max-width: 1200px; margin: 0 auto; }
+.rare-collection { max-width: 100%; margin: 0 auto; }
 .rare-collection-title { font-family: Georgia, serif; font-size: 1.8rem; color: #8b4513; text-align: center; margin-bottom: 10px; }
 .rare-collection-subtitle { font-size: 1rem; color: #5d2e0c; font-style: italic; text-align: center; margin-bottom: 35px; }
 
