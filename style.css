@@ -394,11 +394,12 @@ body {
     margin: 0 auto !important; 
 }
 
-/* КАРТОЧКА КНИГИ */
+/* КАРТОЧКА КНИГИ — ИСПРАВЛЕННАЯ ВЕРСИЯ */
 .rare-book { 
     display: flex !important; 
     flex-direction: column !important; 
-    width: 100% !important; 
+    /* width: 100% !important;  ← УДАЛИЛИ или заменили на auto */
+    width: auto !important;  /* ← Позволяем сетке управлять шириной */
     min-width: 0 !important; 
     height: 430px !important; 
     background: #fff8f0 !important; 
