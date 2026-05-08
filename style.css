@@ -484,3 +484,17 @@ body {
     .rare-featured-images { grid-template-columns: 1fr !important; }
     .rare-featured-img { height: 200px !important; }
 }
+/* ===== ОТЛАДКА: ВИЗУАЛЬНЫЙ ТЕСТ СЕТКИ ===== */
+/* Если этот код работает — вы увидите цвета */
+
+.rare-grid {
+    background: rgba(255, 0, 0, 0.1) !important;  /* Полупрозрачный красный */
+    border: 3px dashed red !important;
+    outline: 2px solid orange !important;
+}
+
+.rare-book {
+    background: rgba(0, 100, 255, 0.1) !important;  /* Полупрозрачный синий */
+    border: 2px solid blue !important;
+    outline: 1px dotted lime !important;
+}
